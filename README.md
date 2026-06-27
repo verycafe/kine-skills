@@ -41,3 +41,5 @@ Fetch and follow instructions from https://raw.githubusercontent.com/verycafe/ki
 ### [kine-svg-dev](https://github.com/verycafe/kine-skills/tree/main/kine-svg-dev)
 
 可以将图片转换成 SVG 格式。
+
+![kine-svg-dev 展示图](assets/showcases/kine-svg-dev-showcase.png)
