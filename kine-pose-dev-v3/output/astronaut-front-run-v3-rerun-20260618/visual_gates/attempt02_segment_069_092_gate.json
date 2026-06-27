@@ -1,0 +1,27 @@
+{
+  "schema": "kine-pose-dev-v3.visual-gate.v1",
+  "runId": "astronaut-front-run-v3-rerun-20260618",
+  "candidateChosen": "attempt02_frames_069_092",
+  "manualVisualGate": "pass",
+  "primaryQuestion": "Does this read as front-facing running rather than a warped still image?",
+  "answer": "pass: the sequence shows whole-character model-generated front-facing running with alternating knees, opposite arm pump, support/float rhythm, and stable identity.",
+  "gateResults": {
+    "action_plan_gate": "pass",
+    "frame_source_gate": "pass",
+    "source_framing_gate": "pass_with_minor_note: full body stays visible with green margin; no damaging crop observed in selected segment",
+    "soft_control_gate": "pass: 24-frame plan and controls exist as reference evidence",
+    "alternating_locomotion_gate": "pass: left/right leg phases visibly alternate",
+    "contact_support_gate": "pass: feet/shadow/contact rhythm reads as running-in-place",
+    "sequence_evidence_gate": "pass: 24 consecutive frames copied from one continuous generated video segment",
+    "v3_semantic_subject_gate": "pass: helmet/head/torso/arms/legs/boots remain coherent",
+    "v3_occlusion_overlap_gate": "pass_with_minor_note: small model flicker in hands/boots, no broken joints or holes",
+    "canvas_stability_gate": "pass: fixed green background and centered camera in selected segment"
+  },
+  "knownResidualRisks": [
+    "AI video has mild suit-detail flicker between frames.",
+    "This is a generated whole-character run, not a rigged controllable character.",
+    "Loop seam is acceptable for review but not mathematically perfect."
+  ],
+  "selectedPreview": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3-rerun-20260618/sheets/selected_run_24fps.gif",
+  "selectedBoard": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3-rerun-20260618/sheets/selected_run_board.png"
+}

@@ -1,0 +1,8 @@
+{
+  "taskId": "kine-pose-dev-v3-astronaut-front-run",
+  "frameId": "pose_10",
+  "status": "pass",
+  "reviewer": "codex_visual_review",
+  "reviewIndependence": "independent_record_required_by_v3",
+  "notes": "Source-preserving front-run candidate. Full character remains visible; review as Phase A preview evidence."
+}

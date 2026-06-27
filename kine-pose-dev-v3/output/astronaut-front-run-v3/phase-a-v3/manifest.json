@@ -1,0 +1,33 @@
+{
+  "taskId": "kine-pose-dev-v3-astronaut-front-run",
+  "artifacts": [
+    {
+      "role": "source",
+      "path": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/phase-a-v3/source.png"
+    },
+    {
+      "role": "intake",
+      "path": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/phase-a-v3/intake.json"
+    },
+    {
+      "role": "director_brief",
+      "path": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/phase-a-v3/animation-director-brief.json"
+    },
+    {
+      "role": "semantic_motion_plan",
+      "path": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/phase-a-v3/semantic-motion-plan.json"
+    },
+    {
+      "role": "per_frame_occlusion_plan",
+      "path": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/phase-a-v3/per-frame-occlusion-plan.json"
+    },
+    {
+      "role": "frame_generation_provenance",
+      "path": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/phase-a-v3/frame-generation-provenance.json"
+    },
+    {
+      "role": "phase_a_v3_qa",
+      "path": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/phase-a-v3/phase-a-v3-qa.json"
+    }
+  ]
+}

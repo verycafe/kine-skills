@@ -1,0 +1,4 @@
+interface:
+  display_name: "Kine Duolingo Image"
+  short_description: "Generate high-saturation Duolingo-style kids-game images"
+  default_prompt: "Use $kine-image-duolingo to generate a children's educational game image from my scene, character, object, prop, or asset-sheet brief while preserving the flat, bold, high-saturation Duolingo-style visual language. Drawing must use $imagegen."

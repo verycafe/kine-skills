@@ -1,0 +1,29 @@
+{
+  "taskId": "phase-a-v3-fixture",
+  "artifacts": [
+    {
+      "role": "intake",
+      "path": "phase-a-v3/intake.json"
+    },
+    {
+      "role": "director_brief",
+      "path": "phase-a-v3/animation-director-brief.json"
+    },
+    {
+      "role": "semantic_motion_plan",
+      "path": "phase-a-v3/semantic-motion-plan.json"
+    },
+    {
+      "role": "per_frame_occlusion_plan",
+      "path": "phase-a-v3/per-frame-occlusion-plan.json"
+    },
+    {
+      "role": "frame_generation_provenance",
+      "path": "phase-a-v3/frame-generation-provenance.json"
+    },
+    {
+      "role": "phase_a_v3_qa",
+      "path": "phase-a-v3/phase-a-v3-qa.json"
+    }
+  ]
+}

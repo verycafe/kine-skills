@@ -1,0 +1,4 @@
+interface:
+  display_name: "Kine Summer Shot"
+  short_description: "Clean production storyboard boards with review gates"
+  default_prompt: "Use $kine-summer-shot to turn this scene into a clean 2K production storyboard board / animation planning sheet before generating individual frames."

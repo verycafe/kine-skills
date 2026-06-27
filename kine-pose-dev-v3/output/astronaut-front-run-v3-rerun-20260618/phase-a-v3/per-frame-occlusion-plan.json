@@ -1,0 +1,342 @@
+{
+  "schema": "kine-pose-dev-v3.phase-a.per-frame-plan.v1",
+  "runId": "astronaut-front-run-v3-rerun-20260618",
+  "frames": [
+    {
+      "frame": 1,
+      "supportContact": "screen-left support contact",
+      "freeLeg": "screen-right knee begins lifting",
+      "armCoordination": "screen-left arm forward, screen-right arm back",
+      "bodyTiming": "downbeat contact",
+      "requiredRead": "front-facing running-in-place, not idle bobbing and not local limb warp",
+      "occlusionOverlapNotes": [
+        "helmet ring must remain continuous around hair and face",
+        "arms may cross in front of torso but hands cannot merge with hips",
+        "raised knee/boot must overlap suit correctly without holes or detached joints",
+        "boots must remain readable and must not melt into the green background"
+      ]
+    },
+    {
+      "frame": 2,
+      "supportContact": "screen-left support load",
+      "freeLeg": "screen-right knee lifts low",
+      "armCoordination": "arms pass through stronger swing",
+      "bodyTiming": "slight torso compression",
+      "requiredRead": "front-facing running-in-place, not idle bobbing and not local limb warp",
+      "occlusionOverlapNotes": [
+        "helmet ring must remain continuous around hair and face",
+        "arms may cross in front of torso but hands cannot merge with hips",
+        "raised knee/boot must overlap suit correctly without holes or detached joints",
+        "boots must remain readable and must not melt into the green background"
+      ]
+    },
+    {
+      "frame": 3,
+      "supportContact": "screen-left support",
+      "freeLeg": "screen-right knee mid lift",
+      "armCoordination": "opposite arm swing clear",
+      "bodyTiming": "torso rebounds up",
+      "requiredRead": "front-facing running-in-place, not idle bobbing and not local limb warp",
+      "occlusionOverlapNotes": [
+        "helmet ring must remain continuous around hair and face",
+        "arms may cross in front of torso but hands cannot merge with hips",
+        "raised knee/boot must overlap suit correctly without holes or detached joints",
+        "boots must remain readable and must not melt into the green background"
+      ]
+    },
+    {
+      "frame": 4,
+      "supportContact": "screen-left support",
+      "freeLeg": "screen-right knee high forward",
+      "armCoordination": "screen-left arm highest forward",
+      "bodyTiming": "peak lift",
+      "requiredRead": "front-facing running-in-place, not idle bobbing and not local limb warp",
+      "occlusionOverlapNotes": [
+        "helmet ring must remain continuous around hair and face",
+        "arms may cross in front of torso but hands cannot merge with hips",
+        "raised knee/boot must overlap suit correctly without holes or detached joints",
+        "boots must remain readable and must not melt into the green background"
+      ]
+    },
+    {
+      "frame": 5,
+      "supportContact": "screen-left toe support",
+      "freeLeg": "screen-right knee high hold",
+      "armCoordination": "helmet steady, hair follows",
+      "bodyTiming": "float preparation",
+      "requiredRead": "front-facing running-in-place, not idle bobbing and not local limb warp",
+      "occlusionOverlapNotes": [
+        "helmet ring must remain continuous around hair and face",
+        "arms may cross in front of torso but hands cannot merge with hips",
+        "raised knee/boot must overlap suit correctly without holes or detached joints",
+        "boots must remain readable and must not melt into the green background"
+      ]
+    },
+    {
+      "frame": 6,
+      "supportContact": "brief float",
+      "freeLeg": "screen-right lower leg extends down",
+      "armCoordination": "arms cross through neutral",
+      "bodyTiming": "both feet briefly light",
+      "requiredRead": "front-facing running-in-place, not idle bobbing and not local limb warp",
+      "occlusionOverlapNotes": [
+        "helmet ring must remain continuous around hair and face",
+        "arms may cross in front of torso but hands cannot merge with hips",
+        "raised knee/boot must overlap suit correctly without holes or detached joints",
+        "boots must remain readable and must not melt into the green background"
+      ]
+    },
+    {
+      "frame": 7,
+      "supportContact": "screen-right foot reaching floor",
+      "freeLeg": "screen-left leg begins recovery",
+      "armCoordination": "screen-right arm forward, screen-left arm back",
+      "bodyTiming": "pre-contact",
+      "requiredRead": "front-facing running-in-place, not idle bobbing and not local limb warp",
+      "occlusionOverlapNotes": [
+        "helmet ring must remain continuous around hair and face",
+        "arms may cross in front of torso but hands cannot merge with hips",
+        "raised knee/boot must overlap suit correctly without holes or detached joints",
+        "boots must remain readable and must not melt into the green background"
+      ]
+    },
+    {
+      "frame": 8,
+      "supportContact": "screen-right support contact",
+      "freeLeg": "screen-left foot trailing",
+      "armCoordination": "opposite arm swing established",
+      "bodyTiming": "downbeat contact",
+      "requiredRead": "front-facing running-in-place, not idle bobbing and not local limb warp",
+      "occlusionOverlapNotes": [
+        "helmet ring must remain continuous around hair and face",
+        "arms may cross in front of torso but hands cannot merge with hips",
+        "raised knee/boot must overlap suit correctly without holes or detached joints",
+        "boots must remain readable and must not melt into the green background"
+      ]
+    },
+    {
+      "frame": 9,
+      "supportContact": "screen-right support load",
+      "freeLeg": "screen-left knee begins lifting",
+      "armCoordination": "arms continue alternating",
+      "bodyTiming": "slight torso compression",
+      "requiredRead": "front-facing running-in-place, not idle bobbing and not local limb warp",
+      "occlusionOverlapNotes": [
+        "helmet ring must remain continuous around hair and face",
+        "arms may cross in front of torso but hands cannot merge with hips",
+        "raised knee/boot must overlap suit correctly without holes or detached joints",
+        "boots must remain readable and must not melt into the green background"
+      ]
+    },
+    {
+      "frame": 10,
+      "supportContact": "screen-right support",
+      "freeLeg": "screen-left knee lifts low",
+      "armCoordination": "screen-right arm forward stronger",
+      "bodyTiming": "rebound up",
+      "requiredRead": "front-facing running-in-place, not idle bobbing and not local limb warp",
+      "occlusionOverlapNotes": [
+        "helmet ring must remain continuous around hair and face",
+        "arms may cross in front of torso but hands cannot merge with hips",
+        "raised knee/boot must overlap suit correctly without holes or detached joints",
+        "boots must remain readable and must not melt into the green background"
+      ]
+    },
+    {
+      "frame": 11,
+      "supportContact": "screen-right support",
+      "freeLeg": "screen-left knee mid lift",
+      "armCoordination": "opposite arm swing clear",
+      "bodyTiming": "torso stable",
+      "requiredRead": "front-facing running-in-place, not idle bobbing and not local limb warp",
+      "occlusionOverlapNotes": [
+        "helmet ring must remain continuous around hair and face",
+        "arms may cross in front of torso but hands cannot merge with hips",
+        "raised knee/boot must overlap suit correctly without holes or detached joints",
+        "boots must remain readable and must not melt into the green background"
+      ]
+    },
+    {
+      "frame": 12,
+      "supportContact": "screen-right support",
+      "freeLeg": "screen-left knee high forward",
+      "armCoordination": "screen-right arm highest forward",
+      "bodyTiming": "peak lift",
+      "requiredRead": "front-facing running-in-place, not idle bobbing and not local limb warp",
+      "occlusionOverlapNotes": [
+        "helmet ring must remain continuous around hair and face",
+        "arms may cross in front of torso but hands cannot merge with hips",
+        "raised knee/boot must overlap suit correctly without holes or detached joints",
+        "boots must remain readable and must not melt into the green background"
+      ]
+    },
+    {
+      "frame": 13,
+      "supportContact": "screen-right toe support",
+      "freeLeg": "screen-left knee high hold",
+      "armCoordination": "helmet steady, face readable",
+      "bodyTiming": "float preparation",
+      "requiredRead": "front-facing running-in-place, not idle bobbing and not local limb warp",
+      "occlusionOverlapNotes": [
+        "helmet ring must remain continuous around hair and face",
+        "arms may cross in front of torso but hands cannot merge with hips",
+        "raised knee/boot must overlap suit correctly without holes or detached joints",
+        "boots must remain readable and must not melt into the green background"
+      ]
+    },
+    {
+      "frame": 14,
+      "supportContact": "brief float",
+      "freeLeg": "screen-left lower leg extends down",
+      "armCoordination": "arms cross through neutral",
+      "bodyTiming": "both feet briefly light",
+      "requiredRead": "front-facing running-in-place, not idle bobbing and not local limb warp",
+      "occlusionOverlapNotes": [
+        "helmet ring must remain continuous around hair and face",
+        "arms may cross in front of torso but hands cannot merge with hips",
+        "raised knee/boot must overlap suit correctly without holes or detached joints",
+        "boots must remain readable and must not melt into the green background"
+      ]
+    },
+    {
+      "frame": 15,
+      "supportContact": "screen-left foot reaching floor",
+      "freeLeg": "screen-right leg begins recovery",
+      "armCoordination": "screen-left arm forward again",
+      "bodyTiming": "pre-contact",
+      "requiredRead": "front-facing running-in-place, not idle bobbing and not local limb warp",
+      "occlusionOverlapNotes": [
+        "helmet ring must remain continuous around hair and face",
+        "arms may cross in front of torso but hands cannot merge with hips",
+        "raised knee/boot must overlap suit correctly without holes or detached joints",
+        "boots must remain readable and must not melt into the green background"
+      ]
+    },
+    {
+      "frame": 16,
+      "supportContact": "screen-left support contact",
+      "freeLeg": "screen-right foot trailing",
+      "armCoordination": "opposite arm swing re-established",
+      "bodyTiming": "downbeat contact loop anchor",
+      "requiredRead": "front-facing running-in-place, not idle bobbing and not local limb warp",
+      "occlusionOverlapNotes": [
+        "helmet ring must remain continuous around hair and face",
+        "arms may cross in front of torso but hands cannot merge with hips",
+        "raised knee/boot must overlap suit correctly without holes or detached joints",
+        "boots must remain readable and must not melt into the green background"
+      ]
+    },
+    {
+      "frame": 17,
+      "supportContact": "screen-left support load",
+      "freeLeg": "screen-right knee begins lifting",
+      "armCoordination": "same as frame 02 but not identical",
+      "bodyTiming": "loop compression",
+      "requiredRead": "front-facing running-in-place, not idle bobbing and not local limb warp",
+      "occlusionOverlapNotes": [
+        "helmet ring must remain continuous around hair and face",
+        "arms may cross in front of torso but hands cannot merge with hips",
+        "raised knee/boot must overlap suit correctly without holes or detached joints",
+        "boots must remain readable and must not melt into the green background"
+      ]
+    },
+    {
+      "frame": 18,
+      "supportContact": "screen-left support",
+      "freeLeg": "screen-right knee mid lift",
+      "armCoordination": "same direction as frame 03",
+      "bodyTiming": "loop rebound",
+      "requiredRead": "front-facing running-in-place, not idle bobbing and not local limb warp",
+      "occlusionOverlapNotes": [
+        "helmet ring must remain continuous around hair and face",
+        "arms may cross in front of torso but hands cannot merge with hips",
+        "raised knee/boot must overlap suit correctly without holes or detached joints",
+        "boots must remain readable and must not melt into the green background"
+      ]
+    },
+    {
+      "frame": 19,
+      "supportContact": "screen-left support",
+      "freeLeg": "screen-right knee high forward",
+      "armCoordination": "clear front-run silhouette",
+      "bodyTiming": "loop peak",
+      "requiredRead": "front-facing running-in-place, not idle bobbing and not local limb warp",
+      "occlusionOverlapNotes": [
+        "helmet ring must remain continuous around hair and face",
+        "arms may cross in front of torso but hands cannot merge with hips",
+        "raised knee/boot must overlap suit correctly without holes or detached joints",
+        "boots must remain readable and must not melt into the green background"
+      ]
+    },
+    {
+      "frame": 20,
+      "supportContact": "brief float",
+      "freeLeg": "screen-right leg transitions down",
+      "armCoordination": "arms pass neutral",
+      "bodyTiming": "loop float",
+      "requiredRead": "front-facing running-in-place, not idle bobbing and not local limb warp",
+      "occlusionOverlapNotes": [
+        "helmet ring must remain continuous around hair and face",
+        "arms may cross in front of torso but hands cannot merge with hips",
+        "raised knee/boot must overlap suit correctly without holes or detached joints",
+        "boots must remain readable and must not melt into the green background"
+      ]
+    },
+    {
+      "frame": 21,
+      "supportContact": "screen-right support contact",
+      "freeLeg": "screen-left leg trailing",
+      "armCoordination": "switch contact",
+      "bodyTiming": "second downbeat",
+      "requiredRead": "front-facing running-in-place, not idle bobbing and not local limb warp",
+      "occlusionOverlapNotes": [
+        "helmet ring must remain continuous around hair and face",
+        "arms may cross in front of torso but hands cannot merge with hips",
+        "raised knee/boot must overlap suit correctly without holes or detached joints",
+        "boots must remain readable and must not melt into the green background"
+      ]
+    },
+    {
+      "frame": 22,
+      "supportContact": "screen-right support",
+      "freeLeg": "screen-left knee mid lift",
+      "armCoordination": "opposite arm forward",
+      "bodyTiming": "loop continuation",
+      "requiredRead": "front-facing running-in-place, not idle bobbing and not local limb warp",
+      "occlusionOverlapNotes": [
+        "helmet ring must remain continuous around hair and face",
+        "arms may cross in front of torso but hands cannot merge with hips",
+        "raised knee/boot must overlap suit correctly without holes or detached joints",
+        "boots must remain readable and must not melt into the green background"
+      ]
+    },
+    {
+      "frame": 23,
+      "supportContact": "screen-right support",
+      "freeLeg": "screen-left knee descends",
+      "armCoordination": "arms return toward first pose",
+      "bodyTiming": "anticipation into frame 24",
+      "requiredRead": "front-facing running-in-place, not idle bobbing and not local limb warp",
+      "occlusionOverlapNotes": [
+        "helmet ring must remain continuous around hair and face",
+        "arms may cross in front of torso but hands cannot merge with hips",
+        "raised knee/boot must overlap suit correctly without holes or detached joints",
+        "boots must remain readable and must not melt into the green background"
+      ]
+    },
+    {
+      "frame": 24,
+      "supportContact": "screen-left foot about to contact",
+      "freeLeg": "screen-right knee preparing lift",
+      "armCoordination": "nearly matches frame 01 without freezing",
+      "bodyTiming": "seamless loop return",
+      "requiredRead": "front-facing running-in-place, not idle bobbing and not local limb warp",
+      "occlusionOverlapNotes": [
+        "helmet ring must remain continuous around hair and face",
+        "arms may cross in front of torso but hands cannot merge with hips",
+        "raised knee/boot must overlap suit correctly without holes or detached joints",
+        "boots must remain readable and must not melt into the green background"
+      ]
+    }
+  ]
+}

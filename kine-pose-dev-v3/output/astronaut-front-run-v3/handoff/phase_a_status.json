@@ -1,0 +1,17 @@
+{
+  "format": "kinePoseDevV3.phaseAStatus",
+  "version": "0.1",
+  "date": "2026-06-18",
+  "taskId": "kine-pose-dev-v3-astronaut-front-run",
+  "status": "visual_rejected",
+  "failures": [
+    "unreadable_action",
+    "source_pose_snapback",
+    "owner_motion_incoherent",
+    "bad_contact",
+    "local_transform_selected_for_large_action"
+  ],
+  "reason": "User visual review: sequence reads as local source-image distortion/warp, not front-facing running action.",
+  "phaseBAllowed": false,
+  "nextAction": "Rebuild Phase A with stable action gates and model-generated whole-subject frames."
+}

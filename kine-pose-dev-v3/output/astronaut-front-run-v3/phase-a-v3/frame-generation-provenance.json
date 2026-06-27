@@ -1,0 +1,293 @@
+{
+  "taskId": "kine-pose-dev-v3-astronaut-front-run",
+  "frames": {
+    "pose_00": {
+      "method": "manual_source_preserving_edit",
+      "model": "PIL/Numpy source-preserving deformation fallback",
+      "sourceImages": [
+        "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/phase-a-v3/source.png"
+      ],
+      "controlImages": [
+        "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/soft_controls/kine-pose-dev-v3-astronaut-front-run__frame_01__pose_00__role_soft_control_reference.png"
+      ],
+      "promptSource": "phase-a-v3/animation-director-brief.json + phase-a-v3/per-frame-occlusion-plan.json",
+      "programmaticCharacterPixels": false,
+      "notes": "Source pixels were preserved and deformed for a Phase A review loop; no source master, rig, bones, or runtime animation was created.",
+      "programmaticSubjectPixels": false,
+      "selectedPromotionInvalidated": true,
+      "invalidatedReason": "User visual review: sequence reads as local source-image distortion/warp, not front-facing running action.",
+      "blockingFailures": [
+        "unreadable_action",
+        "source_pose_snapback",
+        "owner_motion_incoherent",
+        "bad_contact",
+        "local_transform_selected_for_large_action"
+      ],
+      "allowedUseAfterInvalidation": "rejected/review evidence only; not selected-frame or final-preview source"
+    },
+    "pose_01": {
+      "method": "manual_source_preserving_edit",
+      "model": "PIL/Numpy source-preserving deformation fallback",
+      "sourceImages": [
+        "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/phase-a-v3/source.png"
+      ],
+      "controlImages": [
+        "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/soft_controls/kine-pose-dev-v3-astronaut-front-run__frame_02__pose_01__role_soft_control_reference.png"
+      ],
+      "promptSource": "phase-a-v3/animation-director-brief.json + phase-a-v3/per-frame-occlusion-plan.json",
+      "programmaticCharacterPixels": false,
+      "notes": "Source pixels were preserved and deformed for a Phase A review loop; no source master, rig, bones, or runtime animation was created.",
+      "programmaticSubjectPixels": false,
+      "selectedPromotionInvalidated": true,
+      "invalidatedReason": "User visual review: sequence reads as local source-image distortion/warp, not front-facing running action.",
+      "blockingFailures": [
+        "unreadable_action",
+        "source_pose_snapback",
+        "owner_motion_incoherent",
+        "bad_contact",
+        "local_transform_selected_for_large_action"
+      ],
+      "allowedUseAfterInvalidation": "rejected/review evidence only; not selected-frame or final-preview source"
+    },
+    "pose_02": {
+      "method": "manual_source_preserving_edit",
+      "model": "PIL/Numpy source-preserving deformation fallback",
+      "sourceImages": [
+        "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/phase-a-v3/source.png"
+      ],
+      "controlImages": [
+        "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/soft_controls/kine-pose-dev-v3-astronaut-front-run__frame_03__pose_02__role_soft_control_reference.png"
+      ],
+      "promptSource": "phase-a-v3/animation-director-brief.json + phase-a-v3/per-frame-occlusion-plan.json",
+      "programmaticCharacterPixels": false,
+      "notes": "Source pixels were preserved and deformed for a Phase A review loop; no source master, rig, bones, or runtime animation was created.",
+      "programmaticSubjectPixels": false,
+      "selectedPromotionInvalidated": true,
+      "invalidatedReason": "User visual review: sequence reads as local source-image distortion/warp, not front-facing running action.",
+      "blockingFailures": [
+        "unreadable_action",
+        "source_pose_snapback",
+        "owner_motion_incoherent",
+        "bad_contact",
+        "local_transform_selected_for_large_action"
+      ],
+      "allowedUseAfterInvalidation": "rejected/review evidence only; not selected-frame or final-preview source"
+    },
+    "pose_03": {
+      "method": "manual_source_preserving_edit",
+      "model": "PIL/Numpy source-preserving deformation fallback",
+      "sourceImages": [
+        "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/phase-a-v3/source.png"
+      ],
+      "controlImages": [
+        "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/soft_controls/kine-pose-dev-v3-astronaut-front-run__frame_04__pose_03__role_soft_control_reference.png"
+      ],
+      "promptSource": "phase-a-v3/animation-director-brief.json + phase-a-v3/per-frame-occlusion-plan.json",
+      "programmaticCharacterPixels": false,
+      "notes": "Source pixels were preserved and deformed for a Phase A review loop; no source master, rig, bones, or runtime animation was created.",
+      "programmaticSubjectPixels": false,
+      "selectedPromotionInvalidated": true,
+      "invalidatedReason": "User visual review: sequence reads as local source-image distortion/warp, not front-facing running action.",
+      "blockingFailures": [
+        "unreadable_action",
+        "source_pose_snapback",
+        "owner_motion_incoherent",
+        "bad_contact",
+        "local_transform_selected_for_large_action"
+      ],
+      "allowedUseAfterInvalidation": "rejected/review evidence only; not selected-frame or final-preview source"
+    },
+    "pose_04": {
+      "method": "manual_source_preserving_edit",
+      "model": "PIL/Numpy source-preserving deformation fallback",
+      "sourceImages": [
+        "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/phase-a-v3/source.png"
+      ],
+      "controlImages": [
+        "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/soft_controls/kine-pose-dev-v3-astronaut-front-run__frame_05__pose_04__role_soft_control_reference.png"
+      ],
+      "promptSource": "phase-a-v3/animation-director-brief.json + phase-a-v3/per-frame-occlusion-plan.json",
+      "programmaticCharacterPixels": false,
+      "notes": "Source pixels were preserved and deformed for a Phase A review loop; no source master, rig, bones, or runtime animation was created.",
+      "programmaticSubjectPixels": false,
+      "selectedPromotionInvalidated": true,
+      "invalidatedReason": "User visual review: sequence reads as local source-image distortion/warp, not front-facing running action.",
+      "blockingFailures": [
+        "unreadable_action",
+        "source_pose_snapback",
+        "owner_motion_incoherent",
+        "bad_contact",
+        "local_transform_selected_for_large_action"
+      ],
+      "allowedUseAfterInvalidation": "rejected/review evidence only; not selected-frame or final-preview source"
+    },
+    "pose_05": {
+      "method": "manual_source_preserving_edit",
+      "model": "PIL/Numpy source-preserving deformation fallback",
+      "sourceImages": [
+        "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/phase-a-v3/source.png"
+      ],
+      "controlImages": [
+        "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/soft_controls/kine-pose-dev-v3-astronaut-front-run__frame_06__pose_05__role_soft_control_reference.png"
+      ],
+      "promptSource": "phase-a-v3/animation-director-brief.json + phase-a-v3/per-frame-occlusion-plan.json",
+      "programmaticCharacterPixels": false,
+      "notes": "Source pixels were preserved and deformed for a Phase A review loop; no source master, rig, bones, or runtime animation was created.",
+      "programmaticSubjectPixels": false,
+      "selectedPromotionInvalidated": true,
+      "invalidatedReason": "User visual review: sequence reads as local source-image distortion/warp, not front-facing running action.",
+      "blockingFailures": [
+        "unreadable_action",
+        "source_pose_snapback",
+        "owner_motion_incoherent",
+        "bad_contact",
+        "local_transform_selected_for_large_action"
+      ],
+      "allowedUseAfterInvalidation": "rejected/review evidence only; not selected-frame or final-preview source"
+    },
+    "pose_06": {
+      "method": "manual_source_preserving_edit",
+      "model": "PIL/Numpy source-preserving deformation fallback",
+      "sourceImages": [
+        "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/phase-a-v3/source.png"
+      ],
+      "controlImages": [
+        "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/soft_controls/kine-pose-dev-v3-astronaut-front-run__frame_07__pose_06__role_soft_control_reference.png"
+      ],
+      "promptSource": "phase-a-v3/animation-director-brief.json + phase-a-v3/per-frame-occlusion-plan.json",
+      "programmaticCharacterPixels": false,
+      "notes": "Source pixels were preserved and deformed for a Phase A review loop; no source master, rig, bones, or runtime animation was created.",
+      "programmaticSubjectPixels": false,
+      "selectedPromotionInvalidated": true,
+      "invalidatedReason": "User visual review: sequence reads as local source-image distortion/warp, not front-facing running action.",
+      "blockingFailures": [
+        "unreadable_action",
+        "source_pose_snapback",
+        "owner_motion_incoherent",
+        "bad_contact",
+        "local_transform_selected_for_large_action"
+      ],
+      "allowedUseAfterInvalidation": "rejected/review evidence only; not selected-frame or final-preview source"
+    },
+    "pose_07": {
+      "method": "manual_source_preserving_edit",
+      "model": "PIL/Numpy source-preserving deformation fallback",
+      "sourceImages": [
+        "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/phase-a-v3/source.png"
+      ],
+      "controlImages": [
+        "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/soft_controls/kine-pose-dev-v3-astronaut-front-run__frame_08__pose_07__role_soft_control_reference.png"
+      ],
+      "promptSource": "phase-a-v3/animation-director-brief.json + phase-a-v3/per-frame-occlusion-plan.json",
+      "programmaticCharacterPixels": false,
+      "notes": "Source pixels were preserved and deformed for a Phase A review loop; no source master, rig, bones, or runtime animation was created.",
+      "programmaticSubjectPixels": false,
+      "selectedPromotionInvalidated": true,
+      "invalidatedReason": "User visual review: sequence reads as local source-image distortion/warp, not front-facing running action.",
+      "blockingFailures": [
+        "unreadable_action",
+        "source_pose_snapback",
+        "owner_motion_incoherent",
+        "bad_contact",
+        "local_transform_selected_for_large_action"
+      ],
+      "allowedUseAfterInvalidation": "rejected/review evidence only; not selected-frame or final-preview source"
+    },
+    "pose_08": {
+      "method": "manual_source_preserving_edit",
+      "model": "PIL/Numpy source-preserving deformation fallback",
+      "sourceImages": [
+        "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/phase-a-v3/source.png"
+      ],
+      "controlImages": [
+        "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/soft_controls/kine-pose-dev-v3-astronaut-front-run__frame_09__pose_08__role_soft_control_reference.png"
+      ],
+      "promptSource": "phase-a-v3/animation-director-brief.json + phase-a-v3/per-frame-occlusion-plan.json",
+      "programmaticCharacterPixels": false,
+      "notes": "Source pixels were preserved and deformed for a Phase A review loop; no source master, rig, bones, or runtime animation was created.",
+      "programmaticSubjectPixels": false,
+      "selectedPromotionInvalidated": true,
+      "invalidatedReason": "User visual review: sequence reads as local source-image distortion/warp, not front-facing running action.",
+      "blockingFailures": [
+        "unreadable_action",
+        "source_pose_snapback",
+        "owner_motion_incoherent",
+        "bad_contact",
+        "local_transform_selected_for_large_action"
+      ],
+      "allowedUseAfterInvalidation": "rejected/review evidence only; not selected-frame or final-preview source"
+    },
+    "pose_09": {
+      "method": "manual_source_preserving_edit",
+      "model": "PIL/Numpy source-preserving deformation fallback",
+      "sourceImages": [
+        "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/phase-a-v3/source.png"
+      ],
+      "controlImages": [
+        "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/soft_controls/kine-pose-dev-v3-astronaut-front-run__frame_10__pose_09__role_soft_control_reference.png"
+      ],
+      "promptSource": "phase-a-v3/animation-director-brief.json + phase-a-v3/per-frame-occlusion-plan.json",
+      "programmaticCharacterPixels": false,
+      "notes": "Source pixels were preserved and deformed for a Phase A review loop; no source master, rig, bones, or runtime animation was created.",
+      "programmaticSubjectPixels": false,
+      "selectedPromotionInvalidated": true,
+      "invalidatedReason": "User visual review: sequence reads as local source-image distortion/warp, not front-facing running action.",
+      "blockingFailures": [
+        "unreadable_action",
+        "source_pose_snapback",
+        "owner_motion_incoherent",
+        "bad_contact",
+        "local_transform_selected_for_large_action"
+      ],
+      "allowedUseAfterInvalidation": "rejected/review evidence only; not selected-frame or final-preview source"
+    },
+    "pose_10": {
+      "method": "manual_source_preserving_edit",
+      "model": "PIL/Numpy source-preserving deformation fallback",
+      "sourceImages": [
+        "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/phase-a-v3/source.png"
+      ],
+      "controlImages": [
+        "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/soft_controls/kine-pose-dev-v3-astronaut-front-run__frame_11__pose_10__role_soft_control_reference.png"
+      ],
+      "promptSource": "phase-a-v3/animation-director-brief.json + phase-a-v3/per-frame-occlusion-plan.json",
+      "programmaticCharacterPixels": false,
+      "notes": "Source pixels were preserved and deformed for a Phase A review loop; no source master, rig, bones, or runtime animation was created.",
+      "programmaticSubjectPixels": false,
+      "selectedPromotionInvalidated": true,
+      "invalidatedReason": "User visual review: sequence reads as local source-image distortion/warp, not front-facing running action.",
+      "blockingFailures": [
+        "unreadable_action",
+        "source_pose_snapback",
+        "owner_motion_incoherent",
+        "bad_contact",
+        "local_transform_selected_for_large_action"
+      ],
+      "allowedUseAfterInvalidation": "rejected/review evidence only; not selected-frame or final-preview source"
+    },
+    "pose_11": {
+      "method": "manual_source_preserving_edit",
+      "model": "PIL/Numpy source-preserving deformation fallback",
+      "sourceImages": [
+        "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/phase-a-v3/source.png"
+      ],
+      "controlImages": [
+        "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/soft_controls/kine-pose-dev-v3-astronaut-front-run__frame_12__pose_11__role_soft_control_reference.png"
+      ],
+      "promptSource": "phase-a-v3/animation-director-brief.json + phase-a-v3/per-frame-occlusion-plan.json",
+      "programmaticCharacterPixels": false,
+      "notes": "Source pixels were preserved and deformed for a Phase A review loop; no source master, rig, bones, or runtime animation was created.",
+      "programmaticSubjectPixels": false,
+      "selectedPromotionInvalidated": true,
+      "invalidatedReason": "User visual review: sequence reads as local source-image distortion/warp, not front-facing running action.",
+      "blockingFailures": [
+        "unreadable_action",
+        "source_pose_snapback",
+        "owner_motion_incoherent",
+        "bad_contact",
+        "local_transform_selected_for_large_action"
+      ],
+      "allowedUseAfterInvalidation": "rejected/review evidence only; not selected-frame or final-preview source"
+    }
+  }
+}

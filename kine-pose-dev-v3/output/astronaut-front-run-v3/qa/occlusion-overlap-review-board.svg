@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="1462" viewBox="0 0 1280 1462">
+<style>
+rect.bg{fill:#f8f7f3} text.title{font:700 30px Arial,sans-serif;fill:#14213d}
+text.meta{font:14px Arial,sans-serif;fill:#5c677d} text.line{font:18px Menlo,Consolas,monospace;fill:#1f2937}
+</style>
+<rect class="bg" x="0" y="0" width="1280" height="1462"/>
+<text x="32" y="50" class="title">Occlusion And Overlap Review</text>
+<text x="32" y="74" class="meta">Kine Pose Dev V3 Phase A QA evidence. Not final preview.</text>
+<text x="32" y="96" class="line">pose_00 beat: screen-left boot supports; screen-right knee lifts toward viewer</text>
+<text x="32" y="124" class="line">  occlusion: frontOwner: screen_right_leg; backOwner: torso_core; risk: hip_or_thigh_hole, frontOwner: swinging_arm; backOwner: torso_edge; risk: black_sleeve_detach</text>
+<text x="32" y="152" class="line">  overlap:   screen_right_hip_overlap, screen_right_knee_forward, screen_left_boot_ground_contact</text>
+<text x="32" y="180" class="line">  forbidden: source_pose_snapback, detached_child, joint_hole, wrong_side_motion, bad_contact, bad_overlap</text>
+<text x="32" y="208" class="line">pose_01 beat: screen-right boot supports; screen-left knee lifts toward viewer</text>
+<text x="32" y="236" class="line">  occlusion: frontOwner: screen_left_leg; backOwner: torso_core; risk: hip_or_thigh_hole, frontOwner: swinging_arm; backOwner: torso_edge; risk: black_sleeve_detach</text>
+<text x="32" y="264" class="line">  overlap:   screen_left_hip_overlap, screen_left_knee_forward, screen_right_boot_ground_contact</text>
+<text x="32" y="292" class="line">  forbidden: source_pose_snapback, detached_child, joint_hole, wrong_side_motion, bad_contact, bad_overlap</text>
+<text x="32" y="320" class="line">pose_02 beat: screen-right boot supports; screen-left knee lifts toward viewer</text>
+<text x="32" y="348" class="line">  occlusion: frontOwner: screen_left_leg; backOwner: torso_core; risk: hip_or_thigh_hole, frontOwner: swinging_arm; backOwner: torso_edge; risk: black_sleeve_detach</text>
+<text x="32" y="376" class="line">  overlap:   screen_left_hip_overlap, screen_left_knee_forward, screen_right_boot_ground_contact</text>
+<text x="32" y="404" class="line">  forbidden: source_pose_snapback, detached_child, joint_hole, wrong_side_motion, bad_contact, bad_overlap</text>
+<text x="32" y="432" class="line">pose_03 beat: screen-right boot supports; screen-left knee lifts toward viewer</text>
+<text x="32" y="460" class="line">  occlusion: frontOwner: screen_left_leg; backOwner: torso_core; risk: hip_or_thigh_hole, frontOwner: swinging_arm; backOwner: torso_edge; risk: black_sleeve_detach</text>
+<text x="32" y="488" class="line">  overlap:   screen_left_hip_overlap, screen_left_knee_forward, screen_right_boot_ground_contact</text>
+<text x="32" y="516" class="line">  forbidden: source_pose_snapback, detached_child, joint_hole, wrong_side_motion, bad_contact, bad_overlap</text>
+<text x="32" y="544" class="line">pose_04 beat: screen-right boot supports; screen-left knee lifts toward viewer</text>
+<text x="32" y="572" class="line">  occlusion: frontOwner: screen_left_leg; backOwner: torso_core; risk: hip_or_thigh_hole, frontOwner: swinging_arm; backOwner: torso_edge; risk: black_sleeve_detach</text>
+<text x="32" y="600" class="line">  overlap:   screen_left_hip_overlap, screen_left_knee_forward, screen_right_boot_ground_contact</text>
+<text x="32" y="628" class="line">  forbidden: source_pose_snapback, detached_child, joint_hole, wrong_side_motion, bad_contact, bad_overlap</text>
+<text x="32" y="656" class="line">pose_05 beat: screen-right boot supports; screen-left knee lifts toward viewer</text>
+<text x="32" y="684" class="line">  occlusion: frontOwner: screen_left_leg; backOwner: torso_core; risk: hip_or_thigh_hole, frontOwner: swinging_arm; backOwner: torso_edge; risk: black_sleeve_detach</text>
+<text x="32" y="712" class="line">  overlap:   screen_left_hip_overlap, screen_left_knee_forward, screen_right_boot_ground_contact</text>
+<text x="32" y="740" class="line">  forbidden: source_pose_snapback, detached_child, joint_hole, wrong_side_motion, bad_contact, bad_overlap</text>
+<text x="32" y="768" class="line">pose_06 beat: screen-right boot supports; screen-left knee lifts toward viewer</text>
+<text x="32" y="796" class="line">  occlusion: frontOwner: screen_left_leg; backOwner: torso_core; risk: hip_or_thigh_hole, frontOwner: swinging_arm; backOwner: torso_edge; risk: black_sleeve_detach</text>
+<text x="32" y="824" class="line">  overlap:   screen_left_hip_overlap, screen_left_knee_forward, screen_right_boot_ground_contact</text>
+<text x="32" y="852" class="line">  forbidden: source_pose_snapback, detached_child, joint_hole, wrong_side_motion, bad_contact, bad_overlap</text>
+<text x="32" y="880" class="line">pose_07 beat: screen-left boot supports; screen-right knee lifts toward viewer</text>
+<text x="32" y="908" class="line">  occlusion: frontOwner: screen_right_leg; backOwner: torso_core; risk: hip_or_thigh_hole, frontOwner: swinging_arm; backOwner: torso_edge; risk: black_sleeve_detach</text>
+<text x="32" y="936" class="line">  overlap:   screen_right_hip_overlap, screen_right_knee_forward, screen_left_boot_ground_contact</text>
+<text x="32" y="964" class="line">  forbidden: source_pose_snapback, detached_child, joint_hole, wrong_side_motion, bad_contact, bad_overlap</text>
+<text x="32" y="992" class="line">pose_08 beat: screen-left boot supports; screen-right knee lifts toward viewer</text>
+<text x="32" y="1020" class="line">  occlusion: frontOwner: screen_right_leg; backOwner: torso_core; risk: hip_or_thigh_hole, frontOwner: swinging_arm; backOwner: torso_edge; risk: black_sleeve_detach</text>
+<text x="32" y="1048" class="line">  overlap:   screen_right_hip_overlap, screen_right_knee_forward, screen_left_boot_ground_contact</text>
+<text x="32" y="1076" class="line">  forbidden: source_pose_snapback, detached_child, joint_hole, wrong_side_motion, bad_contact, bad_overlap</text>
+<text x="32" y="1104" class="line">pose_09 beat: screen-left boot supports; screen-right knee lifts toward viewer</text>
+<text x="32" y="1132" class="line">  occlusion: frontOwner: screen_right_leg; backOwner: torso_core; risk: hip_or_thigh_hole, frontOwner: swinging_arm; backOwner: torso_edge; risk: black_sleeve_detach</text>
+<text x="32" y="1160" class="line">  overlap:   screen_right_hip_overlap, screen_right_knee_forward, screen_left_boot_ground_contact</text>
+<text x="32" y="1188" class="line">  forbidden: source_pose_snapback, detached_child, joint_hole, wrong_side_motion, bad_contact, bad_overlap</text>
+<text x="32" y="1216" class="line">pose_10 beat: screen-left boot supports; screen-right knee lifts toward viewer</text>
+<text x="32" y="1244" class="line">  occlusion: frontOwner: screen_right_leg; backOwner: torso_core; risk: hip_or_thigh_hole, frontOwner: swinging_arm; backOwner: torso_edge; risk: black_sleeve_detach</text>
+<text x="32" y="1272" class="line">  overlap:   screen_right_hip_overlap, screen_right_knee_forward, screen_left_boot_ground_contact</text>
+<text x="32" y="1300" class="line">  forbidden: source_pose_snapback, detached_child, joint_hole, wrong_side_motion, bad_contact, bad_overlap</text>
+<text x="32" y="1328" class="line">pose_11 beat: screen-left boot supports; screen-right knee lifts toward viewer</text>
+<text x="32" y="1356" class="line">  occlusion: frontOwner: screen_right_leg; backOwner: torso_core; risk: hip_or_thigh_hole, frontOwner: swinging_arm; backOwner: torso_edge; risk: black_sleeve_detach</text>
+<text x="32" y="1384" class="line">  overlap:   screen_right_hip_overlap, screen_right_knee_forward, screen_left_boot_ground_contact</text>
+<text x="32" y="1412" class="line">  forbidden: source_pose_snapback, detached_child, joint_hole, wrong_side_motion, bad_contact, bad_overlap</text>
+</svg>

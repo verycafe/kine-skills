@@ -1,0 +1,20 @@
+{
+  "schema": "kine-pose-dev-v3.phase-a.animation-director-brief.v1",
+  "runId": "astronaut-front-run-v3-rerun-20260618",
+  "plainLanguageDirection": "Make the astronaut actually run toward the camera/in place: one foot supports while the other knee drives forward, arms pump opposite the legs, the body bounces from real contact. Keep the camera fixed and the character full-body.",
+  "rhythm": "two clear contact downbeats plus lifted-knee peaks in a 24-frame loop; energetic cartoon run, not a slow march",
+  "physics": {
+    "centerOfMass": "small vertical bounce tied to support contact, no random drifting",
+    "contacts": "at least one readable support foot on contact frames; brief float allowed only between contacts",
+    "arms": "opposite arm/leg coordination; elbows bend instead of rubber stretching",
+    "headHelmet": "head and helmet remain coherent, with only slight follow-through"
+  },
+  "negativeDirection": [
+    "do not twist the whole body like a liquify warp",
+    "do not keep both legs straight while only moving pixels",
+    "do not crop helmet, boots, or hands",
+    "do not add extra limbs, duplicate boots, broken knees, or detached gloves",
+    "do not turn the character into side view or three-quarter view",
+    "do not change to a different costume or character"
+  ]
+}

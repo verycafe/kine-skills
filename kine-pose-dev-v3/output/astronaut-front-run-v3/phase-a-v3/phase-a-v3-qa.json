@@ -1,0 +1,246 @@
+{
+  "taskId": "kine-pose-dev-v3-astronaut-front-run",
+  "frameQa": {
+    "pose_00": {
+      "frameId": "pose_00",
+      "status": "visual_rejected",
+      "failures": [
+        "unreadable_action",
+        "source_pose_snapback",
+        "owner_motion_incoherent",
+        "bad_contact",
+        "local_transform_selected_for_large_action"
+      ],
+      "evidence": {
+        "sourceComparisonBoard": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/qa/kine-pose-dev-v3-astronaut-front-run__frame_01__pose_00__source-comparison-board.png",
+        "controlVsCandidate": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/qa/kine-pose-dev-v3-astronaut-front-run__frame_01__pose_00__control-vs-candidate.jpg",
+        "selectedFrameReview": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/qa/kine-pose-dev-v3-astronaut-front-run__frame_01__pose_00__selected-frame-review.json"
+      },
+      "rejectionReason": "User visual review: sequence reads as local source-image distortion/warp, not front-facing running action."
+    },
+    "pose_01": {
+      "frameId": "pose_01",
+      "status": "visual_rejected",
+      "failures": [
+        "unreadable_action",
+        "source_pose_snapback",
+        "owner_motion_incoherent",
+        "bad_contact",
+        "local_transform_selected_for_large_action"
+      ],
+      "evidence": {
+        "sourceComparisonBoard": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/qa/kine-pose-dev-v3-astronaut-front-run__frame_02__pose_01__source-comparison-board.png",
+        "controlVsCandidate": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/qa/kine-pose-dev-v3-astronaut-front-run__frame_02__pose_01__control-vs-candidate.jpg",
+        "selectedFrameReview": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/qa/kine-pose-dev-v3-astronaut-front-run__frame_02__pose_01__selected-frame-review.json"
+      },
+      "rejectionReason": "User visual review: sequence reads as local source-image distortion/warp, not front-facing running action."
+    },
+    "pose_02": {
+      "frameId": "pose_02",
+      "status": "visual_rejected",
+      "failures": [
+        "unreadable_action",
+        "source_pose_snapback",
+        "owner_motion_incoherent",
+        "bad_contact",
+        "local_transform_selected_for_large_action"
+      ],
+      "evidence": {
+        "sourceComparisonBoard": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/qa/kine-pose-dev-v3-astronaut-front-run__frame_03__pose_02__source-comparison-board.png",
+        "controlVsCandidate": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/qa/kine-pose-dev-v3-astronaut-front-run__frame_03__pose_02__control-vs-candidate.jpg",
+        "selectedFrameReview": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/qa/kine-pose-dev-v3-astronaut-front-run__frame_03__pose_02__selected-frame-review.json"
+      },
+      "rejectionReason": "User visual review: sequence reads as local source-image distortion/warp, not front-facing running action."
+    },
+    "pose_03": {
+      "frameId": "pose_03",
+      "status": "visual_rejected",
+      "failures": [
+        "unreadable_action",
+        "source_pose_snapback",
+        "owner_motion_incoherent",
+        "bad_contact",
+        "local_transform_selected_for_large_action"
+      ],
+      "evidence": {
+        "sourceComparisonBoard": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/qa/kine-pose-dev-v3-astronaut-front-run__frame_04__pose_03__source-comparison-board.png",
+        "controlVsCandidate": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/qa/kine-pose-dev-v3-astronaut-front-run__frame_04__pose_03__control-vs-candidate.jpg",
+        "selectedFrameReview": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/qa/kine-pose-dev-v3-astronaut-front-run__frame_04__pose_03__selected-frame-review.json"
+      },
+      "rejectionReason": "User visual review: sequence reads as local source-image distortion/warp, not front-facing running action."
+    },
+    "pose_04": {
+      "frameId": "pose_04",
+      "status": "visual_rejected",
+      "failures": [
+        "unreadable_action",
+        "source_pose_snapback",
+        "owner_motion_incoherent",
+        "bad_contact",
+        "local_transform_selected_for_large_action"
+      ],
+      "evidence": {
+        "sourceComparisonBoard": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/qa/kine-pose-dev-v3-astronaut-front-run__frame_05__pose_04__source-comparison-board.png",
+        "controlVsCandidate": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/qa/kine-pose-dev-v3-astronaut-front-run__frame_05__pose_04__control-vs-candidate.jpg",
+        "selectedFrameReview": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/qa/kine-pose-dev-v3-astronaut-front-run__frame_05__pose_04__selected-frame-review.json"
+      },
+      "rejectionReason": "User visual review: sequence reads as local source-image distortion/warp, not front-facing running action."
+    },
+    "pose_05": {
+      "frameId": "pose_05",
+      "status": "visual_rejected",
+      "failures": [
+        "unreadable_action",
+        "source_pose_snapback",
+        "owner_motion_incoherent",
+        "bad_contact",
+        "local_transform_selected_for_large_action"
+      ],
+      "evidence": {
+        "sourceComparisonBoard": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/qa/kine-pose-dev-v3-astronaut-front-run__frame_06__pose_05__source-comparison-board.png",
+        "controlVsCandidate": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/qa/kine-pose-dev-v3-astronaut-front-run__frame_06__pose_05__control-vs-candidate.jpg",
+        "selectedFrameReview": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/qa/kine-pose-dev-v3-astronaut-front-run__frame_06__pose_05__selected-frame-review.json"
+      },
+      "rejectionReason": "User visual review: sequence reads as local source-image distortion/warp, not front-facing running action."
+    },
+    "pose_06": {
+      "frameId": "pose_06",
+      "status": "visual_rejected",
+      "failures": [
+        "unreadable_action",
+        "source_pose_snapback",
+        "owner_motion_incoherent",
+        "bad_contact",
+        "local_transform_selected_for_large_action"
+      ],
+      "evidence": {
+        "sourceComparisonBoard": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/qa/kine-pose-dev-v3-astronaut-front-run__frame_07__pose_06__source-comparison-board.png",
+        "controlVsCandidate": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/qa/kine-pose-dev-v3-astronaut-front-run__frame_07__pose_06__control-vs-candidate.jpg",
+        "selectedFrameReview": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/qa/kine-pose-dev-v3-astronaut-front-run__frame_07__pose_06__selected-frame-review.json"
+      },
+      "rejectionReason": "User visual review: sequence reads as local source-image distortion/warp, not front-facing running action."
+    },
+    "pose_07": {
+      "frameId": "pose_07",
+      "status": "visual_rejected",
+      "failures": [
+        "unreadable_action",
+        "source_pose_snapback",
+        "owner_motion_incoherent",
+        "bad_contact",
+        "local_transform_selected_for_large_action"
+      ],
+      "evidence": {
+        "sourceComparisonBoard": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/qa/kine-pose-dev-v3-astronaut-front-run__frame_08__pose_07__source-comparison-board.png",
+        "controlVsCandidate": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/qa/kine-pose-dev-v3-astronaut-front-run__frame_08__pose_07__control-vs-candidate.jpg",
+        "selectedFrameReview": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/qa/kine-pose-dev-v3-astronaut-front-run__frame_08__pose_07__selected-frame-review.json"
+      },
+      "rejectionReason": "User visual review: sequence reads as local source-image distortion/warp, not front-facing running action."
+    },
+    "pose_08": {
+      "frameId": "pose_08",
+      "status": "visual_rejected",
+      "failures": [
+        "unreadable_action",
+        "source_pose_snapback",
+        "owner_motion_incoherent",
+        "bad_contact",
+        "local_transform_selected_for_large_action"
+      ],
+      "evidence": {
+        "sourceComparisonBoard": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/qa/kine-pose-dev-v3-astronaut-front-run__frame_09__pose_08__source-comparison-board.png",
+        "controlVsCandidate": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/qa/kine-pose-dev-v3-astronaut-front-run__frame_09__pose_08__control-vs-candidate.jpg",
+        "selectedFrameReview": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/qa/kine-pose-dev-v3-astronaut-front-run__frame_09__pose_08__selected-frame-review.json"
+      },
+      "rejectionReason": "User visual review: sequence reads as local source-image distortion/warp, not front-facing running action."
+    },
+    "pose_09": {
+      "frameId": "pose_09",
+      "status": "visual_rejected",
+      "failures": [
+        "unreadable_action",
+        "source_pose_snapback",
+        "owner_motion_incoherent",
+        "bad_contact",
+        "local_transform_selected_for_large_action"
+      ],
+      "evidence": {
+        "sourceComparisonBoard": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/qa/kine-pose-dev-v3-astronaut-front-run__frame_10__pose_09__source-comparison-board.png",
+        "controlVsCandidate": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/qa/kine-pose-dev-v3-astronaut-front-run__frame_10__pose_09__control-vs-candidate.jpg",
+        "selectedFrameReview": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/qa/kine-pose-dev-v3-astronaut-front-run__frame_10__pose_09__selected-frame-review.json"
+      },
+      "rejectionReason": "User visual review: sequence reads as local source-image distortion/warp, not front-facing running action."
+    },
+    "pose_10": {
+      "frameId": "pose_10",
+      "status": "visual_rejected",
+      "failures": [
+        "unreadable_action",
+        "source_pose_snapback",
+        "owner_motion_incoherent",
+        "bad_contact",
+        "local_transform_selected_for_large_action"
+      ],
+      "evidence": {
+        "sourceComparisonBoard": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/qa/kine-pose-dev-v3-astronaut-front-run__frame_11__pose_10__source-comparison-board.png",
+        "controlVsCandidate": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/qa/kine-pose-dev-v3-astronaut-front-run__frame_11__pose_10__control-vs-candidate.jpg",
+        "selectedFrameReview": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/qa/kine-pose-dev-v3-astronaut-front-run__frame_11__pose_10__selected-frame-review.json"
+      },
+      "rejectionReason": "User visual review: sequence reads as local source-image distortion/warp, not front-facing running action."
+    },
+    "pose_11": {
+      "frameId": "pose_11",
+      "status": "visual_rejected",
+      "failures": [
+        "unreadable_action",
+        "source_pose_snapback",
+        "owner_motion_incoherent",
+        "bad_contact",
+        "local_transform_selected_for_large_action"
+      ],
+      "evidence": {
+        "sourceComparisonBoard": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/qa/kine-pose-dev-v3-astronaut-front-run__frame_12__pose_11__source-comparison-board.png",
+        "controlVsCandidate": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/qa/kine-pose-dev-v3-astronaut-front-run__frame_12__pose_11__control-vs-candidate.jpg",
+        "selectedFrameReview": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/qa/kine-pose-dev-v3-astronaut-front-run__frame_12__pose_11__selected-frame-review.json"
+      },
+      "rejectionReason": "User visual review: sequence reads as local source-image distortion/warp, not front-facing running action."
+    }
+  },
+  "sequenceQa": {
+    "status": "visual_rejected",
+    "failures": [
+      "unreadable_action",
+      "source_pose_snapback",
+      "owner_motion_incoherent",
+      "bad_contact",
+      "local_transform_selected_for_large_action"
+    ],
+    "evidence": {
+      "motionStabilityReview": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/qa/kine-pose-dev-v3-astronaut-front-run__motion-stability-review.json",
+      "sequenceMotionStabilityBoard": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/qa/sequence-motion-stability-board.svg",
+      "rejectedIterationManifest": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/rejected/iteration-01-warp-not-running/rejection-manifest.json"
+    },
+    "rejectionReason": "User visual review: sequence reads as local source-image distortion/warp, not front-facing running action."
+  },
+  "reviewer": "codex_v3_phase_a_review",
+  "reviewIndependence": "independent_record_required_by_v3",
+  "status": "visual_rejected",
+  "failures": [
+    "unreadable_action",
+    "source_pose_snapback",
+    "owner_motion_incoherent",
+    "bad_contact",
+    "local_transform_selected_for_large_action"
+  ],
+  "evidence": {
+    "semantic_owner_review_board": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/qa/semantic-owner-review-board.svg",
+    "occlusion_overlap_review_board": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/qa/occlusion-overlap-review-board.svg",
+    "contact_anchor_review_board": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/qa/contact-anchor-review-board.svg",
+    "contact_anchor_crop_sheet": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/qa/contact-anchor-crop-sheet.svg",
+    "local_repair_review_board": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/qa/local-repair-review-board.svg",
+    "local_repair_before_after_sheet": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/qa/local-repair-before-after-sheet.svg",
+    "sequence_motion_stability_board": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/qa/sequence-motion-stability-board.svg",
+    "rejectedIterationManifest": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/rejected/iteration-01-warp-not-running/rejection-manifest.json"
+  },
+  "rejectionReason": "User visual review: sequence reads as local source-image distortion/warp, not front-facing running action."
+}

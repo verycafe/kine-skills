@@ -1,0 +1,845 @@
+{
+  "format": "kinePose.selectedFrameRegistry",
+  "version": "0.1",
+  "date": "2026-06-18",
+  "taskId": "kine-pose-dev-v3-astronaut-front-run",
+  "policy": {
+    "reuseBeforeGenerate": true,
+    "doNotRegeneratePassedFrames": true,
+    "candidateBeforeSelected": true
+  },
+  "frames": [],
+  "status": "visual_rejected",
+  "rejectedFrames": [
+    {
+      "status": "visual_rejected",
+      "frameNo": "01",
+      "frameId": "pose_00",
+      "candidateSource": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/candidates_unverified/kine-pose-dev-v3-astronaut-front-run__frame_01__pose_00__role_character_candidate.png",
+      "selectedImage": null,
+      "poseReference": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/soft_controls/kine-pose-dev-v3-astronaut-front-run__frame_01__pose_00__role_soft_control_reference.png",
+      "visualGate": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/visual_gates/pose_00.json",
+      "controlVsCandidate": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/qa/kine-pose-dev-v3-astronaut-front-run__frame_01__pose_00__control-vs-candidate.jpg",
+      "generationProvenance": {
+        "method": "manual_source_preserving_edit",
+        "model": "PIL/Numpy source-preserving deformation fallback",
+        "sourceImages": [
+          "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/phase-a-v3/source.png"
+        ],
+        "controlImages": [
+          "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/soft_controls/kine-pose-dev-v3-astronaut-front-run__frame_01__pose_00__role_soft_control_reference.png"
+        ],
+        "promptSource": "phase-a-v3/animation-director-brief.json + phase-a-v3/per-frame-occlusion-plan.json",
+        "programmaticCharacterPixels": false,
+        "notes": "Source pixels were preserved and deformed for a Phase A review loop; no source master, rig, bones, or runtime animation was created."
+      },
+      "actionGateProfiles": [
+        "alternating_locomotion_gate",
+        "contact_support_gate",
+        "sequence_evidence_gate",
+        "action_plan_gate",
+        "source_framing_gate",
+        "soft_control_gate",
+        "canvas_stability_gate"
+      ],
+      "requiredVisualVerdicts": [
+        "phaseOwnership",
+        "phaseDistinctness",
+        "oppositeLimbCoordination",
+        "contactStability",
+        "supportContactAccuracy",
+        "contactShadowCoherence",
+        "sequenceEvidenceIntegrity",
+        "actionPlan",
+        "motionBeatsCovered",
+        "noEndpointTeleport",
+        "sourceIdentity",
+        "sourceFraming",
+        "fullBodyVisible",
+        "noCrop",
+        "noShrink",
+        "reviewIndependent",
+        "softControls",
+        "noHardSkeleton",
+        "stableCanvas"
+      ],
+      "requiredVisualEvidence": [
+        "visualReviewEvidence.sourceComparisonBoard",
+        "visualReviewEvidence.selectedFrameReview",
+        "sequenceReviewEvidence.motionStabilityReview"
+      ],
+      "doNotRegenerate": false,
+      "invalidatedSelectedImage": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/frames_selected_invalidated/iteration-01-warp-not-running/kine-pose-dev-v3-astronaut-front-run__frame_01__pose_00__selected.png",
+      "failures": [
+        "unreadable_action",
+        "source_pose_snapback",
+        "owner_motion_incoherent",
+        "bad_contact",
+        "local_transform_selected_for_large_action"
+      ],
+      "rejectionReason": "User visual review: sequence reads as local source-image distortion/warp, not front-facing running action."
+    },
+    {
+      "status": "visual_rejected",
+      "frameNo": "02",
+      "frameId": "pose_01",
+      "candidateSource": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/candidates_unverified/kine-pose-dev-v3-astronaut-front-run__frame_02__pose_01__role_character_candidate.png",
+      "selectedImage": null,
+      "poseReference": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/soft_controls/kine-pose-dev-v3-astronaut-front-run__frame_02__pose_01__role_soft_control_reference.png",
+      "visualGate": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/visual_gates/pose_01.json",
+      "controlVsCandidate": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/qa/kine-pose-dev-v3-astronaut-front-run__frame_02__pose_01__control-vs-candidate.jpg",
+      "generationProvenance": {
+        "method": "manual_source_preserving_edit",
+        "model": "PIL/Numpy source-preserving deformation fallback",
+        "sourceImages": [
+          "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/phase-a-v3/source.png"
+        ],
+        "controlImages": [
+          "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/soft_controls/kine-pose-dev-v3-astronaut-front-run__frame_02__pose_01__role_soft_control_reference.png"
+        ],
+        "promptSource": "phase-a-v3/animation-director-brief.json + phase-a-v3/per-frame-occlusion-plan.json",
+        "programmaticCharacterPixels": false,
+        "notes": "Source pixels were preserved and deformed for a Phase A review loop; no source master, rig, bones, or runtime animation was created."
+      },
+      "actionGateProfiles": [
+        "alternating_locomotion_gate",
+        "contact_support_gate",
+        "sequence_evidence_gate",
+        "action_plan_gate",
+        "source_framing_gate",
+        "soft_control_gate",
+        "canvas_stability_gate"
+      ],
+      "requiredVisualVerdicts": [
+        "phaseOwnership",
+        "phaseDistinctness",
+        "oppositeLimbCoordination",
+        "contactStability",
+        "supportContactAccuracy",
+        "contactShadowCoherence",
+        "sequenceEvidenceIntegrity",
+        "actionPlan",
+        "motionBeatsCovered",
+        "noEndpointTeleport",
+        "sourceIdentity",
+        "sourceFraming",
+        "fullBodyVisible",
+        "noCrop",
+        "noShrink",
+        "reviewIndependent",
+        "softControls",
+        "noHardSkeleton",
+        "stableCanvas"
+      ],
+      "requiredVisualEvidence": [
+        "visualReviewEvidence.sourceComparisonBoard",
+        "visualReviewEvidence.selectedFrameReview",
+        "sequenceReviewEvidence.motionStabilityReview"
+      ],
+      "doNotRegenerate": false,
+      "invalidatedSelectedImage": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/frames_selected_invalidated/iteration-01-warp-not-running/kine-pose-dev-v3-astronaut-front-run__frame_02__pose_01__selected.png",
+      "failures": [
+        "unreadable_action",
+        "source_pose_snapback",
+        "owner_motion_incoherent",
+        "bad_contact",
+        "local_transform_selected_for_large_action"
+      ],
+      "rejectionReason": "User visual review: sequence reads as local source-image distortion/warp, not front-facing running action."
+    },
+    {
+      "status": "visual_rejected",
+      "frameNo": "03",
+      "frameId": "pose_02",
+      "candidateSource": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/candidates_unverified/kine-pose-dev-v3-astronaut-front-run__frame_03__pose_02__role_character_candidate.png",
+      "selectedImage": null,
+      "poseReference": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/soft_controls/kine-pose-dev-v3-astronaut-front-run__frame_03__pose_02__role_soft_control_reference.png",
+      "visualGate": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/visual_gates/pose_02.json",
+      "controlVsCandidate": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/qa/kine-pose-dev-v3-astronaut-front-run__frame_03__pose_02__control-vs-candidate.jpg",
+      "generationProvenance": {
+        "method": "manual_source_preserving_edit",
+        "model": "PIL/Numpy source-preserving deformation fallback",
+        "sourceImages": [
+          "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/phase-a-v3/source.png"
+        ],
+        "controlImages": [
+          "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/soft_controls/kine-pose-dev-v3-astronaut-front-run__frame_03__pose_02__role_soft_control_reference.png"
+        ],
+        "promptSource": "phase-a-v3/animation-director-brief.json + phase-a-v3/per-frame-occlusion-plan.json",
+        "programmaticCharacterPixels": false,
+        "notes": "Source pixels were preserved and deformed for a Phase A review loop; no source master, rig, bones, or runtime animation was created."
+      },
+      "actionGateProfiles": [
+        "alternating_locomotion_gate",
+        "contact_support_gate",
+        "sequence_evidence_gate",
+        "action_plan_gate",
+        "source_framing_gate",
+        "soft_control_gate",
+        "canvas_stability_gate"
+      ],
+      "requiredVisualVerdicts": [
+        "phaseOwnership",
+        "phaseDistinctness",
+        "oppositeLimbCoordination",
+        "contactStability",
+        "supportContactAccuracy",
+        "contactShadowCoherence",
+        "sequenceEvidenceIntegrity",
+        "actionPlan",
+        "motionBeatsCovered",
+        "noEndpointTeleport",
+        "sourceIdentity",
+        "sourceFraming",
+        "fullBodyVisible",
+        "noCrop",
+        "noShrink",
+        "reviewIndependent",
+        "softControls",
+        "noHardSkeleton",
+        "stableCanvas"
+      ],
+      "requiredVisualEvidence": [
+        "visualReviewEvidence.sourceComparisonBoard",
+        "visualReviewEvidence.selectedFrameReview",
+        "sequenceReviewEvidence.motionStabilityReview"
+      ],
+      "doNotRegenerate": false,
+      "invalidatedSelectedImage": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/frames_selected_invalidated/iteration-01-warp-not-running/kine-pose-dev-v3-astronaut-front-run__frame_03__pose_02__selected.png",
+      "failures": [
+        "unreadable_action",
+        "source_pose_snapback",
+        "owner_motion_incoherent",
+        "bad_contact",
+        "local_transform_selected_for_large_action"
+      ],
+      "rejectionReason": "User visual review: sequence reads as local source-image distortion/warp, not front-facing running action."
+    },
+    {
+      "status": "visual_rejected",
+      "frameNo": "04",
+      "frameId": "pose_03",
+      "candidateSource": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/candidates_unverified/kine-pose-dev-v3-astronaut-front-run__frame_04__pose_03__role_character_candidate.png",
+      "selectedImage": null,
+      "poseReference": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/soft_controls/kine-pose-dev-v3-astronaut-front-run__frame_04__pose_03__role_soft_control_reference.png",
+      "visualGate": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/visual_gates/pose_03.json",
+      "controlVsCandidate": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/qa/kine-pose-dev-v3-astronaut-front-run__frame_04__pose_03__control-vs-candidate.jpg",
+      "generationProvenance": {
+        "method": "manual_source_preserving_edit",
+        "model": "PIL/Numpy source-preserving deformation fallback",
+        "sourceImages": [
+          "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/phase-a-v3/source.png"
+        ],
+        "controlImages": [
+          "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/soft_controls/kine-pose-dev-v3-astronaut-front-run__frame_04__pose_03__role_soft_control_reference.png"
+        ],
+        "promptSource": "phase-a-v3/animation-director-brief.json + phase-a-v3/per-frame-occlusion-plan.json",
+        "programmaticCharacterPixels": false,
+        "notes": "Source pixels were preserved and deformed for a Phase A review loop; no source master, rig, bones, or runtime animation was created."
+      },
+      "actionGateProfiles": [
+        "alternating_locomotion_gate",
+        "contact_support_gate",
+        "sequence_evidence_gate",
+        "action_plan_gate",
+        "source_framing_gate",
+        "soft_control_gate",
+        "canvas_stability_gate"
+      ],
+      "requiredVisualVerdicts": [
+        "phaseOwnership",
+        "phaseDistinctness",
+        "oppositeLimbCoordination",
+        "contactStability",
+        "supportContactAccuracy",
+        "contactShadowCoherence",
+        "sequenceEvidenceIntegrity",
+        "actionPlan",
+        "motionBeatsCovered",
+        "noEndpointTeleport",
+        "sourceIdentity",
+        "sourceFraming",
+        "fullBodyVisible",
+        "noCrop",
+        "noShrink",
+        "reviewIndependent",
+        "softControls",
+        "noHardSkeleton",
+        "stableCanvas"
+      ],
+      "requiredVisualEvidence": [
+        "visualReviewEvidence.sourceComparisonBoard",
+        "visualReviewEvidence.selectedFrameReview",
+        "sequenceReviewEvidence.motionStabilityReview"
+      ],
+      "doNotRegenerate": false,
+      "invalidatedSelectedImage": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/frames_selected_invalidated/iteration-01-warp-not-running/kine-pose-dev-v3-astronaut-front-run__frame_04__pose_03__selected.png",
+      "failures": [
+        "unreadable_action",
+        "source_pose_snapback",
+        "owner_motion_incoherent",
+        "bad_contact",
+        "local_transform_selected_for_large_action"
+      ],
+      "rejectionReason": "User visual review: sequence reads as local source-image distortion/warp, not front-facing running action."
+    },
+    {
+      "status": "visual_rejected",
+      "frameNo": "05",
+      "frameId": "pose_04",
+      "candidateSource": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/candidates_unverified/kine-pose-dev-v3-astronaut-front-run__frame_05__pose_04__role_character_candidate.png",
+      "selectedImage": null,
+      "poseReference": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/soft_controls/kine-pose-dev-v3-astronaut-front-run__frame_05__pose_04__role_soft_control_reference.png",
+      "visualGate": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/visual_gates/pose_04.json",
+      "controlVsCandidate": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/qa/kine-pose-dev-v3-astronaut-front-run__frame_05__pose_04__control-vs-candidate.jpg",
+      "generationProvenance": {
+        "method": "manual_source_preserving_edit",
+        "model": "PIL/Numpy source-preserving deformation fallback",
+        "sourceImages": [
+          "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/phase-a-v3/source.png"
+        ],
+        "controlImages": [
+          "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/soft_controls/kine-pose-dev-v3-astronaut-front-run__frame_05__pose_04__role_soft_control_reference.png"
+        ],
+        "promptSource": "phase-a-v3/animation-director-brief.json + phase-a-v3/per-frame-occlusion-plan.json",
+        "programmaticCharacterPixels": false,
+        "notes": "Source pixels were preserved and deformed for a Phase A review loop; no source master, rig, bones, or runtime animation was created."
+      },
+      "actionGateProfiles": [
+        "alternating_locomotion_gate",
+        "contact_support_gate",
+        "sequence_evidence_gate",
+        "action_plan_gate",
+        "source_framing_gate",
+        "soft_control_gate",
+        "canvas_stability_gate"
+      ],
+      "requiredVisualVerdicts": [
+        "phaseOwnership",
+        "phaseDistinctness",
+        "oppositeLimbCoordination",
+        "contactStability",
+        "supportContactAccuracy",
+        "contactShadowCoherence",
+        "sequenceEvidenceIntegrity",
+        "actionPlan",
+        "motionBeatsCovered",
+        "noEndpointTeleport",
+        "sourceIdentity",
+        "sourceFraming",
+        "fullBodyVisible",
+        "noCrop",
+        "noShrink",
+        "reviewIndependent",
+        "softControls",
+        "noHardSkeleton",
+        "stableCanvas"
+      ],
+      "requiredVisualEvidence": [
+        "visualReviewEvidence.sourceComparisonBoard",
+        "visualReviewEvidence.selectedFrameReview",
+        "sequenceReviewEvidence.motionStabilityReview"
+      ],
+      "doNotRegenerate": false,
+      "invalidatedSelectedImage": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/frames_selected_invalidated/iteration-01-warp-not-running/kine-pose-dev-v3-astronaut-front-run__frame_05__pose_04__selected.png",
+      "failures": [
+        "unreadable_action",
+        "source_pose_snapback",
+        "owner_motion_incoherent",
+        "bad_contact",
+        "local_transform_selected_for_large_action"
+      ],
+      "rejectionReason": "User visual review: sequence reads as local source-image distortion/warp, not front-facing running action."
+    },
+    {
+      "status": "visual_rejected",
+      "frameNo": "06",
+      "frameId": "pose_05",
+      "candidateSource": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/candidates_unverified/kine-pose-dev-v3-astronaut-front-run__frame_06__pose_05__role_character_candidate.png",
+      "selectedImage": null,
+      "poseReference": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/soft_controls/kine-pose-dev-v3-astronaut-front-run__frame_06__pose_05__role_soft_control_reference.png",
+      "visualGate": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/visual_gates/pose_05.json",
+      "controlVsCandidate": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/qa/kine-pose-dev-v3-astronaut-front-run__frame_06__pose_05__control-vs-candidate.jpg",
+      "generationProvenance": {
+        "method": "manual_source_preserving_edit",
+        "model": "PIL/Numpy source-preserving deformation fallback",
+        "sourceImages": [
+          "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/phase-a-v3/source.png"
+        ],
+        "controlImages": [
+          "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/soft_controls/kine-pose-dev-v3-astronaut-front-run__frame_06__pose_05__role_soft_control_reference.png"
+        ],
+        "promptSource": "phase-a-v3/animation-director-brief.json + phase-a-v3/per-frame-occlusion-plan.json",
+        "programmaticCharacterPixels": false,
+        "notes": "Source pixels were preserved and deformed for a Phase A review loop; no source master, rig, bones, or runtime animation was created."
+      },
+      "actionGateProfiles": [
+        "alternating_locomotion_gate",
+        "contact_support_gate",
+        "sequence_evidence_gate",
+        "action_plan_gate",
+        "source_framing_gate",
+        "soft_control_gate",
+        "canvas_stability_gate"
+      ],
+      "requiredVisualVerdicts": [
+        "phaseOwnership",
+        "phaseDistinctness",
+        "oppositeLimbCoordination",
+        "contactStability",
+        "supportContactAccuracy",
+        "contactShadowCoherence",
+        "sequenceEvidenceIntegrity",
+        "actionPlan",
+        "motionBeatsCovered",
+        "noEndpointTeleport",
+        "sourceIdentity",
+        "sourceFraming",
+        "fullBodyVisible",
+        "noCrop",
+        "noShrink",
+        "reviewIndependent",
+        "softControls",
+        "noHardSkeleton",
+        "stableCanvas"
+      ],
+      "requiredVisualEvidence": [
+        "visualReviewEvidence.sourceComparisonBoard",
+        "visualReviewEvidence.selectedFrameReview",
+        "sequenceReviewEvidence.motionStabilityReview"
+      ],
+      "doNotRegenerate": false,
+      "invalidatedSelectedImage": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/frames_selected_invalidated/iteration-01-warp-not-running/kine-pose-dev-v3-astronaut-front-run__frame_06__pose_05__selected.png",
+      "failures": [
+        "unreadable_action",
+        "source_pose_snapback",
+        "owner_motion_incoherent",
+        "bad_contact",
+        "local_transform_selected_for_large_action"
+      ],
+      "rejectionReason": "User visual review: sequence reads as local source-image distortion/warp, not front-facing running action."
+    },
+    {
+      "status": "visual_rejected",
+      "frameNo": "07",
+      "frameId": "pose_06",
+      "candidateSource": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/candidates_unverified/kine-pose-dev-v3-astronaut-front-run__frame_07__pose_06__role_character_candidate.png",
+      "selectedImage": null,
+      "poseReference": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/soft_controls/kine-pose-dev-v3-astronaut-front-run__frame_07__pose_06__role_soft_control_reference.png",
+      "visualGate": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/visual_gates/pose_06.json",
+      "controlVsCandidate": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/qa/kine-pose-dev-v3-astronaut-front-run__frame_07__pose_06__control-vs-candidate.jpg",
+      "generationProvenance": {
+        "method": "manual_source_preserving_edit",
+        "model": "PIL/Numpy source-preserving deformation fallback",
+        "sourceImages": [
+          "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/phase-a-v3/source.png"
+        ],
+        "controlImages": [
+          "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/soft_controls/kine-pose-dev-v3-astronaut-front-run__frame_07__pose_06__role_soft_control_reference.png"
+        ],
+        "promptSource": "phase-a-v3/animation-director-brief.json + phase-a-v3/per-frame-occlusion-plan.json",
+        "programmaticCharacterPixels": false,
+        "notes": "Source pixels were preserved and deformed for a Phase A review loop; no source master, rig, bones, or runtime animation was created."
+      },
+      "actionGateProfiles": [
+        "alternating_locomotion_gate",
+        "contact_support_gate",
+        "sequence_evidence_gate",
+        "action_plan_gate",
+        "source_framing_gate",
+        "soft_control_gate",
+        "canvas_stability_gate"
+      ],
+      "requiredVisualVerdicts": [
+        "phaseOwnership",
+        "phaseDistinctness",
+        "oppositeLimbCoordination",
+        "contactStability",
+        "supportContactAccuracy",
+        "contactShadowCoherence",
+        "sequenceEvidenceIntegrity",
+        "actionPlan",
+        "motionBeatsCovered",
+        "noEndpointTeleport",
+        "sourceIdentity",
+        "sourceFraming",
+        "fullBodyVisible",
+        "noCrop",
+        "noShrink",
+        "reviewIndependent",
+        "softControls",
+        "noHardSkeleton",
+        "stableCanvas"
+      ],
+      "requiredVisualEvidence": [
+        "visualReviewEvidence.sourceComparisonBoard",
+        "visualReviewEvidence.selectedFrameReview",
+        "sequenceReviewEvidence.motionStabilityReview"
+      ],
+      "doNotRegenerate": false,
+      "invalidatedSelectedImage": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/frames_selected_invalidated/iteration-01-warp-not-running/kine-pose-dev-v3-astronaut-front-run__frame_07__pose_06__selected.png",
+      "failures": [
+        "unreadable_action",
+        "source_pose_snapback",
+        "owner_motion_incoherent",
+        "bad_contact",
+        "local_transform_selected_for_large_action"
+      ],
+      "rejectionReason": "User visual review: sequence reads as local source-image distortion/warp, not front-facing running action."
+    },
+    {
+      "status": "visual_rejected",
+      "frameNo": "08",
+      "frameId": "pose_07",
+      "candidateSource": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/candidates_unverified/kine-pose-dev-v3-astronaut-front-run__frame_08__pose_07__role_character_candidate.png",
+      "selectedImage": null,
+      "poseReference": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/soft_controls/kine-pose-dev-v3-astronaut-front-run__frame_08__pose_07__role_soft_control_reference.png",
+      "visualGate": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/visual_gates/pose_07.json",
+      "controlVsCandidate": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/qa/kine-pose-dev-v3-astronaut-front-run__frame_08__pose_07__control-vs-candidate.jpg",
+      "generationProvenance": {
+        "method": "manual_source_preserving_edit",
+        "model": "PIL/Numpy source-preserving deformation fallback",
+        "sourceImages": [
+          "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/phase-a-v3/source.png"
+        ],
+        "controlImages": [
+          "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/soft_controls/kine-pose-dev-v3-astronaut-front-run__frame_08__pose_07__role_soft_control_reference.png"
+        ],
+        "promptSource": "phase-a-v3/animation-director-brief.json + phase-a-v3/per-frame-occlusion-plan.json",
+        "programmaticCharacterPixels": false,
+        "notes": "Source pixels were preserved and deformed for a Phase A review loop; no source master, rig, bones, or runtime animation was created."
+      },
+      "actionGateProfiles": [
+        "alternating_locomotion_gate",
+        "contact_support_gate",
+        "sequence_evidence_gate",
+        "action_plan_gate",
+        "source_framing_gate",
+        "soft_control_gate",
+        "canvas_stability_gate"
+      ],
+      "requiredVisualVerdicts": [
+        "phaseOwnership",
+        "phaseDistinctness",
+        "oppositeLimbCoordination",
+        "contactStability",
+        "supportContactAccuracy",
+        "contactShadowCoherence",
+        "sequenceEvidenceIntegrity",
+        "actionPlan",
+        "motionBeatsCovered",
+        "noEndpointTeleport",
+        "sourceIdentity",
+        "sourceFraming",
+        "fullBodyVisible",
+        "noCrop",
+        "noShrink",
+        "reviewIndependent",
+        "softControls",
+        "noHardSkeleton",
+        "stableCanvas"
+      ],
+      "requiredVisualEvidence": [
+        "visualReviewEvidence.sourceComparisonBoard",
+        "visualReviewEvidence.selectedFrameReview",
+        "sequenceReviewEvidence.motionStabilityReview"
+      ],
+      "doNotRegenerate": false,
+      "invalidatedSelectedImage": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/frames_selected_invalidated/iteration-01-warp-not-running/kine-pose-dev-v3-astronaut-front-run__frame_08__pose_07__selected.png",
+      "failures": [
+        "unreadable_action",
+        "source_pose_snapback",
+        "owner_motion_incoherent",
+        "bad_contact",
+        "local_transform_selected_for_large_action"
+      ],
+      "rejectionReason": "User visual review: sequence reads as local source-image distortion/warp, not front-facing running action."
+    },
+    {
+      "status": "visual_rejected",
+      "frameNo": "09",
+      "frameId": "pose_08",
+      "candidateSource": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/candidates_unverified/kine-pose-dev-v3-astronaut-front-run__frame_09__pose_08__role_character_candidate.png",
+      "selectedImage": null,
+      "poseReference": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/soft_controls/kine-pose-dev-v3-astronaut-front-run__frame_09__pose_08__role_soft_control_reference.png",
+      "visualGate": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/visual_gates/pose_08.json",
+      "controlVsCandidate": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/qa/kine-pose-dev-v3-astronaut-front-run__frame_09__pose_08__control-vs-candidate.jpg",
+      "generationProvenance": {
+        "method": "manual_source_preserving_edit",
+        "model": "PIL/Numpy source-preserving deformation fallback",
+        "sourceImages": [
+          "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/phase-a-v3/source.png"
+        ],
+        "controlImages": [
+          "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/soft_controls/kine-pose-dev-v3-astronaut-front-run__frame_09__pose_08__role_soft_control_reference.png"
+        ],
+        "promptSource": "phase-a-v3/animation-director-brief.json + phase-a-v3/per-frame-occlusion-plan.json",
+        "programmaticCharacterPixels": false,
+        "notes": "Source pixels were preserved and deformed for a Phase A review loop; no source master, rig, bones, or runtime animation was created."
+      },
+      "actionGateProfiles": [
+        "alternating_locomotion_gate",
+        "contact_support_gate",
+        "sequence_evidence_gate",
+        "action_plan_gate",
+        "source_framing_gate",
+        "soft_control_gate",
+        "canvas_stability_gate"
+      ],
+      "requiredVisualVerdicts": [
+        "phaseOwnership",
+        "phaseDistinctness",
+        "oppositeLimbCoordination",
+        "contactStability",
+        "supportContactAccuracy",
+        "contactShadowCoherence",
+        "sequenceEvidenceIntegrity",
+        "actionPlan",
+        "motionBeatsCovered",
+        "noEndpointTeleport",
+        "sourceIdentity",
+        "sourceFraming",
+        "fullBodyVisible",
+        "noCrop",
+        "noShrink",
+        "reviewIndependent",
+        "softControls",
+        "noHardSkeleton",
+        "stableCanvas"
+      ],
+      "requiredVisualEvidence": [
+        "visualReviewEvidence.sourceComparisonBoard",
+        "visualReviewEvidence.selectedFrameReview",
+        "sequenceReviewEvidence.motionStabilityReview"
+      ],
+      "doNotRegenerate": false,
+      "invalidatedSelectedImage": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/frames_selected_invalidated/iteration-01-warp-not-running/kine-pose-dev-v3-astronaut-front-run__frame_09__pose_08__selected.png",
+      "failures": [
+        "unreadable_action",
+        "source_pose_snapback",
+        "owner_motion_incoherent",
+        "bad_contact",
+        "local_transform_selected_for_large_action"
+      ],
+      "rejectionReason": "User visual review: sequence reads as local source-image distortion/warp, not front-facing running action."
+    },
+    {
+      "status": "visual_rejected",
+      "frameNo": "10",
+      "frameId": "pose_09",
+      "candidateSource": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/candidates_unverified/kine-pose-dev-v3-astronaut-front-run__frame_10__pose_09__role_character_candidate.png",
+      "selectedImage": null,
+      "poseReference": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/soft_controls/kine-pose-dev-v3-astronaut-front-run__frame_10__pose_09__role_soft_control_reference.png",
+      "visualGate": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/visual_gates/pose_09.json",
+      "controlVsCandidate": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/qa/kine-pose-dev-v3-astronaut-front-run__frame_10__pose_09__control-vs-candidate.jpg",
+      "generationProvenance": {
+        "method": "manual_source_preserving_edit",
+        "model": "PIL/Numpy source-preserving deformation fallback",
+        "sourceImages": [
+          "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/phase-a-v3/source.png"
+        ],
+        "controlImages": [
+          "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/soft_controls/kine-pose-dev-v3-astronaut-front-run__frame_10__pose_09__role_soft_control_reference.png"
+        ],
+        "promptSource": "phase-a-v3/animation-director-brief.json + phase-a-v3/per-frame-occlusion-plan.json",
+        "programmaticCharacterPixels": false,
+        "notes": "Source pixels were preserved and deformed for a Phase A review loop; no source master, rig, bones, or runtime animation was created."
+      },
+      "actionGateProfiles": [
+        "alternating_locomotion_gate",
+        "contact_support_gate",
+        "sequence_evidence_gate",
+        "action_plan_gate",
+        "source_framing_gate",
+        "soft_control_gate",
+        "canvas_stability_gate"
+      ],
+      "requiredVisualVerdicts": [
+        "phaseOwnership",
+        "phaseDistinctness",
+        "oppositeLimbCoordination",
+        "contactStability",
+        "supportContactAccuracy",
+        "contactShadowCoherence",
+        "sequenceEvidenceIntegrity",
+        "actionPlan",
+        "motionBeatsCovered",
+        "noEndpointTeleport",
+        "sourceIdentity",
+        "sourceFraming",
+        "fullBodyVisible",
+        "noCrop",
+        "noShrink",
+        "reviewIndependent",
+        "softControls",
+        "noHardSkeleton",
+        "stableCanvas"
+      ],
+      "requiredVisualEvidence": [
+        "visualReviewEvidence.sourceComparisonBoard",
+        "visualReviewEvidence.selectedFrameReview",
+        "sequenceReviewEvidence.motionStabilityReview"
+      ],
+      "doNotRegenerate": false,
+      "invalidatedSelectedImage": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/frames_selected_invalidated/iteration-01-warp-not-running/kine-pose-dev-v3-astronaut-front-run__frame_10__pose_09__selected.png",
+      "failures": [
+        "unreadable_action",
+        "source_pose_snapback",
+        "owner_motion_incoherent",
+        "bad_contact",
+        "local_transform_selected_for_large_action"
+      ],
+      "rejectionReason": "User visual review: sequence reads as local source-image distortion/warp, not front-facing running action."
+    },
+    {
+      "status": "visual_rejected",
+      "frameNo": "11",
+      "frameId": "pose_10",
+      "candidateSource": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/candidates_unverified/kine-pose-dev-v3-astronaut-front-run__frame_11__pose_10__role_character_candidate.png",
+      "selectedImage": null,
+      "poseReference": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/soft_controls/kine-pose-dev-v3-astronaut-front-run__frame_11__pose_10__role_soft_control_reference.png",
+      "visualGate": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/visual_gates/pose_10.json",
+      "controlVsCandidate": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/qa/kine-pose-dev-v3-astronaut-front-run__frame_11__pose_10__control-vs-candidate.jpg",
+      "generationProvenance": {
+        "method": "manual_source_preserving_edit",
+        "model": "PIL/Numpy source-preserving deformation fallback",
+        "sourceImages": [
+          "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/phase-a-v3/source.png"
+        ],
+        "controlImages": [
+          "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/soft_controls/kine-pose-dev-v3-astronaut-front-run__frame_11__pose_10__role_soft_control_reference.png"
+        ],
+        "promptSource": "phase-a-v3/animation-director-brief.json + phase-a-v3/per-frame-occlusion-plan.json",
+        "programmaticCharacterPixels": false,
+        "notes": "Source pixels were preserved and deformed for a Phase A review loop; no source master, rig, bones, or runtime animation was created."
+      },
+      "actionGateProfiles": [
+        "alternating_locomotion_gate",
+        "contact_support_gate",
+        "sequence_evidence_gate",
+        "action_plan_gate",
+        "source_framing_gate",
+        "soft_control_gate",
+        "canvas_stability_gate"
+      ],
+      "requiredVisualVerdicts": [
+        "phaseOwnership",
+        "phaseDistinctness",
+        "oppositeLimbCoordination",
+        "contactStability",
+        "supportContactAccuracy",
+        "contactShadowCoherence",
+        "sequenceEvidenceIntegrity",
+        "actionPlan",
+        "motionBeatsCovered",
+        "noEndpointTeleport",
+        "sourceIdentity",
+        "sourceFraming",
+        "fullBodyVisible",
+        "noCrop",
+        "noShrink",
+        "reviewIndependent",
+        "softControls",
+        "noHardSkeleton",
+        "stableCanvas"
+      ],
+      "requiredVisualEvidence": [
+        "visualReviewEvidence.sourceComparisonBoard",
+        "visualReviewEvidence.selectedFrameReview",
+        "sequenceReviewEvidence.motionStabilityReview"
+      ],
+      "doNotRegenerate": false,
+      "invalidatedSelectedImage": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/frames_selected_invalidated/iteration-01-warp-not-running/kine-pose-dev-v3-astronaut-front-run__frame_11__pose_10__selected.png",
+      "failures": [
+        "unreadable_action",
+        "source_pose_snapback",
+        "owner_motion_incoherent",
+        "bad_contact",
+        "local_transform_selected_for_large_action"
+      ],
+      "rejectionReason": "User visual review: sequence reads as local source-image distortion/warp, not front-facing running action."
+    },
+    {
+      "status": "visual_rejected",
+      "frameNo": "12",
+      "frameId": "pose_11",
+      "candidateSource": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/candidates_unverified/kine-pose-dev-v3-astronaut-front-run__frame_12__pose_11__role_character_candidate.png",
+      "selectedImage": null,
+      "poseReference": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/soft_controls/kine-pose-dev-v3-astronaut-front-run__frame_12__pose_11__role_soft_control_reference.png",
+      "visualGate": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/visual_gates/pose_11.json",
+      "controlVsCandidate": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/qa/kine-pose-dev-v3-astronaut-front-run__frame_12__pose_11__control-vs-candidate.jpg",
+      "generationProvenance": {
+        "method": "manual_source_preserving_edit",
+        "model": "PIL/Numpy source-preserving deformation fallback",
+        "sourceImages": [
+          "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/phase-a-v3/source.png"
+        ],
+        "controlImages": [
+          "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/soft_controls/kine-pose-dev-v3-astronaut-front-run__frame_12__pose_11__role_soft_control_reference.png"
+        ],
+        "promptSource": "phase-a-v3/animation-director-brief.json + phase-a-v3/per-frame-occlusion-plan.json",
+        "programmaticCharacterPixels": false,
+        "notes": "Source pixels were preserved and deformed for a Phase A review loop; no source master, rig, bones, or runtime animation was created."
+      },
+      "actionGateProfiles": [
+        "alternating_locomotion_gate",
+        "contact_support_gate",
+        "sequence_evidence_gate",
+        "action_plan_gate",
+        "source_framing_gate",
+        "soft_control_gate",
+        "canvas_stability_gate"
+      ],
+      "requiredVisualVerdicts": [
+        "phaseOwnership",
+        "phaseDistinctness",
+        "oppositeLimbCoordination",
+        "contactStability",
+        "supportContactAccuracy",
+        "contactShadowCoherence",
+        "sequenceEvidenceIntegrity",
+        "actionPlan",
+        "motionBeatsCovered",
+        "noEndpointTeleport",
+        "sourceIdentity",
+        "sourceFraming",
+        "fullBodyVisible",
+        "noCrop",
+        "noShrink",
+        "reviewIndependent",
+        "softControls",
+        "noHardSkeleton",
+        "stableCanvas"
+      ],
+      "requiredVisualEvidence": [
+        "visualReviewEvidence.sourceComparisonBoard",
+        "visualReviewEvidence.selectedFrameReview",
+        "sequenceReviewEvidence.motionStabilityReview"
+      ],
+      "doNotRegenerate": false,
+      "invalidatedSelectedImage": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/frames_selected_invalidated/iteration-01-warp-not-running/kine-pose-dev-v3-astronaut-front-run__frame_12__pose_11__selected.png",
+      "failures": [
+        "unreadable_action",
+        "source_pose_snapback",
+        "owner_motion_incoherent",
+        "bad_contact",
+        "local_transform_selected_for_large_action"
+      ],
+      "rejectionReason": "User visual review: sequence reads as local source-image distortion/warp, not front-facing running action."
+    }
+  ],
+  "rejection": {
+    "iteration": "iteration-01-warp-not-running",
+    "date": "2026-06-18",
+    "failures": [
+      "unreadable_action",
+      "source_pose_snapback",
+      "owner_motion_incoherent",
+      "bad_contact",
+      "local_transform_selected_for_large_action"
+    ],
+    "reason": "User visual review: sequence reads as local source-image distortion/warp, not front-facing running action.",
+    "archivedEvidenceDir": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/rejected/iteration-01-warp-not-running",
+    "invalidatedFramesDir": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/frames_selected_invalidated/iteration-01-warp-not-running"
+  }
+}

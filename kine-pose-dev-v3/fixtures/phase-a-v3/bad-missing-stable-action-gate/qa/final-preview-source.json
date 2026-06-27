@@ -1,0 +1,21 @@
+{
+  "taskId": "phase-a-v3-fixture",
+  "previews": [
+    {
+      "role": "final_sequence_gif",
+      "path": "check/final.gif"
+    },
+    {
+      "role": "final_sequence_gif_strip",
+      "path": "check/final-strip.png"
+    },
+    {
+      "role": "final_sequence_board",
+      "path": "sheets/final-board.png"
+    },
+    {
+      "role": "selected_frames_preview",
+      "path": "frames_selected/pose_00-selected.png"
+    }
+  ]
+}

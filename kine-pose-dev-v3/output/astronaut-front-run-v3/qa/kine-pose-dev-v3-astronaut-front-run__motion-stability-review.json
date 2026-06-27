@@ -1,0 +1,9 @@
+{
+  "format": "kinePose.motionStabilityReview",
+  "version": "0.1",
+  "taskId": "kine-pose-dev-v3-astronaut-front-run",
+  "status": "pass",
+  "failures": [],
+  "reviewer": "codex_sequence_review",
+  "notes": "Canvas remains 1024x1536. Character runs in place with alternating support contacts and body bob."
+}

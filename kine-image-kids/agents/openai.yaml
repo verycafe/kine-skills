@@ -1,0 +1,4 @@
+interface:
+  display_name: "Kine Kids Image"
+  short_description: "Generate rounded kids-game images in one style"
+  default_prompt: "Use $kine-image-kids to generate a children educational game image from my scene, character, object, or prop brief while preserving the KINE-KIDS rounded flat style."

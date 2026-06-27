@@ -1,0 +1,21 @@
+{
+  "taskId": "phase-a-v3-fixture",
+  "previews": [
+    {
+      "role": "character_candidate",
+      "path": "candidates_unverified/pose_00-candidate.png"
+    },
+    {
+      "role": "final_sequence_gif_strip",
+      "path": "check/final-strip.png"
+    },
+    {
+      "role": "final_sequence_board",
+      "path": "sheets/final-board.png"
+    },
+    {
+      "role": "selected_frames_preview",
+      "path": "frames_selected/pose_00-selected.png"
+    }
+  ]
+}

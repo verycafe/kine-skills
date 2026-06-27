@@ -1,0 +1,103 @@
+{
+  "format": "kinePose.downstreamLlmHandoff",
+  "version": "0.1",
+  "date": "2026-06-18",
+  "taskId": "kine-pose-dev-v3-astronaut-front-run",
+  "status": "planning_evidence_after_clean_precompose_audit_pending_user_acceptance",
+  "purpose": "Use clean selected sequence frames and GIF evidence to help a downstream LLM reason about component splitting, missing source art, drawing optimization, rigging, parameters, and runtime animation contracts. This handoff is not a source master, component ledger, rig, bone setup, or timeline.",
+  "sourceEvidence": {
+    "board": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/sheets/astronaut-front-run-v3-board.png",
+    "gif": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/check/astronaut-front-run-v3.gif",
+    "strip": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/check/astronaut-front-run-v3-strip.png",
+    "motionGateReview": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/qa/astronaut-front-run-v3-motion-gate-review.json"
+  },
+  "frames": [
+    {
+      "frameNo": "01",
+      "frameId": "pose_00",
+      "selectedImage": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/frames_selected/kine-pose-dev-v3-astronaut-front-run__frame_01__pose_00__selected.png",
+      "poseReference": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/soft_controls/kine-pose-dev-v3-astronaut-front-run__frame_01__pose_00__role_soft_control_reference.png"
+    },
+    {
+      "frameNo": "02",
+      "frameId": "pose_01",
+      "selectedImage": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/frames_selected/kine-pose-dev-v3-astronaut-front-run__frame_02__pose_01__selected.png",
+      "poseReference": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/soft_controls/kine-pose-dev-v3-astronaut-front-run__frame_02__pose_01__role_soft_control_reference.png"
+    },
+    {
+      "frameNo": "03",
+      "frameId": "pose_02",
+      "selectedImage": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/frames_selected/kine-pose-dev-v3-astronaut-front-run__frame_03__pose_02__selected.png",
+      "poseReference": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/soft_controls/kine-pose-dev-v3-astronaut-front-run__frame_03__pose_02__role_soft_control_reference.png"
+    },
+    {
+      "frameNo": "04",
+      "frameId": "pose_03",
+      "selectedImage": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/frames_selected/kine-pose-dev-v3-astronaut-front-run__frame_04__pose_03__selected.png",
+      "poseReference": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/soft_controls/kine-pose-dev-v3-astronaut-front-run__frame_04__pose_03__role_soft_control_reference.png"
+    },
+    {
+      "frameNo": "05",
+      "frameId": "pose_04",
+      "selectedImage": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/frames_selected/kine-pose-dev-v3-astronaut-front-run__frame_05__pose_04__selected.png",
+      "poseReference": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/soft_controls/kine-pose-dev-v3-astronaut-front-run__frame_05__pose_04__role_soft_control_reference.png"
+    },
+    {
+      "frameNo": "06",
+      "frameId": "pose_05",
+      "selectedImage": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/frames_selected/kine-pose-dev-v3-astronaut-front-run__frame_06__pose_05__selected.png",
+      "poseReference": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/soft_controls/kine-pose-dev-v3-astronaut-front-run__frame_06__pose_05__role_soft_control_reference.png"
+    },
+    {
+      "frameNo": "07",
+      "frameId": "pose_06",
+      "selectedImage": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/frames_selected/kine-pose-dev-v3-astronaut-front-run__frame_07__pose_06__selected.png",
+      "poseReference": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/soft_controls/kine-pose-dev-v3-astronaut-front-run__frame_07__pose_06__role_soft_control_reference.png"
+    },
+    {
+      "frameNo": "08",
+      "frameId": "pose_07",
+      "selectedImage": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/frames_selected/kine-pose-dev-v3-astronaut-front-run__frame_08__pose_07__selected.png",
+      "poseReference": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/soft_controls/kine-pose-dev-v3-astronaut-front-run__frame_08__pose_07__role_soft_control_reference.png"
+    },
+    {
+      "frameNo": "09",
+      "frameId": "pose_08",
+      "selectedImage": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/frames_selected/kine-pose-dev-v3-astronaut-front-run__frame_09__pose_08__selected.png",
+      "poseReference": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/soft_controls/kine-pose-dev-v3-astronaut-front-run__frame_09__pose_08__role_soft_control_reference.png"
+    },
+    {
+      "frameNo": "10",
+      "frameId": "pose_09",
+      "selectedImage": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/frames_selected/kine-pose-dev-v3-astronaut-front-run__frame_10__pose_09__selected.png",
+      "poseReference": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/soft_controls/kine-pose-dev-v3-astronaut-front-run__frame_10__pose_09__role_soft_control_reference.png"
+    },
+    {
+      "frameNo": "11",
+      "frameId": "pose_10",
+      "selectedImage": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/frames_selected/kine-pose-dev-v3-astronaut-front-run__frame_11__pose_10__selected.png",
+      "poseReference": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/soft_controls/kine-pose-dev-v3-astronaut-front-run__frame_11__pose_10__role_soft_control_reference.png"
+    },
+    {
+      "frameNo": "12",
+      "frameId": "pose_11",
+      "selectedImage": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/frames_selected/kine-pose-dev-v3-astronaut-front-run__frame_12__pose_11__selected.png",
+      "poseReference": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/soft_controls/kine-pose-dev-v3-astronaut-front-run__frame_12__pose_11__role_soft_control_reference.png"
+    }
+  ],
+  "downstreamQuestions": [
+    "Which visible body/material regions must become stable source-master parts?",
+    "Which hidden surfaces or redraws are implied by the sequence but missing from the original art?",
+    "Which details should stay nested under a parent owner instead of animating independently?",
+    "Which macro parts, pivots, contacts, and constraints are suggested by the motion?",
+    "Which parameters, state-machine states, or runtime inputs are implied by the sequence?",
+    "Which visual areas need optimization or redraw before high-fidelity SVG or rig work?"
+  ],
+  "hardBoundaries": [
+    "Selected frames are motion and identity evidence, not editable source vector masters.",
+    "Do not build a component ledger without source-master audit.",
+    "Do not bind bones, Skin, IK, mesh, constraints, or keyframes from guessed hidden surfaces.",
+    "Do not replace accepted sequence frames while doing downstream planning."
+  ],
+  "nextAction": "Use this handoff as input to source-master audit, high-fidelity SVG trace, semantic component planning, rig planning, and runtime-parameter planning."
+}

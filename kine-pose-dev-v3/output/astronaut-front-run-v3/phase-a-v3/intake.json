@@ -1,0 +1,14 @@
+{
+  "taskId": "kine-pose-dev-v3-astronaut-front-run",
+  "motionRequest": "正面奔跑 / front-facing running in place loop",
+  "sourceImage": "/Users/tvwoo/Downloads/色块宇航员.png",
+  "targetOutput": [
+    "selected action frames",
+    "GIF",
+    "strip",
+    "board",
+    "QA evidence"
+  ],
+  "sourceFramingIntent": "preserve full-body portrait and bright green background",
+  "status": "recorded"
+}

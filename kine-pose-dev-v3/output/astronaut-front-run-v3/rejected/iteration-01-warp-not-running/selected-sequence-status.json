@@ -1,0 +1,32 @@
+{
+  "format": "kinePose.selectedSequenceStatus",
+  "version": "0.1",
+  "date": "2026-06-18",
+  "taskId": "kine-pose-dev-v3-astronaut-front-run",
+  "sequence": "front_run_loop",
+  "status": "deliverable_candidate_needs_user_review",
+  "usableAsDeliverableCandidate": true,
+  "timing": {
+    "fps": 24,
+    "durationSeconds": 1.0,
+    "playbackFrameCount": 24,
+    "selectedActionFrameCount": 12,
+    "exposurePolicy": "twos",
+    "qualityTarget": "draft_on_twos"
+  },
+  "selectedFrames": [
+    "pose_00",
+    "pose_01",
+    "pose_02",
+    "pose_03",
+    "pose_04",
+    "pose_05",
+    "pose_06",
+    "pose_07",
+    "pose_08",
+    "pose_09",
+    "pose_10",
+    "pose_11"
+  ],
+  "nextAction": "Review the front-run GIF/strip/board for action readability and identity before acceptance."
+}

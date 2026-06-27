@@ -1,0 +1,43 @@
+{
+  "schema": "kine-pose-dev-v3.task-scoped-asset-manifest.v1",
+  "runId": "astronaut-front-run-v3-rerun-20260618",
+  "taskAssetsDir": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3-rerun-20260618/task-assets/kine-pose-dev-v3-astronaut-front-run-rerun",
+  "reusePolicy": "Fresh run only. Historical files are not imported as candidates or selected frames.",
+  "entries": [
+    {
+      "role": "source_reference",
+      "path": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3-rerun-20260618/phase-a-v3/source.png",
+      "origin": "/Users/tvwoo/Downloads/色块宇航员.png"
+    },
+    {
+      "role": "uploaded_source_reference",
+      "url": "https://v3b.fal.media/files/b/0a9ecc86/IVW5al2tD_egGXMwZB5Xa_%3F%3F%3F%3F%3F.png",
+      "origin": "genmedia upload this run"
+    },
+    {
+      "role": "candidate_video_attempt01",
+      "path": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3-rerun-20260618/candidates_unverified/attempt01_video.mp4",
+      "origin": "genmedia model output, fresh run"
+    },
+    {
+      "role": "candidate_video_attempt02",
+      "path": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3-rerun-20260618/candidates_unverified/attempt02_video.mp4",
+      "origin": "genmedia model output, fresh run"
+    },
+    {
+      "role": "selected_frames",
+      "path": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3-rerun-20260618/frames_selected",
+      "origin": "attempt02 frames 069-092, copied without local pose warp"
+    },
+    {
+      "role": "selected_gif",
+      "path": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3-rerun-20260618/sheets/selected_run_24fps.gif",
+      "origin": "preview assembled from selected frames"
+    },
+    {
+      "role": "selected_mp4",
+      "path": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3-rerun-20260618/sheets/selected_run_24fps.mp4",
+      "origin": "preview assembled from selected frames"
+    }
+  ]
+}

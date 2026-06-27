@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="240" viewBox="0 0 1280 240">
+<style>
+rect.bg{fill:#f8f7f3} text.title{font:700 30px Arial,sans-serif;fill:#14213d}
+text.meta{font:14px Arial,sans-serif;fill:#5c677d} text.line{font:18px Menlo,Consolas,monospace;fill:#1f2937}
+</style>
+<rect class="bg" x="0" y="0" width="1280" height="240"/>
+<text x="32" y="50" class="title">Local Repair Before/After Sheet</text>
+<text x="32" y="74" class="meta">Kine Pose Dev V3 Phase A QA evidence. Not final preview.</text>
+<text x="32" y="96" class="line">Text-first before/after manifest. Attach candidate and repaired image paths when available.</text>
+<text x="32" y="124" class="line">pose_00: localRepair=no | method=imagegen | gate=visual_gates/pose_00.json</text>
+</svg>

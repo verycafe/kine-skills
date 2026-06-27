@@ -1,0 +1,37 @@
+{
+  "format": "kinePoseDevV3.qaEvidenceManifest",
+  "version": "0.1",
+  "date": "2026-06-18",
+  "taskRoot": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3",
+  "rule": "These boards are QA evidence only and are forbidden as final-preview sources.",
+  "artifacts": [
+    {
+      "role": "semantic_owner_review_board",
+      "path": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/qa/semantic-owner-review-board.svg"
+    },
+    {
+      "role": "occlusion_overlap_review_board",
+      "path": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/qa/occlusion-overlap-review-board.svg"
+    },
+    {
+      "role": "contact_anchor_review_board",
+      "path": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/qa/contact-anchor-review-board.svg"
+    },
+    {
+      "role": "contact_anchor_crop_sheet",
+      "path": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/qa/contact-anchor-crop-sheet.svg"
+    },
+    {
+      "role": "local_repair_review_board",
+      "path": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/qa/local-repair-review-board.svg"
+    },
+    {
+      "role": "local_repair_before_after_sheet",
+      "path": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/qa/local-repair-before-after-sheet.svg"
+    },
+    {
+      "role": "sequence_motion_stability_board",
+      "path": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/qa/sequence-motion-stability-board.svg"
+    }
+  ]
+}

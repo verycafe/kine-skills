@@ -1,0 +1,53 @@
+{
+  "format": "kinePoseDevV3.rejectionManifest",
+  "version": "0.1",
+  "date": "2026-06-18",
+  "taskRoot": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3",
+  "iteration": "iteration-01-warp-not-running",
+  "status": "visual_rejected",
+  "failures": [
+    "unreadable_action",
+    "source_pose_snapback",
+    "owner_motion_incoherent",
+    "bad_contact",
+    "local_transform_selected_for_large_action"
+  ],
+  "reason": "User visual review: sequence reads as local source-image distortion/warp, not front-facing running action.",
+  "invalidatedFrames": [
+    "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/frames_selected_invalidated/iteration-01-warp-not-running/kine-pose-dev-v3-astronaut-front-run__frame_01__pose_00__selected.png",
+    "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/frames_selected_invalidated/iteration-01-warp-not-running/kine-pose-dev-v3-astronaut-front-run__frame_02__pose_01__selected.png",
+    "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/frames_selected_invalidated/iteration-01-warp-not-running/kine-pose-dev-v3-astronaut-front-run__frame_03__pose_02__selected.png",
+    "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/frames_selected_invalidated/iteration-01-warp-not-running/kine-pose-dev-v3-astronaut-front-run__frame_04__pose_03__selected.png",
+    "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/frames_selected_invalidated/iteration-01-warp-not-running/kine-pose-dev-v3-astronaut-front-run__frame_05__pose_04__selected.png",
+    "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/frames_selected_invalidated/iteration-01-warp-not-running/kine-pose-dev-v3-astronaut-front-run__frame_06__pose_05__selected.png",
+    "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/frames_selected_invalidated/iteration-01-warp-not-running/kine-pose-dev-v3-astronaut-front-run__frame_07__pose_06__selected.png",
+    "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/frames_selected_invalidated/iteration-01-warp-not-running/kine-pose-dev-v3-astronaut-front-run__frame_08__pose_07__selected.png",
+    "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/frames_selected_invalidated/iteration-01-warp-not-running/kine-pose-dev-v3-astronaut-front-run__frame_09__pose_08__selected.png",
+    "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/frames_selected_invalidated/iteration-01-warp-not-running/kine-pose-dev-v3-astronaut-front-run__frame_10__pose_09__selected.png",
+    "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/frames_selected_invalidated/iteration-01-warp-not-running/kine-pose-dev-v3-astronaut-front-run__frame_11__pose_10__selected.png",
+    "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/frames_selected_invalidated/iteration-01-warp-not-running/kine-pose-dev-v3-astronaut-front-run__frame_12__pose_11__selected.png"
+  ],
+  "archivedPreviews": [
+    {
+      "source": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/check/astronaut-front-run-v3.gif",
+      "archivedPath": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/rejected/iteration-01-warp-not-running/astronaut-front-run-v3.gif"
+    },
+    {
+      "source": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/check/astronaut-front-run-v3-strip.png",
+      "archivedPath": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/rejected/iteration-01-warp-not-running/astronaut-front-run-v3-strip.png"
+    },
+    {
+      "source": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/sheets/astronaut-front-run-v3-board.png",
+      "archivedPath": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/rejected/iteration-01-warp-not-running/astronaut-front-run-v3-board.png"
+    },
+    {
+      "source": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/sheets/astronaut-front-run-v3-selected-frames-gif-source-preview.png",
+      "archivedPath": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/rejected/iteration-01-warp-not-running/astronaut-front-run-v3-selected-frames-gif-source-preview.png"
+    },
+    {
+      "source": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/handoff/astronaut-front-run-v3-downstream-llm-handoff.json",
+      "archivedPath": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/rejected/iteration-01-warp-not-running/astronaut-front-run-v3-downstream-llm-handoff.json"
+    }
+  ],
+  "rule": "This iteration is rejected review evidence only and must not be used as selected frames or final preview."
+}

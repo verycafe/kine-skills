@@ -1,0 +1,54 @@
+{
+  "schema": "kine-pose-dev-v3.phase-a.motion-contract.v1",
+  "runId": "astronaut-front-run-v3-rerun-20260618",
+  "task": "Create a fresh front-facing running animation from one character image.",
+  "sourceImage": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3-rerun-20260618/phase-a-v3/source.png",
+  "sourceImageUploadedUrl": "https://v3b.fal.media/files/b/0a9ecc86/IVW5al2tD_egGXMwZB5Xa_%3F%3F%3F%3F%3F.png",
+  "phaseScope": "Phase A only: action frames, sequence evidence, GIF/strip/board. No Phase B, no source-master, no rig.",
+  "action": {
+    "name": "front_facing_run_in_place",
+    "view": "front-facing",
+    "durationTarget": "1 second selected sequence on ones, 24 frames if visual gates pass",
+    "loopIntent": "seamless enough for review loop",
+    "mustReadAs": [
+      "running",
+      "alternating leg lift",
+      "opposite arm swing",
+      "support/contact beats",
+      "slight torso bounce"
+    ],
+    "mustNotReadAs": [
+      "standing idle",
+      "simple image wobble",
+      "PIL/Numpy warp",
+      "puppet distortion",
+      "walking in place only",
+      "camera zoom trick"
+    ]
+  },
+  "subjectIdentity": {
+    "description": "blonde cartoon female astronaut in white suit, black gloves/boots, blue helmet glass and bright green background",
+    "preserve": [
+      "face and blonde hair",
+      "round transparent helmet",
+      "white/black suit panels",
+      "blue/orange suit accents",
+      "large black boots",
+      "full-body centered framing"
+    ]
+  },
+  "gatesRequired": [
+    "action_plan_gate",
+    "frame_source_gate",
+    "source_framing_gate",
+    "soft_control_gate",
+    "alternating_locomotion_gate",
+    "contact_support_gate",
+    "sequence_evidence_gate",
+    "v3_semantic_subject_gate",
+    "v3_occlusion_overlap_gate",
+    "canvas_stability_gate",
+    "manual_visual_gate"
+  ],
+  "selectedFrameRule": "Only model-generated whole-subject frames that visually pass may be copied into frames_selected. Local script frames are evidence only."
+}

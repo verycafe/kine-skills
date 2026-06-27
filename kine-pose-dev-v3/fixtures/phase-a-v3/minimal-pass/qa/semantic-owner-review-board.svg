@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="342" viewBox="0 0 1280 342">
+<style>
+rect.bg{fill:#f8f7f3} text.title{font:700 30px Arial,sans-serif;fill:#14213d}
+text.meta{font:14px Arial,sans-serif;fill:#5c677d} text.line{font:18px Menlo,Consolas,monospace;fill:#1f2937}
+</style>
+<rect class="bg" x="0" y="0" width="1280" height="342"/>
+<text x="32" y="50" class="title">Semantic Owner Review</text>
+<text x="32" y="74" class="meta">Kine Pose Dev V3 Phase A QA evidence. Not final preview.</text>
+<text x="32" y="96" class="line">task: phase-a-v3-fixture</text>
+<text x="32" y="124" class="line">moving owners: right_leg, right_arm</text>
+<text x="32" y="152" class="line">stable owners: left_foot, torso</text>
+<text x="32" y="180" class="line">owner-child rules: owner: right_leg; children: right_knee, right_foot</text>
+<text x="32" y="208" class="line">forbidden owner changes: right_foot_detached, left_foot_sliding</text>
+<text x="32" y="236" class="line"></text>
+<text x="32" y="264" class="line">selected frame owner checks:</text>
+<text x="32" y="292" class="line">SELECTED pose_00: moving=right_leg, right_arm | stable=left_foot, torso</text>
+</svg>

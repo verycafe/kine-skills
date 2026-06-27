@@ -1,0 +1,13 @@
+{
+  "taskId": "phase-a-v3-fixture",
+  "frames": [
+    {
+      "frameId": "pose_00",
+      "status": "selected",
+      "selectedImage": "frames_selected/pose_00-component-sheet.png",
+      "candidateSource": "candidates_unverified/pose_00-candidate.png",
+      "visualGate": "visual_gates/pose_00.json",
+      "doNotRegenerate": false
+    }
+  ]
+}

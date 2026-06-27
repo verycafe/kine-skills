@@ -1,0 +1,27 @@
+{
+  "schema": "kine-pose-dev-v3.generation-result.v1",
+  "attempt": 2,
+  "endpoint_id": "bytedance/seedance-2.0/fast/image-to-video",
+  "request_id": "019edb20-e015-7442-8119-85d06a5312bc",
+  "video_url": "https://v3b.fal.media/files/b/0a9eccdf/HG6lTMUDx4MP8lfCSYcRk_video.mp4",
+  "video_path": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3-rerun-20260618/candidates_unverified/attempt02_video.mp4",
+  "frame_dir": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3-rerun-20260618/candidates_unverified/attempt02_frames_all",
+  "frame_count": 97,
+  "fps": 24,
+  "duration_seconds": 4.041667,
+  "candidate_boards": [
+    "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3-rerun-20260618/candidates_unverified/attempt02_overview_board.png",
+    "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3-rerun-20260618/candidates_unverified/attempt02_segment_001_024_board.png",
+    "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3-rerun-20260618/candidates_unverified/attempt02_segment_025_048_board.png",
+    "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3-rerun-20260618/candidates_unverified/attempt02_segment_049_072_board.png",
+    "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3-rerun-20260618/candidates_unverified/attempt02_segment_073_096_board.png"
+  ],
+  "candidate_gifs": [
+    "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3-rerun-20260618/candidates_unverified/attempt02_full_preview_12fps.gif",
+    "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3-rerun-20260618/candidates_unverified/attempt02_segment_001_024_24fps.gif",
+    "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3-rerun-20260618/candidates_unverified/attempt02_segment_025_048_24fps.gif",
+    "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3-rerun-20260618/candidates_unverified/attempt02_segment_049_072_24fps.gif",
+    "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3-rerun-20260618/candidates_unverified/attempt02_segment_073_096_24fps.gif"
+  ],
+  "selected_status": "not_evaluated_yet"
+}

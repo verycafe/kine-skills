@@ -1,0 +1,4 @@
+interface:
+  display_name: "Kine Pose Dev V3"
+  short_description: "Phase A action-frame and GIF quality workflow"
+  default_prompt: "Use $kine-pose-dev-v3 to plan and execute a Phase A-only Kine Pose workflow for believable whole-character action frames, selected sequence evidence, and GIF/strip/board QA."

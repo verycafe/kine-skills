@@ -1,0 +1,45 @@
+{
+  "schema": "kine-pose-dev-v3.phase-a.semantic-motion-plan.v1",
+  "runId": "astronaut-front-run-v3-rerun-20260618",
+  "inspiration": {
+    "kinePose": "action contract, action gates, selected-frame registry, whole-character frame rule",
+    "layerScenario": "semantic awareness of subject parts and occlusion/overlap risks; no Phase B decomposition is performed"
+  },
+  "partsUnderstoodForMotion": [
+    {
+      "part": "helmet/head/face/hair",
+      "motion": "mostly stable with tiny vertical follow-through",
+      "risk": "identity drift or helmet break"
+    },
+    {
+      "part": "torso/suit core",
+      "motion": "small up/down bounce, remains centered",
+      "risk": "rubber torso warp"
+    },
+    {
+      "part": "screen-left arm/glove",
+      "motion": "opposes screen-left leg, swings forward/back with elbow bend",
+      "risk": "hand merges into hip or disappears"
+    },
+    {
+      "part": "screen-right arm/glove",
+      "motion": "opposes screen-right leg, swings forward/back with elbow bend",
+      "risk": "forearm panel melts"
+    },
+    {
+      "part": "screen-left leg/boot",
+      "motion": "alternates support and forward knee lift",
+      "risk": "knee hole, boot duplication, foot floats without contact"
+    },
+    {
+      "part": "screen-right leg/boot",
+      "motion": "alternates support and forward knee lift",
+      "risk": "knee hole, boot duplication, foot floats without contact"
+    },
+    {
+      "part": "background/canvas",
+      "motion": "stable bright green background, no camera trick",
+      "risk": "camera zoom hides bad motion"
+    }
+  ]
+}

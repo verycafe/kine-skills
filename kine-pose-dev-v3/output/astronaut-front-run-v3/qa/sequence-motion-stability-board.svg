@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="594" viewBox="0 0 1280 594">
+<style>
+rect.bg{fill:#f8f7f3} text.title{font:700 30px Arial,sans-serif;fill:#14213d}
+text.meta{font:14px Arial,sans-serif;fill:#5c677d} text.line{font:18px Menlo,Consolas,monospace;fill:#1f2937}
+</style>
+<rect class="bg" x="0" y="0" width="1280" height="594"/>
+<text x="32" y="50" class="title">Sequence Motion Stability Review</text>
+<text x="32" y="74" class="meta">Kine Pose Dev V3 Phase A QA evidence. Not final preview.</text>
+<text x="32" y="96" class="line">sequence status: pass</text>
+<text x="32" y="124" class="line">sequence failures: none</text>
+<text x="32" y="152" class="line">sequence evidence: motionStabilityReview: /Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/qa/kine-pose-dev-v3-astronaut-front-run__motion-stability-review.json; sequenceMotionStabilityBoard: /Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/qa/sequence-motion-stability-board.svg</text>
+<text x="32" y="180" class="line"></text>
+<text x="32" y="208" class="line">selected order:</text>
+<text x="32" y="236" class="line">01. pose_00 -&gt; /Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/frames_selected/kine-pose-dev-v3-astronaut-front-run__frame_01__pose_00__selected.png</text>
+<text x="32" y="264" class="line">02. pose_01 -&gt; /Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/frames_selected/kine-pose-dev-v3-astronaut-front-run__frame_02__pose_01__selected.png</text>
+<text x="32" y="292" class="line">03. pose_02 -&gt; /Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/frames_selected/kine-pose-dev-v3-astronaut-front-run__frame_03__pose_02__selected.png</text>
+<text x="32" y="320" class="line">04. pose_03 -&gt; /Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/frames_selected/kine-pose-dev-v3-astronaut-front-run__frame_04__pose_03__selected.png</text>
+<text x="32" y="348" class="line">05. pose_04 -&gt; /Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/frames_selected/kine-pose-dev-v3-astronaut-front-run__frame_05__pose_04__selected.png</text>
+<text x="32" y="376" class="line">06. pose_05 -&gt; /Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/frames_selected/kine-pose-dev-v3-astronaut-front-run__frame_06__pose_05__selected.png</text>
+<text x="32" y="404" class="line">07. pose_06 -&gt; /Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/frames_selected/kine-pose-dev-v3-astronaut-front-run__frame_07__pose_06__selected.png</text>
+<text x="32" y="432" class="line">08. pose_07 -&gt; /Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/frames_selected/kine-pose-dev-v3-astronaut-front-run__frame_08__pose_07__selected.png</text>
+<text x="32" y="460" class="line">09. pose_08 -&gt; /Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/frames_selected/kine-pose-dev-v3-astronaut-front-run__frame_09__pose_08__selected.png</text>
+<text x="32" y="488" class="line">10. pose_09 -&gt; /Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/frames_selected/kine-pose-dev-v3-astronaut-front-run__frame_10__pose_09__selected.png</text>
+<text x="32" y="516" class="line">11. pose_10 -&gt; /Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/frames_selected/kine-pose-dev-v3-astronaut-front-run__frame_11__pose_10__selected.png</text>
+<text x="32" y="544" class="line">12. pose_11 -&gt; /Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3/frames_selected/kine-pose-dev-v3-astronaut-front-run__frame_12__pose_11__selected.png</text>
+</svg>

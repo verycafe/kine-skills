@@ -1,0 +1,44 @@
+{
+  "taskId": "phase-a-v3-fixture",
+  "frameId": "pose_00",
+  "status": "pass",
+  "selectedImage": "frames_selected/pose_00-component-sheet.png",
+  "candidateImage": "candidates_unverified/pose_00-candidate.png",
+  "controlImage": "soft_controls/pose_00-control.png",
+  "failures": [],
+  "actionGateProfiles": [
+    "action_plan_gate",
+    "alternating_locomotion_gate",
+    "contact_support_gate"
+  ],
+  "requiredVisualVerdicts": [
+    "actionPlan",
+    "motionBeatsCovered",
+    "noEndpointTeleport",
+    "phaseOwnership",
+    "phaseDistinctness",
+    "oppositeLimbCoordination",
+    "contactStability",
+    "supportContactAccuracy"
+  ],
+  "verdict": {
+    "actionPlan": "pass",
+    "motionBeatsCovered": "pass",
+    "noEndpointTeleport": "pass",
+    "phaseOwnership": "pass",
+    "phaseDistinctness": "pass",
+    "oppositeLimbCoordination": "pass",
+    "contactStability": "pass",
+    "supportContactAccuracy": "pass",
+    "actionReadability": "pass",
+    "identityPreserved": "pass",
+    "originalCharacterTreatment": "pass",
+    "notPoseProxy": "pass",
+    "ownerMotionCoherence": "pass",
+    "occlusionOverlapPlausibility": "pass",
+    "contactContinuity": "pass",
+    "propContinuity": "pass",
+    "provenanceValidity": "pass",
+    "wholeSubjectActionFrame": "fail"
+  }
+}

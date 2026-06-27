@@ -1,0 +1,43 @@
+{
+  "taskId": "phase-a-v3-fixture",
+  "owners": [
+    "head",
+    "torso",
+    "right_leg",
+    "left_leg",
+    "left_foot",
+    "right_arm",
+    "prop_none"
+  ],
+  "movingOwners": [
+    "right_leg",
+    "right_arm"
+  ],
+  "stableOwners": [
+    "left_foot",
+    "torso"
+  ],
+  "ownerChildRules": [
+    {
+      "owner": "right_leg",
+      "children": [
+        "right_knee",
+        "right_foot"
+      ]
+    }
+  ],
+  "propOwners": [
+    "none"
+  ],
+  "contactOwners": [
+    "left_foot"
+  ],
+  "secondaryOwners": [
+    "hair"
+  ],
+  "forbiddenOwnerChanges": [
+    "right_foot_detached",
+    "left_foot_sliding"
+  ],
+  "status": "ready"
+}

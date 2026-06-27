@@ -1,0 +1,39 @@
+{
+  "taskId": "phase-a-v3-fixture",
+  "frameQa": {
+    "pose_00": {
+      "frameId": "pose_00",
+      "status": "pass",
+      "failures": [],
+      "evidence": {
+        "semanticOwnerReviewBoard": "qa/semantic-owner-review-board.svg",
+        "occlusionOverlapReviewBoard": "qa/occlusion-overlap-review-board.svg",
+        "contactAnchorReviewBoard": "qa/contact-anchor-review-board.svg"
+      }
+    }
+  },
+  "sequenceQa": {
+    "status": "pass",
+    "failures": [],
+    "evidence": {
+      "sequenceMotionStabilityBoard": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/fixtures/phase-a-v3/minimal-pass/qa/sequence-motion-stability-board.svg"
+    }
+  },
+  "reviewer": "independent_fixture_review",
+  "reviewIndependence": "independent",
+  "status": "deliverable_candidate",
+  "failures": [],
+  "evidence": {
+    "semanticOwnerReviewBoard": "qa/semantic-owner-review-board.svg",
+    "occlusionOverlapReviewBoard": "qa/occlusion-overlap-review-board.svg",
+    "contactAnchorReviewBoard": "qa/contact-anchor-review-board.svg",
+    "sequenceMotionStabilityBoard": "qa/sequence-motion-stability-board.svg",
+    "semantic_owner_review_board": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/fixtures/phase-a-v3/minimal-pass/qa/semantic-owner-review-board.svg",
+    "occlusion_overlap_review_board": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/fixtures/phase-a-v3/minimal-pass/qa/occlusion-overlap-review-board.svg",
+    "contact_anchor_review_board": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/fixtures/phase-a-v3/minimal-pass/qa/contact-anchor-review-board.svg",
+    "contact_anchor_crop_sheet": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/fixtures/phase-a-v3/minimal-pass/qa/contact-anchor-crop-sheet.svg",
+    "local_repair_review_board": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/fixtures/phase-a-v3/minimal-pass/qa/local-repair-review-board.svg",
+    "local_repair_before_after_sheet": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/fixtures/phase-a-v3/minimal-pass/qa/local-repair-before-after-sheet.svg",
+    "sequence_motion_stability_board": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/fixtures/phase-a-v3/minimal-pass/qa/sequence-motion-stability-board.svg"
+  }
+}
