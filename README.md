@@ -36,6 +36,8 @@ Fetch and follow instructions from https://raw.githubusercontent.com/verycafe/ki
 
 绘制多邻国风格图片。
 
+![kine-image-duolingo 展示图](assets/showcases/kine-image-duolingo-showcase.png)
+
 ### [kine-svg-dev](https://github.com/verycafe/kine-skills/tree/main/kine-svg-dev)
 
 可以将图片转换成 SVG 格式。
