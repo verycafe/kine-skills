@@ -1,8 +1,0 @@
-{
-  "schema": "kine-pose.pipeline-task.v1",
-  "runId": "astronaut-front-run-v3-rerun-20260618",
-  "skill": "kine-pose-dev-v3",
-  "sourceImage": "/Users/tvwoo/Projects/KINE-SKILLS/kine-pose-dev-v3/output/astronaut-front-run-v3-rerun-20260618/phase-a-v3/source.png",
-  "action": "front_facing_run_in_place",
-  "phase": "A-only"
-}

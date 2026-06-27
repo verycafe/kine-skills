@@ -1,1 +1,0 @@
-This preview directory has no valid final output for the current iteration. The previous local-warp preview was archived under rejected/iteration-01-warp-not-running and the task status is visual_rejected.
