@@ -2,7 +2,7 @@
 
 ## 注意
 
-所有 SKILL 都是完全基于 Codex 环境编写，为了深度适配 image gen。
+为了深度适配 image gen，所有 SKILL 都是完全基于 Codex 环境编写。
 
 ## 安装
 
