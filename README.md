@@ -18,6 +18,8 @@ Fetch and follow instructions from https://raw.githubusercontent.com/verycafe/ki
 
 可以将用户提交的角色图片自动进行拆解，适合作为动画等工作的前序处理。
 
+![kine-layer-v2-5 展示图](assets/showcases/kine-layer-v2-5-showcase.png)
+
 ### [kine-summer-shot](https://github.com/verycafe/kine-skills/tree/main/kine-summer-shot)
 
 可以生成动画分镜板。
