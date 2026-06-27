@@ -24,6 +24,8 @@ Fetch and follow instructions from https://raw.githubusercontent.com/verycafe/ki
 
 可以生成动画分镜板。
 
+![kine-summer-shot 展示图](assets/showcases/kine-summer-shot-showcase.png)
+
 ### [kine-image-kids](https://github.com/verycafe/kine-skills/tree/main/kine-image-kids)
 
 绘制儿童扁平风格图片。
