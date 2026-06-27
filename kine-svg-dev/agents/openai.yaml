@@ -1,0 +1,4 @@
+interface:
+  display_name: "KINE SVG DEV"
+  short_description: "Layer raster art into Kine SVG masters."
+  default_prompt: "Convert this character image into a layered SVG source master with manifest, component ledger, preview evidence, and Kine animation-readiness notes."
