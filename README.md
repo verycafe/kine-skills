@@ -30,6 +30,8 @@ Fetch and follow instructions from https://raw.githubusercontent.com/verycafe/ki
 
 绘制儿童扁平风格图片。
 
+![kine-image-kids 展示图](assets/showcases/kine-image-kids-showcase.png)
+
 ### [kine-image-duolingo](https://github.com/verycafe/kine-skills/tree/main/kine-image-duolingo)
 
 绘制多邻国风格图片。
