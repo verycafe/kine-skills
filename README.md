@@ -18,7 +18,7 @@ Fetch and follow instructions from https://raw.githubusercontent.com/verycafe/ki
 
 ### [kine-layer-v2-5](https://github.com/verycafe/kine-skills/tree/main/kine-layer-v2-5)
 
-可以将用户提交的角色图片自动进行拆解，适合作为动画等工作的前序处理。
+Kine Layer V2.5 可以将用户提交的角色图片自动进行拆解，适合作为动画等工作的前序处理。
 
 ![kine-layer-v2-5 展示图](assets/showcases/kine-layer-v2-5-showcase.png)
 

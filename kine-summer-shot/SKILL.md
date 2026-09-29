@@ -15,7 +15,7 @@ The default visual language is a white-background production board: clean page l
 
 ## Required Skill Order
 
-1. If generating images, load and follow `$imagegen` at `/Users/tvwoo/.codex/skills/.system/imagegen/SKILL.md`.
+1. If generating images, locate `$imagegen` in the current Codex environment's available skills, then load and follow its `SKILL.md`.
 2. If the user names a visual style skill such as `$pastel`, load that skill too and obey it in the image prompt.
 3. If the user supplies reference images, preserve explicit identity cues and label them in the prompt as character/style/environment references.
 

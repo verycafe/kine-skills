@@ -1,13 +1,21 @@
 ---
-name: kine-layer-v3
-description: Experimental KINE-LAYER V3 source-master workflow for developing semantic component-plan-first character decomposition. Use when decomposing a raster character into animation-ready layers using component planning, multi-sheet generation, per-owner masks, hidden-surface completion, alpha cleanup, source-recompose gates, review HTML, PSD/PNG manifests, or when improving the next-generation KINE-LAYER pipeline beyond V2.
+name: kine-layer-v2-5
+description: Experimental KINE-LAYER V2.5 source-master workflow for developing semantic component-plan-first character decomposition. Use when decomposing a raster character into animation-ready layers using component planning, multi-sheet generation, per-owner masks, hidden-surface completion, alpha cleanup, source-recompose gates, review HTML, PSD/PNG manifests, or when improving the next-generation KINE-LAYER pipeline beyond V2.
 ---
 
-# Kine Layer V3
+# Kine Layer V2.5
+
+## Package Identity And Internal Compatibility
+
+The published skill name and directory are `kine-layer-v2-5`; the display version is **V2.5**. Invoke it as `$kine-layer-v2-5`.
+
+The implementation retains the internal `v3-*` CLI commands, `v3/` workspace paths, `kine.v3.*` schema identifiers, and `KINE_LAYER_V3_CONTRACT.md` filename. These names are compatibility identifiers, not the published skill version. Keep them unchanged when reading or continuing existing workspaces.
+
+Command examples below use paths relative to the repository root. After installation, resolve `scripts/kine_layer_workspace.py` relative to this `SKILL.md` and use that absolute script path from any working directory.
 
 ## Purpose
 
-Use this skill for V3 development of KINE-LAYER source-master generation:
+Use this skill for V2.5 development of KINE-LAYER source-master generation:
 
 ```text
 source image
@@ -20,23 +28,23 @@ source image
  -> review / PSD / PNG / Spine-ready handoff
 ```
 
-V3 keeps V2's working CLI, QA, registration, packaging, and review machinery, but changes the default mental model: a parts sheet is not the plan. The plan comes first; generated sheets are bounded evidence for named owners.
+V2.5 keeps V2's working CLI, QA, registration, packaging, and review machinery, but changes the default mental model: a parts sheet is not the plan. The plan comes first; generated sheets are bounded evidence for named owners.
 
 ## Scope / Precedence / Completion Contract
 
-When `$kine-layer-v3` is invoked, this `SKILL.md` is the active V3 workflow contract. Global or project `AGENTS.md` files remain useful generic defaults, but they must not downgrade V3 into a minimal plan-only or work-order-only implementation.
+When `$kine-layer-v2-5` is invoked, this `SKILL.md` is the active V2.5 workflow contract. Global or project `AGENTS.md` files remain useful generic defaults, but they must not downgrade V2.5 into a minimal plan-only or work-order-only implementation.
 
-For V3, completion means the generated `$imagegen` outputs have been saved into the workspace, ingested, synced into candidates, registered, recomposed, reviewed, and validated as either accepted or clearly blocked. A task is incomplete if it only produced an imagegen work order, a raw sheet, a transparent sheet, a visible cut, a candidate sheet, or a chat-visible generated image.
+For V2.5, completion means the generated `$imagegen` outputs have been saved into the workspace, ingested, synced into candidates, registered, recomposed, reviewed, and validated as either accepted or clearly blocked. A task is incomplete if it only produced an imagegen work order, a raw sheet, a transparent sheet, a visible cut, a candidate sheet, or a chat-visible generated image.
 
-Every V3 workspace writes `KINE_LAYER_V3_CONTRACT.md`. Read it before continuing an existing workspace. It repeats the local rule that work orders and sheet assets are not final, and that `v3/check/v3-validation-report.json` plus review/registration/recompose/export reports are the source of truth.
+Every V2.5 workspace writes `KINE_LAYER_V3_CONTRACT.md`. Read it before continuing an existing workspace. It repeats the local rule that work orders and sheet assets are not final, and that `v3/check/v3-validation-report.json` plus review/registration/recompose/export reports are the source of truth.
 
-If `v3/imagegen/imagegen-progress-report.json` has pending `$imagegen` tasks, do not present the V3 run as complete. The final/status message must say which ImageGen outputs are still missing, unsaved, un-ingested, rejected, or waiting for the next stage. Debug artifacts such as semantic-decomposition boards, annotated maps, source-visible crops, raw sheets, transparent sheets, and candidate sheets are evidence only; they are never replacement deliverables for the V3 source-master pipeline.
+If `v3/imagegen/imagegen-progress-report.json` has pending `$imagegen` tasks, do not present the V2.5 run as complete. The final/status message must say which ImageGen outputs are still missing, unsaved, un-ingested, rejected, or waiting for the next stage. Debug artifacts such as semantic-decomposition boards, annotated maps, source-visible crops, raw sheets, transparent sheets, and candidate sheets are evidence only; they are never replacement deliverables for the V2.5 source-master pipeline.
 
-`CODEX_HOME` isolation is a debugging or Skill QA tool only. It is not the normal user workflow for running V3.
+`CODEX_HOME` isolation is a debugging or Skill QA tool only. It is not the normal user workflow for running V2.5.
 
 ## Validation Before Optimization
 
-Do not optimize V3 Skill behavior from a written plan alone. Before changing V3 decomposition, prompt, registration, or review semantics, run a small `$imagegen` validation gate:
+Do not optimize V2.5 Skill behavior from a written plan alone. Before changing V2.5 decomposition, prompt, registration, or review semantics, run a small `$imagegen` validation gate:
 
 ```text
 Generate 3-6 random character source images with $imagegen
@@ -60,22 +68,22 @@ If the real role sheet does not pass, do not claim the Skill optimization is com
 
 ## Validation Terminology
 
-Use precise validation labels in V3 work:
+Use precise validation labels in V2.5 work:
 
-- `code regression validation`: script compile checks, unit tests, schema checks, fixture-based tests, and report field assertions. These checks prove that implementation paths still execute, but they do not prove that V3 works on real generated images.
+- `code regression validation`: script compile checks, unit tests, schema checks, fixture-based tests, and report field assertions. These checks prove that implementation paths still execute, but they do not prove that V2.5 works on real generated images.
 - `true-image pipeline validation`: a real source image has produced `$imagegen` output, that output was saved at the task's `expectedOutput`, ingested, synced into candidates, registered, recomposed, reviewed, and summarized by `v3-imagegen-execution-report` / `v3-validate`.
 - `true-image partial validation`: real `$imagegen` outputs entered the pipeline and reached some downstream gates, but the run still has pending outputs, rejected candidates, missing hidden completion, failed export, or other blockers.
 
-Do not summarize a V3 optimization as "verified", "validated", or "done" when only `code regression validation` has run. In that case say exactly that code regression passed and true-image pipeline validation is still not run.
+Do not summarize a V2.5 optimization as "verified", "validated", or "done" when only `code regression validation` has run. In that case say exactly that code regression passed and true-image pipeline validation is still not run.
 
 When a real workspace is blocked, report the blocked stage plainly. For example: role sheets ingested and candidates registered, but hidden inpaint outputs are still missing. Do not collapse that into a generic success or a generic failure.
 
 ## First Command
 
-For any V3 workspace, start by writing the V3 scaffold:
+For any V2.5 workspace, start by writing the V2.5 scaffold:
 
 ```bash
-python3 skill-v3/scripts/kine_layer_workspace.py v3-plan \
+python3 kine-layer-v2-5/scripts/kine_layer_workspace.py v3-plan \
   --workspace /absolute/path/workspace
 ```
 
@@ -93,102 +101,102 @@ These files are binding development artifacts:
 - `sheet-campaign.json`: bounded multi-sheet generation plan split by role, not one giant fragile board.
 - `qa-gates.json`: explicit gates for plan completeness, masks, hidden completion, alpha cleanup, source recompose, and pose stress.
 
-## V3 Rules
+## V2.5 Rules
 
 - Do not ask image generation to invent the decomposition plan. Generate the plan first.
 - All drawing/image output must use the `$imagegen` skill. Do not implement an API version, CLI fallback, or alternate drawing backend for KINE-LAYER.
-- V3 uses a dual-track check after source routing: local masks/reference bundles provide source-locked boundary evidence, while `$imagegen` produces subject mattes, role sheets, repair candidates, and hidden completion candidates. Neither track alone is final; accepted components must pass registration, recompose, and QA gates.
+- V2.5 uses a dual-track check after source routing: local masks/reference bundles provide source-locked boundary evidence, while `$imagegen` produces subject mattes, role sheets, repair candidates, and hidden completion candidates. Neither track alone is final; accepted components must pass registration, recompose, and QA gates.
 - Prefer several role-specific parts sheets over one overloaded sheet:
   - `head_identity`
   - `body_clothes`
   - `limbs`
   - `feet_footwear`
   - `props_accessories`
-- A mixed visual validation board is useful for judging layout and prompt quality, but it is not a registrable V3 role sheet unless it is ingested with a `sheet-id` that exists in `v3/sheet-campaign.json` and therefore carries `allowedOwners` / `allowedComponents`. If registration reports `candidate_component_pool_missing`, the next action is to save and ingest the missing role-specific sheet outputs, not to tune visual similarity thresholds.
-- For role-specific puppet-board sheets, V3 may add conservative `ownerHint` / `ownerCandidate` metadata from sheet role, part position, and coarse color evidence when no manual mapping exists. This only narrows the component pool before normal registration scoring; it must never accept a candidate, bypass source similarity, or override QA/recompose gates.
+- A mixed visual validation board is useful for judging layout and prompt quality, but it is not a registrable V2.5 role sheet unless it is ingested with a `sheet-id` that exists in `v3/sheet-campaign.json` and therefore carries `allowedOwners` / `allowedComponents`. If registration reports `candidate_component_pool_missing`, the next action is to save and ingest the missing role-specific sheet outputs, not to tune visual similarity thresholds.
+- For role-specific puppet-board sheets, V2.5 may add conservative `ownerHint` / `ownerCandidate` metadata from sheet role, part position, and coarse color evidence when no manual mapping exists. This only narrows the component pool before normal registration scoring; it must never accept a candidate, bypass source similarity, or override QA/recompose gates.
 - Before creating role-sheet prompts, make a visual split decision from the actual image. This is an Agent reasoning step, not a new API: inspect the source/reference board and decide whether garments should stay coherent, split left/right, split front/back, or split by rigid plates. The prompt may only expose drawing-facing `generationTargets`; it must not expose internal thigh/shin/foot registration rows as direct drawing requests.
 - Reconcile LLM semantic owners with local pixel evidence before treating any mask as a component truth. LLM/Agent visual understanding decides what stable owners should exist; local alpha clusters, bbox, visible cuts, and crops only provide pixel evidence. If the two disagree, do not accept either side blindly. When the Agent visually sees a stable object that local scripts may miss, it must write `v3/stable-object-notes.json` before role-sheet prompts. Use an `objects` array with semantic fields such as `id`, `type`, `role`, `relationship`, `description`, and optional source `bbox`/`region`. This file is the durable handoff from image understanding into the scripted `stable-object-ledger.json`.
 - Foreign stable owner resolution is mandatory: if component A's region contains stable owner B, first check the semantic ledger. If B has no owner slice yet, create B as its own owner or interaction group. If B already has owner evidence, remove B pixels or matching B alpha clusters from A's `cleanOwnerMask`. A may then continue as source-visible owner evidence, while B remains its own owner. Do not reject A merely because the original hard cut contained B.
 - `visible_cut` and `mask_region` are source-visible evidence, not automatic hidden-inpaint targets. A registrable owner should use `cleanOwnerMask` plus an explicit completion allowance for hidden surface, overlap, and sockets. ImageGen should fill only missing/hidden/overlap pixels for source-visible owners, not repaint already visible boots, props, clothing layers, hands, or heads wholesale.
 - If a `source-visible-*` local candidate registers cleanly and no manual review or explicit hidden target says a hidden surface is missing, mark hidden completion as not required for that component. Do not create a hidden-inpaint `$imagegen` task just because the owner is normally animation-ready; otherwise the model is forced to invent a complete replacement component with no source-canvas target.
-- V3 default decomposition has a binding component taxonomy:
+- V2.5 default decomposition has a binding component taxonomy:
   - `final-layer`: animation-ready parts such as whole face/head identity, hair front/back, torso, hips, arms, legs, feet, head accessory, and major props.
   - `source-locked-detail`: face micro details such as eyes, iris/pupil, brows, nose, mouth, ears, ear accessories, and glasses. These are source/reference evidence by default, not independent generated final components.
   - `interaction-group`: hand-held props or contact areas such as hand + glove, hand + umbrella handle, or hand + tool. Keep the contact group coherent unless a later explicit face/prop rig mode asks for separation.
   - `garment-layer`: pants, skirts, coats, sleeves, and boots split by animation joints and overlap needs, not by seams, cuffs, wrinkles, buttons, or loose cloth fragments.
 - Split garments and equipment by animation behavior, material, and overlap need, not by a fixed template:
   - Plain standing pants may remain one coherent pants layer, or split into left/right legs when that is better for the rig.
-  - Split pants into thigh/shin only when a future explicit knee-rig mode is enabled and the visual split decision says the source supports it. Default V3 role sheets must not ask `$imagegen` for thigh/shin rows.
+  - Split pants into thigh/shin only when a future explicit knee-rig mode is enabled and the visual split decision says the source supports it. Default V2.5 role sheets must not ask `$imagegen` for thigh/shin rows.
   - Skirts, dresses, robes, coats, and capes split by cloth layer, front/back occlusion, and swing area; never by folds, trims, buttons, seams, or decorative fragments.
   - Armor splits by rigid plate and joint overlap; never by highlights, scratches, rivets, or tiny trim.
-- Face and facial micro owners are identity/source-locked evidence first. Do not redraw tiny organs as independent generated identity changes. Default V3 is 2D skeletal character decomposition, not a face-puppet mode; eye/mouth/brow separation requires an explicit future mode.
+- Face and facial micro owners are identity/source-locked evidence first. Do not redraw tiny organs as independent generated identity changes. Default V2.5 is 2D skeletal character decomposition, not a face-puppet mode; eye/mouth/brow separation requires an explicit future mode.
 - Source-locked identity rows such as `face` do not require generated hidden completion by default. They may keep source-visible reconstruction evidence, but they must not create hidden-inpaint `$imagegen` tasks unless an explicit future face/identity rig mode or manual review decision asks for it.
 - Hand-held and worn-contact objects default to `interaction-group`: hand + umbrella handle, hand + glove, hand + tool, hand + bag strap, or hand + weapon grip must preserve contact pixels together. Separate the prop from the hand only when a downstream rig explicitly needs independent prop motion, and then record the socket/pivot relationship.
-- Stable prop coverage is a hard quality gate: if the source or role sheets show a stable held/worn object such as a knife, sword, staff, umbrella, bag, shield, gun, or tool, the V3 plan/export must contain a matching `props` owner or interaction-group. A hand/arm candidate that contains a weapon or tool is not ordinary arm pollution; it is evidence that the stable prop ledger is incomplete.
-- Stable object recognition is a generation prerequisite, not only a blocker. Before writing role-sheet prompts, V3 must write `v3/stable-object-ledger.json`. Active stable objects such as weapons, staffs, umbrellas, bags, books, shields, tools, instruments, worn pouches, straps, back-mounted devices, or other persistent character-owned objects must activate the `props` owner, enter `v3/component-plan.json`, enter `v3/sheet-campaign.json`, enter `v3/sheet-prompts.json`, and enter `v3/imagegen/imagegen-work-order.json` as explicit `generationTargets`. Tiny details such as buttons, seams, highlights, wrinkles, logos, rivets, scratches, and texture marks are `non-component-detail` and must not create props sheets.
+- Stable prop coverage is a hard quality gate: if the source or role sheets show a stable held/worn object such as a knife, sword, staff, umbrella, bag, shield, gun, or tool, the V2.5 plan/export must contain a matching `props` owner or interaction-group. A hand/arm candidate that contains a weapon or tool is not ordinary arm pollution; it is evidence that the stable prop ledger is incomplete.
+- Stable object recognition is a generation prerequisite, not only a blocker. Before writing role-sheet prompts, V2.5 must write `v3/stable-object-ledger.json`. Active stable objects such as weapons, staffs, umbrellas, bags, books, shields, tools, instruments, worn pouches, straps, back-mounted devices, or other persistent character-owned objects must activate the `props` owner, enter `v3/component-plan.json`, enter `v3/sheet-campaign.json`, enter `v3/sheet-prompts.json`, and enter `v3/imagegen/imagegen-work-order.json` as explicit `generationTargets`. Tiny details such as buttons, seams, highlights, wrinkles, logos, rivets, scratches, and texture marks are `non-component-detail` and must not create props sheets.
 - Stable object role sheets and repair sheets must use real reference packages: full source image, object-local crop, nearby-contact crop, clean owner mask or visible evidence, and source anchor/calibration guides. The prompt must preserve object type, direction, material, grip/contact relation, and source-canvas scale. It must not replace a knife with another weapon, turn a staff into another tool, detach handles/straps/fingers, generate floating fragments, or create multi-view design-board alternates.
-- If `stable_owner_missing_props` or an active stable-object ledger remains after role sheets were ingested, V3 must create a `stable_object_repair` `$imagegen` task. That repair task is not final art: it must be saved at `expectedOutput`, ingested as a parts sheet, synced into candidates, registered, recomposed, exported, and validated through `v3-continue-imagegen`.
+- If `stable_owner_missing_props` or an active stable-object ledger remains after role sheets were ingested, V2.5 must create a `stable_object_repair` `$imagegen` task. That repair task is not final art: it must be saved at `expectedOutput`, ingested as a parts sheet, synced into candidates, registered, recomposed, exported, and validated through `v3-continue-imagegen`.
 - Generated candidate proportion consistency is a hard quality gate: record each role-sheet candidate's sheet bbox, target source bbox, scale factors, aspect drift, outside-mask ratio, and rejection reasons. If all real `$imagegen` candidates fail while `source-visible-*` fallback candidates pass, report this as generated candidate quality failure instead of hiding it behind a passing source-visible reconstruction.
-- Proportion control is local to each source part. V3 must not force every generated component to a universal sheet scale. Each drawing-facing `generationTarget` should carry `targetSourceBbox` / `sourceScaleAnchor` from the corresponding source-canvas part or stable object. `$imagegen` should match that target's source width, height, aspect, and canvas-relative scale: a boot must follow the source boot scale, a head must follow the source head scale, and a weapon must follow the source weapon scale.
+- Proportion control is local to each source part. V2.5 must not force every generated component to a universal sheet scale. Each drawing-facing `generationTarget` should carry `targetSourceBbox` / `sourceScaleAnchor` from the corresponding source-canvas part or stable object. `$imagegen` should match that target's source width, height, aspect, and canvas-relative scale: a boot must follow the source boot scale, a head must follow the source head scale, and a weapon must follow the source weapon scale.
 - A generated parts sheet is only candidate art. It becomes a component only after owner mapping, alpha cleanup, source-canvas registration, and QA.
 - Role sheet QA must reject over-fragmented head micro sheets, garment-fragment sheets, broken hand-held interaction groups, and under-split connected limb sheets before candidate registration.
-- Hidden/occluded content is a separate gate only when a component has an explicit hidden/overlap target or manual review asks for it. A source-visible local candidate can pass the default V3 flow when registration, recompose, pose-stress, Review integrity, export, and validation gates pass; it must not be routed into hidden-inpaint by default.
+- Hidden/occluded content is a separate gate only when a component has an explicit hidden/overlap target or manual review asks for it. A source-visible local candidate can pass the default V2.5 flow when registration, recompose, pose-stress, Review integrity, export, and validation gates pass; it must not be routed into hidden-inpaint by default.
 - Final claims must distinguish:
   - source-locked reconstruction
   - generated completion candidates
   - accepted final components
   - blocked evidence
 - Review HTML should prioritize visual inspection: Original, Combined/candidate sheet, Components. Debug QA metrics may exist in JSON or a folded debug drawer, but should not dominate the page or appear in the header summary.
-- Review must still show missing, rejected, or no-image V3 components as placeholder cards so component count and failure state remain visible. V3 Review supports status filtering, per-card detail toggles, and large image preview for visual inspection.
-- Do not expose `review.html` as the user-facing deliverable while V3 is still blocked, has pending `$imagegen` tasks, has no accepted registered components, or has not passed `v3/check/v3-validation-report.json`. In that state `review.html` is a debug/review artifact only; show `v3/imagegen/imagegen-execution-board.png`, `v3/imagegen/v3-imagegen-execution-report.json`, and `v3/imagegen/imagegen-progress-report.json` instead.
+- Review must still show missing, rejected, or no-image V2.5 components as placeholder cards so component count and failure state remain visible. V2.5 Review supports status filtering, per-card detail toggles, and large image preview for visual inspection.
+- Do not expose `review.html` as the user-facing deliverable while V2.5 is still blocked, has pending `$imagegen` tasks, has no accepted registered components, or has not passed `v3/check/v3-validation-report.json`. In that state `review.html` is a debug/review artifact only; show `v3/imagegen/imagegen-execution-board.png`, `v3/imagegen/v3-imagegen-execution-report.json`, and `v3/imagegen/imagegen-progress-report.json` instead.
 
 ## Standard Flow
 
 1. Initialize or reuse a workspace:
 
 ```bash
-python3 skill-v3/scripts/kine_layer_workspace.py run \
+python3 kine-layer-v2-5/scripts/kine_layer_workspace.py run \
   --source /absolute/path/source.png \
   --out-root /absolute/path/workspaces
 ```
 
 Initialization writes `source/source-background-preflight.json` and `source/source-subject-preflight.json`.
 
-V3 routes the source before component splitting:
+V2.5 routes the source before component splitting:
 
 - If the source already has high-confidence useful alpha, continue directly. Existing alpha is not automatically trusted: sparse alpha, edge scene fragments, too-small boxes, or low-confidence subject geometry must route to subject isolation instead of component splitting.
-- If the source has an opaque flat border background such as green screen, V3 removes only the background-color region connected to the canvas edge before partitioning and records `source/preprocessed-alpha.png`. Isolated same-color pixels inside the character, such as green eyes or green costume details, are preserved.
-- If the source is an opaque non-flat scene, such as a character in front of an aircraft, grass, sky, buildings, or other complex background, V3 must not generate component masks or visible cuts from that scene source. It writes a `$imagegen` subject matte task first. The V3 agent must then call the `$imagegen` skill, save the matte at the task's `expectedOutput`, ingest it, and continue V3 on the clean character workspace. Do not hand this back to the user as a manual command sequence.
+- If the source has an opaque flat border background such as green screen, V2.5 removes only the background-color region connected to the canvas edge before partitioning and records `source/preprocessed-alpha.png`. Isolated same-color pixels inside the character, such as green eyes or green costume details, are preserved.
+- If the source is an opaque non-flat scene, such as a character in front of an aircraft, grass, sky, buildings, or other complex background, V2.5 must not generate component masks or visible cuts from that scene source. It writes a `$imagegen` subject matte task first. The V2.5 agent must then call the `$imagegen` skill, save the matte at the task's `expectedOutput`, ingest it, and continue V2.5 on the clean character workspace. Do not hand this back to the user as a manual command sequence.
 
 Initialization also preserves an un-keyed, normalized original reference at `source/original-normalized.png`. Use this as the color/detail authority when chroma-key cleanup may have removed source-like colors inside the character.
 
 For an existing workspace, these commands are internal recovery/debug anchors for inspecting source background and subject routing state:
 
 ```bash
-python3 skill-v3/scripts/kine_layer_workspace.py v3-source-preflight \
+python3 kine-layer-v2-5/scripts/kine_layer_workspace.py v3-source-preflight \
   --workspace /absolute/path/workspace
 
-python3 skill-v3/scripts/kine_layer_workspace.py v3-subject-preflight \
+python3 kine-layer-v2-5/scripts/kine_layer_workspace.py v3-subject-preflight \
   --workspace /absolute/path/workspace
 ```
 
 When `v3-subject-preflight` reports `needs_imagegen_subject_matte`, the user-facing flow is still automatic:
 
 ```text
-V3 agent reads the subject matte work order
+V2.5 agent reads the subject matte work order
  -> loads source.png into the $imagegen context
  -> uses the $imagegen skill in built-in mode to remove scene/background objects
  -> saves a full-canvas high-resolution PNG at expectedOutput
  -> runs v3-continue-imagegen internally
- -> continues V3 on the resulting clean character workspace
+ -> continues V2.5 on the resulting clean character workspace
 ```
 
-For built-in `$imagegen`, a generated image that is only visible in chat is not pipeline evidence. The Agent must file it into the work order's `expectedOutput` path before continuing. `$imagegen` outputs should be requested as PNG. PNG may be opaque or transparent; if the built-in tool returns an opaque chroma-key PNG, V3 locally removes only the requested edge-connected chroma-key background before ingest.
+For built-in `$imagegen`, a generated image that is only visible in chat is not pipeline evidence. The Agent must file it into the work order's `expectedOutput` path before continuing. `$imagegen` outputs should be requested as PNG. PNG may be opaque or transparent; if the built-in tool returns an opaque chroma-key PNG, V2.5 locally removes only the requested edge-connected chroma-key background before ingest.
 
 If built-in `$imagegen` returns a file path through `savedPath` or by writing under `$CODEX_HOME/generated_images`, the Agent must file that PNG through the internal adapter before continuing:
 
 ```bash
-python3 skill-v3/scripts/kine_layer_workspace.py v3-save-imagegen-inline \
+python3 kine-layer-v2-5/scripts/kine_layer_workspace.py v3-save-imagegen-inline \
   --workspace /absolute/path/scene-workspace \
   --task-id subject-matte:source-character \
   --input /absolute/path/to/imagegen-output.png \
@@ -198,7 +206,7 @@ python3 skill-v3/scripts/kine_layer_workspace.py v3-save-imagegen-inline \
 If built-in `$imagegen` returns `savedPath: null` but exposes an inline PNG/base64 image result, the Agent must save that inline result through the same adapter before continuing:
 
 ```bash
-python3 skill-v3/scripts/kine_layer_workspace.py v3-save-imagegen-inline \
+python3 kine-layer-v2-5/scripts/kine_layer_workspace.py v3-save-imagegen-inline \
   --workspace /absolute/path/scene-workspace \
   --task-id subject-matte:source-character \
   --base64-file /absolute/path/imagegen-result.base64.txt \
@@ -218,7 +226,7 @@ Never treat "saved" file existence alone as continuation success.
 After the subject matte is saved, use the internal continuation command:
 
 ```bash
-python3 skill-v3/scripts/kine_layer_workspace.py v3-continue-imagegen \
+python3 kine-layer-v2-5/scripts/kine_layer_workspace.py v3-continue-imagegen \
   --workspace /absolute/path/scene-workspace
 ```
 
@@ -227,27 +235,27 @@ python3 skill-v3/scripts/kine_layer_workspace.py v3-continue-imagegen \
 The shell commands below are recovery/debug anchors only. They are not the normal user workflow:
 
 ```bash
-python3 skill-v3/scripts/kine_layer_workspace.py v3-imagegen-work-order \
+python3 kine-layer-v2-5/scripts/kine_layer_workspace.py v3-imagegen-work-order \
   --workspace /absolute/path/scene-workspace
 
 # after $imagegen saves imagegen/v3/source-character-matte.png:
-python3 skill-v3/scripts/kine_layer_workspace.py v3-ingest-subject-matte \
+python3 kine-layer-v2-5/scripts/kine_layer_workspace.py v3-ingest-subject-matte \
   --workspace /absolute/path/scene-workspace \
   --matte /absolute/path/scene-workspace/imagegen/v3/source-character-matte.png \
   --out /absolute/path/clean-character-workspace
 ```
 
-2. Write the V3 plan:
+2. Write the V2.5 plan:
 
 ```bash
-python3 skill-v3/scripts/kine_layer_workspace.py v3-plan \
+python3 kine-layer-v2-5/scripts/kine_layer_workspace.py v3-plan \
   --workspace /absolute/path/workspace
 ```
 
 3. Write component mask jobs:
 
 ```bash
-python3 skill-v3/scripts/kine_layer_workspace.py v3-mask-jobs \
+python3 kine-layer-v2-5/scripts/kine_layer_workspace.py v3-mask-jobs \
   --workspace /absolute/path/workspace
 ```
 
@@ -264,13 +272,13 @@ v3/masks/<component>.visible_cut.png
 v3/masks/mask-summary.json
 ```
 
-Mask jobs record `maskSource` in the job JSON, component plan, and summary. Current sources are `source_partition_*`, `vlm_cutout_map_region` from `cutout-map.json` / `v3/visual-split-decision.json`, and `registered_candidate_alpha` from already registered source-canvas candidate evidence. V3 does not trust an unregistered parts-sheet crop as a final mask source.
+Mask jobs record `maskSource` in the job JSON, component plan, and summary. Current sources are `source_partition_*`, `vlm_cutout_map_region` from `cutout-map.json` / `v3/visual-split-decision.json`, and `registered_candidate_alpha` from already registered source-canvas candidate evidence. V2.5 does not trust an unregistered parts-sheet crop as a final mask source.
 When a component mask contains another stable owner that already has owner evidence, `v3-mask-jobs` writes both the original source-visible mask and the cleaned owner mask. The cleaned mask is the default `mask` / `visibleCut`; the original hard-cut evidence remains available as `sourceVisibleMask` / `sourceVisibleCut`. Foreign-owner subtraction is conservative: only trusted independent owners, such as props or discrete accessories, may be removed automatically. Broad body/clothing/limb bbox evidence is recorded in `foreignOwnerResolution.skippedOwners` and must be handled by registration/recompose QA instead of destructive subtraction.
 
 4. Write per-component reference bundles:
 
 ```bash
-python3 skill-v3/scripts/kine_layer_workspace.py v3-reference-bundles \
+python3 kine-layer-v2-5/scripts/kine_layer_workspace.py v3-reference-bundles \
   --workspace /absolute/path/workspace
 ```
 
@@ -298,7 +306,7 @@ Reference priority for `$imagegen` tasks:
 Execution contract for `$imagegen` tasks:
 
 - Do not rely on prompt text paths alone. Built-in `$imagegen` does not automatically read local file paths mentioned in a prompt.
-- Every `v3/imagegen/imagegen-work-order.json` task may include `inputImages`; before calling `$imagegen`, load every `inputImages[].path` into the image context. V3 also writes `v3/imagegen/reference-boards/*.reference-contact.png` for each task. If the execution surface cannot load many separate local images, load that reference-contact board into context instead; it visibly contains the same inputs and is saved as execution evidence.
+- Every `v3/imagegen/imagegen-work-order.json` task may include `inputImages`; before calling `$imagegen`, load every `inputImages[].path` into the image context. V2.5 also writes `v3/imagegen/reference-boards/*.reference-contact.png` for each task. If the execution surface cannot load many separate local images, load that reference-contact board into context instead; it visibly contains the same inputs and is saved as execution evidence.
 - For every role sheet, registration repair, and hidden inpaint task, the required reference package is:
   1. `source-original-full`: identity, global style, and proportions.
   2. `component-original-region`: the unprocessed source crop for local color/detail/material.
@@ -311,14 +319,14 @@ Execution contract for `$imagegen` tasks:
 5. Generate bounded role sheets from `v3/sheet-campaign.json`.
 
 ```bash
-python3 skill-v3/scripts/kine_layer_workspace.py v3-sheet-prompts \
+python3 kine-layer-v2-5/scripts/kine_layer_workspace.py v3-sheet-prompts \
   --workspace /absolute/path/workspace
 ```
 
 6. Ingest each sheet with append semantics:
 
 ```bash
-python3 skill-v3/scripts/kine_layer_workspace.py parts-sheet \
+python3 kine-layer-v2-5/scripts/kine_layer_workspace.py parts-sheet \
   --workspace /absolute/path/workspace \
   --sheet /absolute/path/sheet.raw.png \
   --sheet-id sheet-001 \
@@ -327,10 +335,10 @@ python3 skill-v3/scripts/kine_layer_workspace.py parts-sheet \
   --chroma-key auto
 ```
 
-7. Sync split sheet candidates into the V3 candidate pool:
+7. Sync split sheet candidates into the V2.5 candidate pool:
 
 ```bash
-python3 skill-v3/scripts/kine_layer_workspace.py v3-sync-candidates \
+python3 kine-layer-v2-5/scripts/kine_layer_workspace.py v3-sync-candidates \
   --workspace /absolute/path/workspace
 ```
 
@@ -344,7 +352,7 @@ v3/sheets/sheet-manifest.json
 8. Register and QA:
 
 ```bash
-python3 skill-v3/scripts/kine_layer_workspace.py v3-register-candidates \
+python3 kine-layer-v2-5/scripts/kine_layer_workspace.py v3-register-candidates \
   --workspace /absolute/path/workspace
 ```
 
@@ -355,24 +363,24 @@ v3/registration/registration-report.json
 v3/registration/<component-id>/<candidate-id>.registered.png
 ```
 
-Then run the legacy QA/review checks while V3 recompose gates are still being developed:
+Then run the legacy QA/review checks while V2.5 recompose gates are still being developed:
 
 ```bash
-python3 skill-v3/scripts/kine_layer_workspace.py qa \
+python3 kine-layer-v2-5/scripts/kine_layer_workspace.py qa \
   --workspace /absolute/path/workspace
 
-python3 skill-v3/scripts/kine_layer_workspace.py validate-html \
+python3 kine-layer-v2-5/scripts/kine_layer_workspace.py validate-html \
   --workspace /absolute/path/workspace
 ```
 
-V3 candidate registration is component-level evidence. `auto-register-parts` is still available for the V2 owner-level path, but it is not the V3 registration gate.
+V2.5 candidate registration is component-level evidence. `auto-register-parts` is still available for the V2 owner-level path, but it is not the V2.5 registration gate.
 If a sheet produces candidates but `v3/registration/registration-report.json` has `acceptedCount: 0`, aggregate validation must block with `no_candidates_accepted`; rejected candidates are useful diagnostics, not accepted components.
 Registration reports must include human-readable rejection details alongside internal codes. Codes such as `owner_pollution`, `source_similarity_failed`, `shape_mismatch`, and `identity_drift` are not enough on their own; reports and repair tasks should explain in plain language what failed and which next action is expected. These explanations are diagnostics only and must not relax registration, recompose, or QA gates.
 
 9. Write registration repair tasks when candidates are rejected:
 
 ```bash
-python3 skill-v3/scripts/kine_layer_workspace.py v3-registration-repair-report \
+python3 kine-layer-v2-5/scripts/kine_layer_workspace.py v3-registration-repair-report \
   --workspace /absolute/path/workspace
 ```
 
@@ -389,7 +397,7 @@ The report turns rejected reasons such as `source_similarity_failed`, `owner_pol
 To produce one execution checklist for all pending `$imagegen` tasks:
 
 ```bash
-python3 skill-v3/scripts/kine_layer_workspace.py v3-imagegen-work-order \
+python3 kine-layer-v2-5/scripts/kine_layer_workspace.py v3-imagegen-work-order \
   --workspace /absolute/path/workspace
 ```
 
@@ -421,14 +429,14 @@ Every task in `imagegen-work-order.json` must include `agentAction`, `completion
 
 Initial role-specific parts sheet tasks come from `v3-sheet-prompts`. Each sheet must be saved at its `expectedOutput` path and then ingested with the listed `parts-sheet --append --chroma-key auto` command. Registration repair and hidden inpaint tasks must not be generated or treated as active until all role sheets in the current campaign have been saved and ingested.
 
-If a generated sheet was saved under an ad-hoc sheet id such as `controlled_layout_mixed`, it may still be useful visual evidence, but V3 registration must block with `candidate_component_pool_missing` until the real role-specific `sheet-001`, `sheet-002`, etc. outputs are saved and ingested. Do not interpret this blocker as proof that the art is visually bad; it means the candidate has no component pool to match against.
+If a generated sheet was saved under an ad-hoc sheet id such as `controlled_layout_mixed`, it may still be useful visual evidence, but V2.5 registration must block with `candidate_component_pool_missing` until the real role-specific `sheet-001`, `sheet-002`, etc. outputs are saved and ingested. Do not interpret this blocker as proof that the art is visually bad; it means the candidate has no component pool to match against.
 
 Fresh `run` automatically refreshes the work order, progress report, and workspace-local execution report before it finishes, then records them in `run-state.json` as `v3ImagegenWorkOrder`, `v3ImagegenProgressReport`, and `v3ImagegenExecutionReport`. This prevents a raw sheet or semantic-decomposition package from being treated as the final artifact while the save/ingest/register/hidden/export steps are still missing.
 
 After saving `$imagegen` outputs at their `expectedOutput` paths, inspect ingest readiness:
 
 ```bash
-python3 skill-v3/scripts/kine_layer_workspace.py v3-imagegen-progress-report \
+python3 kine-layer-v2-5/scripts/kine_layer_workspace.py v3-imagegen-progress-report \
   --workspace /absolute/path/workspace
 ```
 
@@ -443,7 +451,7 @@ The progress report checks missing outputs, unreadable images, empty alpha, hidd
 After a ready output exists, run:
 
 ```bash
-python3 skill-v3/scripts/kine_layer_workspace.py v3-continue-imagegen \
+python3 kine-layer-v2-5/scripts/kine_layer_workspace.py v3-continue-imagegen \
   --workspace /absolute/path/workspace
 ```
 
@@ -452,11 +460,11 @@ python3 skill-v3/scripts/kine_layer_workspace.py v3-continue-imagegen \
 10. Write hidden completion jobs:
 
 ```bash
-python3 skill-v3/scripts/kine_layer_workspace.py v3-hidden-jobs \
+python3 kine-layer-v2-5/scripts/kine_layer_workspace.py v3-hidden-jobs \
   --workspace /absolute/path/workspace
 ```
 
-This writes the V3 hidden four-pack for each component:
+This writes the V2.5 hidden four-pack for each component:
 
 ```text
 v3/hidden/<component-id>/registered_merged.png
@@ -474,7 +482,7 @@ The command does not pretend missing hidden art is complete. Components that nee
 When hidden pixels are still missing, write explicit `$imagegen` skill tasks:
 
 ```bash
-python3 skill-v3/scripts/kine_layer_workspace.py v3-hidden-handoff \
+python3 kine-layer-v2-5/scripts/kine_layer_workspace.py v3-hidden-handoff \
   --workspace /absolute/path/workspace
 ```
 
@@ -490,7 +498,7 @@ Each task names the component, prompt, visible cut, registered evidence, expecte
 Hidden inpaint handoff tasks must be executable without consulting another incomplete file. Every task must include `taskId`, `taskType`, `inputImages`, `referenceContactBoard`, `agentAction`, `completionCriteria`, `expectedOutput`, and `ingestCommand`. The staged `v3/imagegen/imagegen-work-order.json` may aggregate these tasks, but `v3/hidden/hidden-inpaint-handoff.json` must remain complete enough for a later Agent to load the reference board, call `$imagegen`, save the output, ingest it, and continue.
 
 ```bash
-python3 skill-v3/scripts/kine_layer_workspace.py v3-ingest-hidden \
+python3 kine-layer-v2-5/scripts/kine_layer_workspace.py v3-ingest-hidden \
   --workspace /absolute/path/workspace \
   --component torso \
   --image /absolute/path/workspace/v3/hidden/torso/imagegen_hidden_inpaint.png \
@@ -503,7 +511,7 @@ Ingest updates `hidden_inpaint.png`, `merged_component.png`, `qa_overlap.png`, `
 11. Review `$imagegen` hidden inpaint outputs:
 
 ```bash
-python3 skill-v3/scripts/kine_layer_workspace.py v3-hidden-review-report \
+python3 kine-layer-v2-5/scripts/kine_layer_workspace.py v3-hidden-review-report \
   --workspace /absolute/path/workspace
 ```
 
@@ -516,17 +524,17 @@ v3/hidden/review/hidden-inpaint-review-report.json
 The report lists each `$imagegen` hidden output, provenance, hidden pixel count, visible-overlap status, QA overlap image, and whether human review is still required. To apply batch review decisions:
 
 ```bash
-python3 skill-v3/scripts/kine_layer_workspace.py v3-hidden-review-report \
+python3 kine-layer-v2-5/scripts/kine_layer_workspace.py v3-hidden-review-report \
   --workspace /absolute/path/workspace \
   --decisions /absolute/path/workspace/v3-hidden-review-decisions.json
 ```
 
 The decisions JSON must use type `kine.v3.hiddenInpaintReviewDecisions` with `accepted`, `rejected`, or `needs_revision` rows. Manual `accepted` is evidence only. Manual `rejected` or `needs_revision` writes back to `v3/component-plan.json` and blocks final export.
 
-12. Run V3 source recompose:
+12. Run V2.5 source recompose:
 
 ```bash
-python3 skill-v3/scripts/kine_layer_workspace.py v3-recompose \
+python3 kine-layer-v2-5/scripts/kine_layer_workspace.py v3-recompose \
   --workspace /absolute/path/workspace
 ```
 
@@ -540,10 +548,10 @@ v3/check/recompose-report.json
 
 Only accepted components with `mergedComponent` evidence are composed. Missing registration or merged artifacts are reported, not filled from source locks. The report includes `perComponentQuality` for source-visible mismatch diagnosis, so a failed Combined image can be traced back to the component that introduced missing alpha or RGB drift. Failed component-visible checks also write `v3/check/component-quality/<component-id>/visible-mismatch-heatmap.png`.
 
-13. Run V3 pose stress:
+13. Run V2.5 pose stress:
 
 ```bash
-python3 skill-v3/scripts/kine_layer_workspace.py v3-pose-stress \
+python3 kine-layer-v2-5/scripts/kine_layer_workspace.py v3-pose-stress \
   --workspace /absolute/path/workspace
 ```
 
@@ -560,7 +568,7 @@ The command writes small-angle pivot/socket preview evidence for accepted merged
 14. Aggregate pose gap calibration evidence:
 
 ```bash
-python3 skill-v3/scripts/kine_layer_workspace.py v3-pose-calibration-report \
+python3 kine-layer-v2-5/scripts/kine_layer_workspace.py v3-pose-calibration-report \
   --workspace-root /absolute/path/workspaces \
   --refresh
 ```
@@ -571,14 +579,14 @@ This writes:
 <workspace-root>/v3-pose-calibration-report.json
 ```
 
-The report aggregates `gapRatio`, `gapPixels`, and `newAlphaRatio` across V3 pose-stress cases, lists the largest gap cases, and recommends thresholds for later human-calibrated `hard_fail` use. It does not modify `v3/qa-gates.json`; copy thresholds only after visual review of the largest gap cases.
+The report aggregates `gapRatio`, `gapPixels`, and `newAlphaRatio` across V2.5 pose-stress cases, lists the largest gap cases, and recommends thresholds for later human-calibrated `hard_fail` use. It does not modify `v3/qa-gates.json`; copy thresholds only after visual review of the largest gap cases.
 
-15. Apply Review decisions when a human reviewer marks V3 cards in `review.html`:
+15. Apply Review decisions when a human reviewer marks V2.5 cards in `review.html`:
 
-Before applying decisions, verify that Review is showing the current V3 evidence:
+Before applying decisions, verify that Review is showing the current V2.5 evidence:
 
 ```bash
-python3 skill-v3/scripts/kine_layer_workspace.py v3-review-integrity-report \
+python3 kine-layer-v2-5/scripts/kine_layer_workspace.py v3-review-integrity-report \
   --workspace /absolute/path/workspace
 ```
 
@@ -588,20 +596,20 @@ This writes:
 v3/review/review-integrity-report.json
 ```
 
-The report verifies that `review.html` exposes active V3 components, split parts-sheet candidates, rejected candidates, the correct Combined/candidate-sheet image, and folded debug evidence. It blocks stale or partial Review pages, including cases where Combined shows an old hard cutout, only a head, too few component cards, or visible debug text such as reconstruction QA metrics.
+The report verifies that `review.html` exposes active V2.5 components, split parts-sheet candidates, rejected candidates, the correct Combined/candidate-sheet image, and folded debug evidence. It blocks stale or partial Review pages, including cases where Combined shows an old hard cutout, only a head, too few component cards, or visible debug text such as reconstruction QA metrics.
 
 ```bash
-python3 skill-v3/scripts/kine_layer_workspace.py v3-apply-review-decisions \
+python3 kine-layer-v2-5/scripts/kine_layer_workspace.py v3-apply-review-decisions \
   --workspace /absolute/path/workspace \
   --decisions /absolute/path/workspace/v3-review-decisions.json
 ```
 
 The Review page stores decisions locally in the browser and downloads a `kine.v3.reviewDecisions` JSON file. Applying it writes `v3/review/review-decisions-applied.json` and annotates `v3/component-plan.json`. Manual `rejected` blocks export; manual `accepted` is review evidence only and does not bypass review integrity, recompose, pose-stress, or hidden-completion gates.
 
-16. Export V3 accepted final components:
+16. Export V2.5 accepted final components:
 
 ```bash
-python3 skill-v3/scripts/kine_layer_workspace.py v3-export \
+python3 kine-layer-v2-5/scripts/kine_layer_workspace.py v3-export \
   --workspace /absolute/path/workspace
 ```
 
@@ -614,13 +622,13 @@ v3/export/kine-handoff-manifest.json
 v3/export/source-master-v3.psd  # only when export provenance is final-exportable
 ```
 
-The export is blocked unless V3 recompose, pose-stress, stable-owner coverage, generated-candidate quality, and export-provenance gates pass. Only accepted merged components are exported. A PSD for the normal final path may only contain accepted generated/merged component assets; `source-visible-*` fallback layers are debug/source-lock evidence and must not be labeled as a normal final redrawn PSD. If the run can only export source-visible fallback components, `components-manifest.json` must be `blocked_not_final` or explicitly mark the PSD/export as `source-visible-fallback`, not `final_exportable`.
-`components-manifest.json` and `kine-handoff-manifest.json` include `runtimeTargets.spine` and `runtimeTargets.live2d` with bone/slot, parent, socket, pivot, placement, and draw-order metadata for downstream rigging. These are handoff contracts only; V3 does not claim to generate Spine meshes, Live2D deformers, weights, or animation curves.
+The export is blocked unless V2.5 recompose, pose-stress, stable-owner coverage, generated-candidate quality, and export-provenance gates pass. Only accepted merged components are exported. A PSD for the normal final path may only contain accepted generated/merged component assets; `source-visible-*` fallback layers are debug/source-lock evidence and must not be labeled as a normal final redrawn PSD. If the run can only export source-visible fallback components, `components-manifest.json` must be `blocked_not_final` or explicitly mark the PSD/export as `source-visible-fallback`, not `final_exportable`.
+`components-manifest.json` and `kine-handoff-manifest.json` include `runtimeTargets.spine` and `runtimeTargets.live2d` with bone/slot, parent, socket, pivot, placement, and draw-order metadata for downstream rigging. These are handoff contracts only; V2.5 does not claim to generate Spine meshes, Live2D deformers, weights, or animation curves.
 
 17. Validate exported handoff manifest references:
 
 ```bash
-python3 skill-v3/scripts/kine_layer_workspace.py v3-validate-handoff \
+python3 kine-layer-v2-5/scripts/kine_layer_workspace.py v3-validate-handoff \
   --workspace /absolute/path/workspace
 ```
 
@@ -635,7 +643,7 @@ The command checks exported component PNG references, placement versus source ca
 18. Record external Spine/Live2D import evidence:
 
 ```bash
-python3 skill-v3/scripts/kine_layer_workspace.py v3-runtime-import-report \
+python3 kine-layer-v2-5/scripts/kine_layer_workspace.py v3-runtime-import-report \
   --workspace /absolute/path/workspace \
   --evidence /absolute/path/workspace/v3-runtime-import-evidence.json
 ```
@@ -648,19 +656,19 @@ v3/export/runtime-import-report.json
 
 The evidence JSON must use type `kine.v3.runtimeImportEvidence` with `imports` rows for `spine` and `live2d`. A row can be `passed`, `failed`, or `skipped`; `passed` records downstream confidence, while failed evidence remains visible as an external runtime blocker. This records manual or external-tool import evidence only. It does not generate Spine meshes, Live2D deformers, weights, or animation curves.
 
-19. Write the aggregate V3 validation report:
+19. Write the aggregate V2.5 validation report:
 
 ```bash
-python3 skill-v3/scripts/kine_layer_workspace.py v3-validate \
+python3 kine-layer-v2-5/scripts/kine_layer_workspace.py v3-validate \
   --workspace /absolute/path/workspace
 ```
 
-This writes `v3/check/v3-validation-report.json` by reading the current V3 artifacts. It is a read-only hardening report: missing or failed source-master gates stay blocked and are never promoted to final components. If `$imagegen` hidden outputs exist, `hidden_inpaint_review` must pass before aggregate validation can pass. External Spine/Live2D runtime import evidence is recorded separately by `v3-runtime-import-report`; missing external import evidence does not block the default V3 source-master validation, but actual failed runtime import evidence remains visible in the report.
+This writes `v3/check/v3-validation-report.json` by reading the current V2.5 artifacts. It is a read-only hardening report: missing or failed source-master gates stay blocked and are never promoted to final components. If `$imagegen` hidden outputs exist, `hidden_inpaint_review` must pass before aggregate validation can pass. External Spine/Live2D runtime import evidence is recorded separately by `v3-runtime-import-report`; missing external import evidence does not block the default V2.5 source-master validation, but actual failed runtime import evidence remains visible in the report.
 
 20. Aggregate real-sample hardening reports across workspaces:
 
 ```bash
-python3 skill-v3/scripts/kine_layer_workspace.py v3-hardening-report \
+python3 kine-layer-v2-5/scripts/kine_layer_workspace.py v3-hardening-report \
   --workspace-root /absolute/path/workspaces \
   --refresh
 ```
@@ -671,22 +679,22 @@ This writes:
 <workspace-root>/v3-hardening-report.json
 ```
 
-Use this after running several real characters through V3. The report summarizes workspace pass/block counts, per-gate status counts, top blockers, and blocked gates per workspace. It does not generate art, call an API, or promote blocked components. Pass `--workspace` more than once to aggregate explicit workspaces, and `--out` to choose a custom report path.
+Use this after running several real characters through V2.5. The report summarizes workspace pass/block counts, per-gate status counts, top blockers, and blocked gates per workspace. It does not generate art, call an API, or promote blocked components. Pass `--workspace` more than once to aggregate explicit workspaces, and `--out` to choose a custom report path.
 
 21. Audit real `$imagegen` role-sheet execution:
 
 ```bash
-python3 skill-v3/scripts/kine_layer_workspace.py v3-imagegen-execution-report \
+python3 kine-layer-v2-5/scripts/kine_layer_workspace.py v3-imagegen-execution-report \
   --workspace /absolute/path/workspace \
   --refresh
 ```
 
-Use this whenever testing whether `$imagegen` actually followed the V3 decomposition contract. It reads the work order, saved `expectedOutput` files, parts-sheet ingest evidence, sheet preflight reports, V3 candidate sync, registration report, and V3 validation report. It distinguishes:
+Use this whenever testing whether `$imagegen` actually followed the V2.5 decomposition contract. It reads the work order, saved `expectedOutput` files, parts-sheet ingest evidence, sheet preflight reports, V2.5 candidate sync, registration report, and V2.5 validation report. It distinguishes:
 
 - `no_imagegen_execution`: no real role-sheet output entered the pipeline.
 - `imagegen_execution_failed`: role-sheet output was saved/ingested but sheet preflight or registration failed.
 - `imagegen_execution_partial`: at least one candidate registered, but hidden/recompose/export validation is still incomplete.
-- `passed`: aggregate V3 validation passed.
+- `passed`: aggregate V2.5 validation passed.
 
 This report is the preferred evidence for debugging "only isolated subject", "sheet generated but not ingested", "sheet over-fragmented", and "0 accepted candidates" cases. Screenshots, work orders, raw sheets, and chat-visible images are not enough.
 
@@ -695,7 +703,7 @@ For a single `--workspace`, `v3-imagegen-execution-report` writes `v3/imagegen/v
 `v3-imagegen-execution-report` also writes a per-workspace board at `v3/imagegen/imagegen-execution-board.png`. You can refresh that board directly:
 
 ```bash
-python3 skill-v3/scripts/kine_layer_workspace.py v3-imagegen-visual-board \
+python3 kine-layer-v2-5/scripts/kine_layer_workspace.py v3-imagegen-visual-board \
   --workspace /absolute/path/workspace
 ```
 
@@ -707,18 +715,18 @@ For real role-sheet validation, the visual execution board must show, in one rea
 - transparent sheets after chroma-key cleanup
 - parts contact sheets
 - accepted and rejected candidate evidence
-- V3 recompose and source diff
+- V2.5 recompose and source diff
 
 Without this visual execution board, the validation is incomplete even if JSON reports exist.
 
 22. Package only when QA state is honestly represented:
 
 ```bash
-python3 skill-v3/scripts/kine_layer_workspace.py package \
+python3 kine-layer-v2-5/scripts/kine_layer_workspace.py package \
   --workspace /absolute/path/workspace \
   --allow-blocked
 ```
 
 ## Development Boundary
 
-V3 is experimental. Keep V2 stable. Put V3-only behavior in `skill-v3/` unless the user explicitly asks to backport it.
+V2.5 is experimental. Keep changes within `kine-layer-v2-5/` unless the user explicitly asks to update another skill. Preserve the internal compatibility identifiers listed above.

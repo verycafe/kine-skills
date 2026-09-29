@@ -670,9 +670,13 @@ def write_director_decomposition_plan(workspace: Path, normalization: dict[str, 
 
 
 def v3_workspace_contract_text() -> str:
-    return """# KINE-LAYER V3 Workspace Contract
+    return """# KINE-LAYER V2.5 Workspace Contract
 
-This workspace follows the KINE-LAYER V3 pipeline contract.
+This workspace follows the KINE-LAYER V2.5 pipeline contract.
+
+The published skill is `kine-layer-v2-5`. Internal `v3-*` commands, `v3/` paths,
+`kine.v3.*` schemas, and this `KINE_LAYER_V3_CONTRACT.md` filename are retained
+for workspace compatibility; they do not indicate the published skill version.
 
 ## Completion Contract
 
@@ -692,11 +696,11 @@ Read these reports before claiming completion:
 - `v3/check/recompose-report.json`
 - `v3/export/components-manifest.json`
 
-If validation is missing, rejected, or blocked, report the blocker and continue the V3 pipeline instead of treating an intermediate asset as final.
+If validation is missing, rejected, or blocked, report the blocker and continue the V2.5 pipeline instead of treating an intermediate asset as final.
 
 ## Handoff Rule
 
-When continuing this workspace in a new Agent session, read this contract first. Generic global or project `AGENTS.md` guidance is a default only; it cannot downgrade V3 completion to a plan, a work order, a raw sheet, or an unregistered candidate.
+When continuing this workspace in a new Agent session, read this contract first. Generic global or project `AGENTS.md` guidance is a default only; it cannot downgrade V2.5 completion to a plan, a work order, a raw sheet, or an unregistered candidate.
 """
 
 
@@ -1521,7 +1525,7 @@ def write_v3_source_preflight_report(workspace: Path, tolerance: int = 28) -> di
         **report,
         "source": "source.png",
         "applied": False,
-        "note": "Existing workspace inspection only. New V3 workspaces apply flat-background removal during init when this report says shouldRemove=true.",
+        "note": "Existing workspace inspection only. New V2.5 workspaces apply flat-background removal during init when this report says shouldRemove=true.",
         "createdAt": datetime.now().isoformat(timespec="seconds"),
     }
     out_dir = workspace / "v3" / "source"
@@ -1731,10 +1735,10 @@ def analyze_source_subject(workspace: Path) -> dict[str, Any]:
         },
         "note": (
             "Opaque non-flat scene sources are automatically routed to a $imagegen subject-isolation task "
-            "before V3 mask/reference generation; otherwise background pixels pollute every component."
+            "before V2.5 mask/reference generation; otherwise background pixels pollute every component."
         )
         if should_route_to_subject_isolation
-        else "Source appears ready for V3 component mask/reference generation.",
+        else "Source appears ready for V2.5 component mask/reference generation.",
         "createdAt": datetime.now().isoformat(timespec="seconds"),
     }
 
@@ -1774,7 +1778,7 @@ def block_scene_partition_if_needed(workspace: Path, command_name: str) -> dict[
         "blockers": ["source_subject_needs_imagegen_subject_matte"],
         "sourceSubjectPreflight": "source/source-subject-preflight.json",
         "requiredAction": subject_report.get("requiredAction"),
-        "note": "Partition/apply-cutout-map is blocked for complex scene sources. Run the V3 $imagegen subject isolation flow first, then partition the clean character-matte workspace.",
+        "note": "Partition/apply-cutout-map is blocked for complex scene sources. Run the V2.5 $imagegen subject isolation flow first, then partition the clean character-matte workspace.",
         "createdAt": datetime.now().isoformat(timespec="seconds"),
     }
     write_json(workspace / "v3" / "source" / "partition-blocked.json", result)
@@ -4078,7 +4082,7 @@ def v3_is_role_allowed_large_role_component(role: str, features: dict[str, Any],
     if role_allows_contact and tall_skinny and has_hand_or_prop_pixels:
         return True
 
-    # True-image V3 validation showed that coherent boots and hand-held
+    # True-image V2.5 validation showed that coherent boots and hand-held
     # interaction groups are often tall on the sheet. They are not assembled
     # half-body characters merely because their bbox is high.
     if role == "feet_footwear":
@@ -4175,7 +4179,7 @@ def v3_parts_sheet_repair_guidance(role: str, code: str | None, features: dict[s
     if code in {"garment_overfragmented", "interaction_group_broken", "under_split_connected_sheet", "over_fragmented_micro_parts"}:
         return {
             "code": f"regenerate_{code}",
-            "summary": "Regenerate this role sheet with the V3 smart split rules instead of ingesting the current sheet.",
+            "summary": "Regenerate this role sheet with the V2.5 smart split rules instead of ingesting the current sheet.",
             "nextAction": "rerun_imagegen_role_sheet",
         }
     return None
@@ -4215,7 +4219,7 @@ def v3_parts_sheet_policy_failures(role: str, feature_rows: list[dict[str, Any]]
             {
                 "code": "over_fragmented_micro_parts",
                 "microLikePartCount": micro_count,
-                "message": "V3 head_identity sheets must keep facial micro details source-locked; do not ingest independent eyes, brows, nose, mouth, ears, or glasses as final components.",
+                "message": "V2.5 head_identity sheets must keep facial micro details source-locked; do not ingest independent eyes, brows, nose, mouth, ears, or glasses as final components.",
             }
         )
     if role in {"limbs", "body_clothes"} and garment_fragment_count >= 3:
@@ -4223,7 +4227,7 @@ def v3_parts_sheet_policy_failures(role: str, feature_rows: list[dict[str, Any]]
             {
                 "code": "garment_overfragmented",
                 "fragmentLikePartCount": garment_fragment_count,
-                "message": "V3 garment layers should be split by animation joints, not by loose cuffs, seams, wrinkles, or cloth scraps.",
+                "message": "V2.5 garment layers should be split by animation joints, not by loose cuffs, seams, wrinkles, or cloth scraps.",
             }
         )
     if role == "limbs" and small_dark_fragment_count >= 4 and hand_contact_count >= 1:
@@ -4341,9 +4345,9 @@ def parts_sheet_preflight(
             "the expected ImageGen sheet is one clean green-background final component sheet, not a character turnaround/model sheet",
             "assembled full-body/contextual character components are rejected",
             "broad parts sheets must not contain independently redrawn facial micro layers",
-            "V3 head_identity sheets must not over-fragment source-locked facial details",
-            "V3 garment sheets split by animation joints, not cloth scraps",
-            "V3 hand-held objects must stay coherent interaction groups unless explicitly split",
+            "V2.5 head_identity sheets must not over-fragment source-locked facial details",
+            "V2.5 garment sheets split by animation joints, not cloth scraps",
+            "V2.5 hand-held objects must stay coherent interaction groups unless explicitly split",
             "identity/style drift still requires visual review; this preflight only blocks structural errors",
         ],
         "createdAt": datetime.now().isoformat(timespec="seconds"),
@@ -6975,7 +6979,7 @@ def make_review_html(workspace: Path, qa: dict[str, Any], path: Path) -> None:
     <h2>Review</h2>
     <div class="rightStack">
       <div>
-        <p class="subhead">V3 Components</p>
+        <p class="subhead">V2.5 Components</p>
         <div id="v3Host"></div>
       </div>
       <div>
@@ -7198,7 +7202,7 @@ function renderV3Groups(host, groups) {{
   if (!total) {{
     const empty = document.createElement('div');
     empty.className = 'empty';
-    empty.textContent = 'No V3 components';
+    empty.textContent = 'No V2.5 components';
     host.appendChild(empty);
   }}
 }}
@@ -7336,7 +7340,7 @@ def strip_review_payload_scripts(review_html: str) -> str:
 
 
 def write_v3_review_integrity_report(workspace: Path) -> dict[str, Any]:
-    """Verify Review HTML actually exposes V3 visual evidence instead of stale debug shells."""
+    """Verify Review HTML actually exposes V2.5 visual evidence instead of stale debug shells."""
     review_path = workspace / "check" / "review.html"
     blockers: list[str] = []
     warnings: list[str] = []
@@ -7438,7 +7442,7 @@ def write_v3_review_integrity_report(workspace: Path) -> dict[str, Any]:
         "blockers": blockers,
         "warnings": warnings,
         "createdAt": datetime.now().isoformat(timespec="seconds"),
-        "note": "Visual review integrity gate. It verifies that Review HTML exposes all active V3 components/candidates and keeps debug evidence folded.",
+        "note": "Visual review integrity gate. It verifies that Review HTML exposes all active V2.5 components/candidates and keeps debug evidence folded.",
     }
     out_dir = workspace / "v3" / "review"
     out_dir.mkdir(parents=True, exist_ok=True)
@@ -7449,7 +7453,7 @@ def write_v3_review_integrity_report(workspace: Path) -> dict[str, Any]:
 
 
 def refresh_v3_review_artifacts(workspace: Path, reason: str) -> dict[str, Any]:
-    """Rebuild Review HTML after V3 downstream state changes.
+    """Rebuild Review HTML after V2.5 downstream state changes.
 
     This is an evidence refresh, not an acceptance shortcut. If the legacy QA /
     Review generation fails, validation will continue to expose the blocker
@@ -8427,7 +8431,7 @@ def v3_owner_split_strategy(owner: str) -> dict[str, Any]:
         }
     return {
         "mode": "named_owner_component",
-        "default": "follow the V3 named owner/component plan",
+        "default": "follow the V2.5 named owner/component plan",
         "avoid": v3_owner_do_not_split_by(owner),
     }
 
@@ -8456,7 +8460,7 @@ def v3_component_track(owner: str) -> str:
 
 
 def v3_hidden_requirement_for_owner(owner: str, visibility: str, sheet_eligible: bool, track: str | None = None) -> tuple[bool, str]:
-    """Return the default hidden-completion requirement for a V3 owner.
+    """Return the default hidden-completion requirement for a V2.5 owner.
 
     Source-locked identity/detail rows are source reconstruction evidence by default.
     They should not create ImageGen hidden-inpaint tasks unless a later explicit review
@@ -9279,7 +9283,7 @@ def ensure_v3_stable_object_plan(workspace: Path) -> dict[str, Any]:
                 "promptPath": f"imagegen/v3/{sheet_id}.props_accessories.prompt.txt",
                 "expectedRawPath": f"imagegen/v3/{sheet_id}.props_accessories.raw.png",
                 "partsSheetCommand": (
-                    "python3 skill-v3/scripts/kine_layer_workspace.py parts-sheet "
+                    "python3 kine-layer-v2-5/scripts/kine_layer_workspace.py parts-sheet "
                     f"--workspace {{workspace}} --sheet imagegen/v3/{sheet_id}.props_accessories.raw.png "
                     f"--sheet-id {sheet_id} --role props_accessories --append --chroma-key auto"
                 ),
@@ -9444,9 +9448,9 @@ def v3_component_targets_for_owner(owner: str) -> list[dict[str, Any]]:
 
 
 def write_v3_component_plan(workspace: Path, max_sheet_components: int = 12) -> dict[str, Any]:
-    """Write the V3 decomposition scaffold: semantic owners, sheet batches, and gates.
+    """Write the V2.5 decomposition scaffold: semantic owners, sheet batches, and gates.
 
-    V3 makes the rigging-sheet lesson executable: first name every expected owner,
+    V2.5 makes the rigging-sheet lesson executable: first name every expected owner,
     then group owners into bounded multi-sheet campaigns, then require per-owner mask,
     hidden completion, alpha cleanup, source recompose, and pose-stress gates.
     """
@@ -9592,7 +9596,7 @@ def write_v3_component_plan(workspace: Path, max_sheet_components: int = 12) -> 
                     "promptPath": f"imagegen/v3/{sheet_id}.{role}.prompt.txt",
                     "expectedRawPath": f"imagegen/v3/{sheet_id}.{role}.raw.png",
                     "partsSheetCommand": (
-                        "python3 skill-v3/scripts/kine_layer_workspace.py parts-sheet "
+                        "python3 kine-layer-v2-5/scripts/kine_layer_workspace.py parts-sheet "
                         f"--workspace {{workspace}} --sheet imagegen/v3/{sheet_id}.{role}.raw.png "
                         f"--sheet-id {sheet_id} --role {role} --append --chroma-key auto"
                     ),
@@ -10153,7 +10157,7 @@ def v3_merge_source_locked_details_into_identity_mask(
 ) -> tuple[Image.Image, dict[str, Any] | None]:
     """Fold facial micro/source-locked details into the face identity mask.
 
-    V3 default review should not show eye-white, iris, brows, nose, mouth, ears, or
+    V2.5 default review should not show eye-white, iris, brows, nose, mouth, ears, or
     glasses as separate final components. Their visible pixels still belong in the
     source-locked face/head identity candidate, otherwise recompose loses source alpha.
     """
@@ -10229,7 +10233,7 @@ def write_v3_mask_jobs(workspace: Path, ensure_partition: bool = True) -> dict[s
             "blockers": ["source_subject_needs_imagegen_subject_matte"],
             "sourceSubjectPreflight": "source/source-subject-preflight.json",
             "requiredAction": subject_report.get("requiredAction"),
-            "note": "V3 mask jobs were not generated because the source appears to be an opaque non-flat scene. V3 must run $imagegen subject isolation first.",
+            "note": "V2.5 mask jobs were not generated because the source appears to be an opaque non-flat scene. V2.5 must run $imagegen subject isolation first.",
             "createdAt": datetime.now().isoformat(timespec="seconds"),
         }
         write_json(out_dir / "mask-summary.json", summary)
@@ -10259,7 +10263,7 @@ def write_v3_mask_jobs(workspace: Path, ensure_partition: bool = True) -> dict[s
         for component in components
         if isinstance(component, dict) and isinstance(component.get("owner"), str)
     }
-    # Source-locked detail owners are intentionally absent from the default V3 final
+    # Source-locked detail owners are intentionally absent from the default V2.5 final
     # component plan, but their partition masks are still needed as evidence so their
     # pixels can be folded into the face identity owner.
     evidence_owner_ids.update(V3_SOURCE_LOCKED_DETAIL_OWNERS)
@@ -10455,7 +10459,7 @@ def write_v3_reference_bundles(workspace: Path, padding: int = 16, ensure_masks:
             "blockers": ["source_subject_needs_imagegen_subject_matte"],
             "sourceSubjectPreflight": "source/source-subject-preflight.json",
             "requiredAction": subject_report.get("requiredAction"),
-            "note": "Reference bundles were not generated because source masks would be polluted by scene background. V3 must run $imagegen subject isolation first.",
+            "note": "Reference bundles were not generated because source masks would be polluted by scene background. V2.5 must run $imagegen subject isolation first.",
             "createdAt": datetime.now().isoformat(timespec="seconds"),
         }
         write_json(out_root / "reference-bundles.json", manifest)
@@ -11141,7 +11145,7 @@ def v3_sheet_generation_targets(
                     "id": component_id,
                     "owner": owner,
                     "mode": "named_component",
-                    "description": "named owner component from the V3 plan",
+                    "description": "named owner component from the V2.5 plan",
                     "doNotRequest": v3_owner_do_not_split_by(owner),
                     "internalComponents": [component_id],
                     "splitStrategy": split_strategy,
@@ -11244,7 +11248,7 @@ def v3_sheet_role_policy_text(role: str) -> str:
 - Generate character-owned props as coherent interaction groups.
 - If a prop is held, preserve the contact relationship to the hand/grip; do not detach fingers, handles, straps, or held-object edges into unregistered fragments."""
     return """Role policy:
-- Generate only named final-layer components from the V3 plan.
+- Generate only named final-layer components from the V2.5 plan.
 - Do not add micro details, labels, duplicate alternates, or unrelated visual fragments."""
 
 
@@ -11261,7 +11265,7 @@ def write_v3_sheet_prompts(workspace: Path) -> dict[str, Any]:
             "blockers": ["source_subject_needs_imagegen_subject_matte"],
             "sourceSubjectPreflight": "source/source-subject-preflight.json",
             "requiredAction": subject_report.get("requiredAction"),
-            "note": "Role sheet prompts were not generated because V3 must isolate the character with $imagegen before role sheet generation.",
+            "note": "Role sheet prompts were not generated because V2.5 must isolate the character with $imagegen before role sheet generation.",
             "createdAt": datetime.now().isoformat(timespec="seconds"),
         }
         write_json(out_path, result)
@@ -11308,7 +11312,7 @@ def write_v3_sheet_prompts(workspace: Path) -> dict[str, Any]:
         safe_role = str(role).replace("/", "-").replace(" ", "_")
         expected_output = f"imagegen/v3/{sheet_id}.{safe_role}.raw.png"
         ingest_command = (
-            "python3 skill-v3/scripts/kine_layer_workspace.py parts-sheet "
+            "python3 kine-layer-v2-5/scripts/kine_layer_workspace.py parts-sheet "
             f"--workspace {shlex.quote(str(workspace))} "
             f"--sheet {shlex.quote(str(workspace / expected_output))} "
             f"--sheet-id {shlex.quote(sheet_id)} "
@@ -11316,14 +11320,14 @@ def write_v3_sheet_prompts(workspace: Path) -> dict[str, Any]:
             "--append --chroma-key auto"
         )
         prompt = f"""Use case: precise-object-edit
-Asset type: KINE-LAYER V3 bounded component sheet
+Asset type: KINE-LAYER V2.5 bounded component sheet
 Input image: the provided source character image is the strict identity, style, color, pose-logic, and proportion reference.
 Source canvas: {source.width}x{source.height}px.
 
 Create one role-specific parts sheet for role `{role}` only. Include only these semantic owners: {", ".join(owners) or "none"}.
 Target generation rows for $imagegen: {", ".join(generation_target_ids) or "none"}.
 These generation rows are the only drawing targets. Internal registration component IDs are not direct drawing instructions and must not be used to invent extra fragments.
-Visual split decision: {visual_decision_rel or "none; using V3 fallback generation targets"}.
+Visual split decision: {visual_decision_rel or "none; using V2.5 fallback generation targets"}.
 
 {role_policy}
 
@@ -11343,7 +11347,7 @@ Reference package:
 - Use `visible_cut.png` and `mask_region.png` only for component shape, boundary, alpha, and registration. Do not treat the processed cutout as the color authority.
 - If an input image or reference bundle marks `referenceStrength=weak_fragment` or `useAsPrimaryReference=false`, treat that visible cut/mask as diagnostic boundary evidence only. Do not let a tiny fragment override the original crop, full source, or visual split decision.
 
-Preserve the exact source identity, line style, palette ({palette}), proportions, outfit, hair, face, accessories, and visible silhouettes. The sheet is candidate art only; local KINE-LAYER V3 will split, alpha-clean, register, mask-check, and recompose it before anything can become final.
+Preserve the exact source identity, line style, palette ({palette}), proportions, outfit, hair, face, accessories, and visible silhouettes. The sheet is candidate art only; local KINE-LAYER V2.5 will split, alpha-clean, register, mask-check, and recompose it before anything can become final.
 
 For each target owner/component, draw owner-isolated animation-ready parts with enough hidden/overlap surface for rigging when inferable. Do not include unrelated owners. Do not draw a full assembled body. Do not create turnarounds, labels, captions, grids, watermarks, text, shadows, or alternate designs.
 
@@ -11677,7 +11681,7 @@ V3_REGISTRATION_REASON_CODES = {
 
 V3_REGISTRATION_REASON_DETAILS = {
     "candidate_component_pool_missing": {
-        "plainZh": "候选图没有进入任何可匹配的组件池。通常是 mixed 验证图冒充正式 role sheet，或 sheet-id 没有对应 V3 sheet campaign。",
+        "plainZh": "候选图没有进入任何可匹配的组件池。通常是 mixed 验证图冒充正式 role sheet，或 sheet-id 没有对应 V2.5 sheet campaign。",
         "nextActionZh": "保存并 ingest 正式 role sheet 输出，例如 sheet-001/head、sheet-002/body、sheet-003/limbs，而不是调低相似度阈值。",
     },
     "shape_mismatch": {
@@ -12229,7 +12233,7 @@ def v3_registration_repair_prompt(component: dict[str, Any], reasons: list[str],
     original_region = component.get("originalRegion") or "missing"
     visible_cut = component.get("visibleCut") or "missing"
     return f"""Use case: precise-object-edit
-Asset type: KINE-LAYER V3 registration repair candidate
+Asset type: KINE-LAYER V2.5 registration repair candidate
 Input image: the provided source character image is the strict identity, style, color, pose-logic, and proportion reference.
 
 Repair target:
@@ -12268,11 +12272,11 @@ Requirements:
 - If the previous reason includes shape_mismatch or registration_failed, preserve the source-facing scale and bbox proportions so local registration can place it back on source.png.
 - If the previous reason includes hidden_area_missing, include only the inferable hidden/overlap surface needed around the sockets, without repainting visible source pixels.
 
-Output a full-canvas transparent PNG aligned to source.png dimensions when possible. If a green background is unavoidable, use a perfectly flat #00ff00 background and no #00ff00 inside the component. This is a candidate only; local V3 registration, recompose, and QA must pass before final export."""
+Output a full-canvas transparent PNG aligned to source.png dimensions when possible. If a green background is unavoidable, use a perfectly flat #00ff00 background and no #00ff00 inside the component. This is a candidate only; local V2.5 registration, recompose, and QA must pass before final export."""
 
 
 def write_v3_registration_repair_report(workspace: Path, max_tasks: int = 24) -> dict[str, Any]:
-    """Turn rejected V3 registration evidence into concrete $imagegen repair tasks."""
+    """Turn rejected V2.5 registration evidence into concrete $imagegen repair tasks."""
     if not (workspace / "v3" / "references" / "reference-bundles.json").exists():
         write_v3_reference_bundles(workspace)
     registration_path = workspace / "v3" / "registration" / "registration-report.json"
@@ -12319,7 +12323,7 @@ def write_v3_registration_repair_report(workspace: Path, max_tasks: int = 24) ->
         role = str(component.get("role") or "repair")
         sheet_id = f"repair-{component_id}".replace("_", "-")
         ingest_command = (
-            "python3 skill-v3/scripts/kine_layer_workspace.py parts-sheet "
+            "python3 kine-layer-v2-5/scripts/kine_layer_workspace.py parts-sheet "
             f"--workspace {shlex.quote(str(workspace))} "
             f"--sheet {shlex.quote(str(workspace / expected_output))} "
             f"--sheet-id {shlex.quote(sheet_id)} "
@@ -12372,14 +12376,14 @@ def write_v3_registration_repair_report(workspace: Path, max_tasks: int = 24) ->
         "rejectedReasonDetails": v3_registration_reason_counts_details(reason_counts),
         "tasks": tasks,
         "createdAt": datetime.now().isoformat(timespec="seconds"),
-        "note": "$imagegen repair task plan only. Repaired art remains candidate evidence until V3 registration, recompose, and validation pass.",
+        "note": "$imagegen repair task plan only. Repaired art remains candidate evidence until V2.5 registration, recompose, and validation pass.",
     }
     if missing_rejected_details:
         report["blocker"] = "registration report has rejectedCount > 0 but no rejected[] details; rerun v3-register-candidates before repair planning."
     out_dir = workspace / "v3" / "registration"
     write_json(out_dir / "registration-repair-report.json", report)
     lines = [
-        "# V3 Registration Repair Handoff",
+        "# V2.5 Registration Repair Handoff",
         "",
         "Use these tasks with the `$imagegen` skill only. Do not route them through any other drawing path.",
         "",
@@ -12415,7 +12419,7 @@ def v3_hidden_prompt(component: dict[str, Any]) -> str:
     original_region = component.get("originalRegion") or "missing"
     visible_cut = component.get("visibleCut") or "missing"
     return f"""Use case: precise-object-edit
-Asset type: KINE-LAYER V3 hidden surface completion
+Asset type: KINE-LAYER V2.5 hidden surface completion
 
 Component: {component.get("id")}
 Owner: {component.get("owner")}
@@ -12813,7 +12817,7 @@ def write_v3_hidden_handoff(workspace: Path) -> dict[str, Any]:
         component_dir = hidden_root / component_id
         expected_output = component_dir / "imagegen_hidden_inpaint.png"
         ingest_command = (
-            "python3 skill-v3/scripts/kine_layer_workspace.py v3-ingest-hidden "
+            "python3 kine-layer-v2-5/scripts/kine_layer_workspace.py v3-ingest-hidden "
             f"--workspace {shlex.quote(str(workspace))} "
             f"--component {shlex.quote(component_id)} "
             f"--image {shlex.quote(str(expected_output))} --provenance-source imagegen"
@@ -12865,7 +12869,7 @@ def write_v3_hidden_handoff(workspace: Path) -> dict[str, Any]:
     }
     write_json(hidden_root / "hidden-inpaint-handoff.json", handoff)
     lines = [
-        "# V3 Hidden Inpaint Handoff",
+        "# V2.5 Hidden Inpaint Handoff",
         "",
         "These tasks are for the `$imagegen` skill only. They are not final components until `v3-ingest-hidden`, `v3-recompose`, and `v3-pose-stress` pass.",
         "",
@@ -12946,11 +12950,11 @@ def v3_parts_sheet_imagegen_tasks(workspace: Path) -> list[dict[str, Any]]:
                 "savePolicy": "Save the $imagegen role sheet exactly at expectedOutput before running ingestCommand.",
                 "ingestCommand": ingest_command,
                 "validationCommands": [
-                    "python3 skill-v3/scripts/kine_layer_workspace.py v3-sync-candidates --workspace <workspace>",
-                    "python3 skill-v3/scripts/kine_layer_workspace.py v3-register-candidates --workspace <workspace>",
-                    "python3 skill-v3/scripts/kine_layer_workspace.py v3-hidden-jobs --workspace <workspace>",
-                    "python3 skill-v3/scripts/kine_layer_workspace.py v3-recompose --workspace <workspace>",
-                    "python3 skill-v3/scripts/kine_layer_workspace.py v3-validate --workspace <workspace>",
+                    "python3 kine-layer-v2-5/scripts/kine_layer_workspace.py v3-sync-candidates --workspace <workspace>",
+                    "python3 kine-layer-v2-5/scripts/kine_layer_workspace.py v3-register-candidates --workspace <workspace>",
+                    "python3 kine-layer-v2-5/scripts/kine_layer_workspace.py v3-hidden-jobs --workspace <workspace>",
+                    "python3 kine-layer-v2-5/scripts/kine_layer_workspace.py v3-recompose --workspace <workspace>",
+                    "python3 kine-layer-v2-5/scripts/kine_layer_workspace.py v3-validate --workspace <workspace>",
                 ],
             }
         )
@@ -12992,7 +12996,7 @@ def v3_stable_object_repair_tasks(workspace: Path) -> list[dict[str, Any]]:
     target_ids = [str(target.get("id")) for target in generation_targets if target.get("id")]
     reference_lines = v3_generation_target_reference_lines(generation_targets)
     ingest_command = (
-        "python3 skill-v3/scripts/kine_layer_workspace.py parts-sheet "
+        "python3 kine-layer-v2-5/scripts/kine_layer_workspace.py parts-sheet "
         f"--workspace {shlex.quote(str(workspace))} "
         f"--sheet {shlex.quote(str(workspace / expected_output))} "
         f"--sheet-id {sheet_id} "
@@ -13000,7 +13004,7 @@ def v3_stable_object_repair_tasks(workspace: Path) -> list[dict[str, Any]]:
         "--append --chroma-key auto"
     )
     prompt = f"""Use case: precise-object-edit
-Asset type: KINE-LAYER V3 stable object repair sheet
+Asset type: KINE-LAYER V2.5 stable object repair sheet
 
 Create one props/accessories role sheet to repair missing stable character-owned objects.
 
@@ -13050,10 +13054,10 @@ Output requirements:
             "savePolicy": "Save the $imagegen stable object repair sheet exactly at expectedOutput before running ingestCommand.",
             "ingestCommand": ingest_command,
             "validationCommands": [
-                "python3 skill-v3/scripts/kine_layer_workspace.py v3-sync-candidates --workspace <workspace>",
-                "python3 skill-v3/scripts/kine_layer_workspace.py v3-register-candidates --workspace <workspace>",
-                "python3 skill-v3/scripts/kine_layer_workspace.py v3-recompose --workspace <workspace>",
-                "python3 skill-v3/scripts/kine_layer_workspace.py v3-validate --workspace <workspace>",
+                "python3 kine-layer-v2-5/scripts/kine_layer_workspace.py v3-sync-candidates --workspace <workspace>",
+                "python3 kine-layer-v2-5/scripts/kine_layer_workspace.py v3-register-candidates --workspace <workspace>",
+                "python3 kine-layer-v2-5/scripts/kine_layer_workspace.py v3-recompose --workspace <workspace>",
+                "python3 kine-layer-v2-5/scripts/kine_layer_workspace.py v3-validate --workspace <workspace>",
             ],
         }
     ]
@@ -13143,7 +13147,7 @@ def v3_enrich_imagegen_task_contract(task: dict[str, Any]) -> dict[str, Any]:
     enriched = dict(task)
     enriched.setdefault("agentAction", v3_imagegen_task_agent_action(enriched))
     enriched.setdefault("completionCriteria", v3_imagegen_task_completion_criteria(enriched))
-    enriched.setdefault("continuationCommand", "python3 skill-v3/scripts/kine_layer_workspace.py v3-continue-imagegen --workspace <workspace>")
+    enriched.setdefault("continuationCommand", "python3 kine-layer-v2-5/scripts/kine_layer_workspace.py v3-continue-imagegen --workspace <workspace>")
     enriched.setdefault("executionContract", "must_execute_save_ingest_and_continue_before_final")
     return enriched
 
@@ -13155,13 +13159,13 @@ def write_v3_subject_matte_prompt(workspace: Path) -> dict[str, Any]:
     expected_output = "imagegen/v3/source-character-matte.png"
     default_out = workspace.parent / f"{workspace.name}-character-matte"
     ingest_command = (
-        "python3 skill-v3/scripts/kine_layer_workspace.py v3-ingest-subject-matte "
+        "python3 kine-layer-v2-5/scripts/kine_layer_workspace.py v3-ingest-subject-matte "
         f"--workspace {shlex.quote(str(workspace))} "
         f"--matte {shlex.quote(str(workspace / expected_output))} "
         f"--out {shlex.quote(str(default_out))}"
     )
     prompt = """Use case: precise-object-edit
-Asset type: KINE-LAYER V3 source subject isolation
+Asset type: KINE-LAYER V2.5 source subject isolation
 
 Input image: use the provided source illustration as the strict reference.
 
@@ -13218,12 +13222,12 @@ Do not run v3-mask-jobs on the original scene source."""
             "v3-imagegen-progress-report marks this task ready_for_ingest or ingested_subject_matte.",
         ],
         "continuationCommand": (
-            "python3 skill-v3/scripts/kine_layer_workspace.py v3-continue-imagegen "
+            "python3 kine-layer-v2-5/scripts/kine_layer_workspace.py v3-continue-imagegen "
             f"--workspace {shlex.quote(str(workspace))}"
         ),
         "savePolicy": "Agent saves the $imagegen subject matte as a PNG at expectedOutput. If built-in $imagegen returns a savedPath or generated_images file, use v3-save-imagegen-inline --input. If it returns inline PNG/base64 with savedPath=null, use --base64-file or --base64. Then internally run ingestCommand.",
         "ingestCommand": ingest_command,
-        "nextAction": "Agent runs ingestCommand internally after the transparent matte exists, then continues V3 on the generated character-matte workspace.",
+        "nextAction": "Agent runs ingestCommand internally after the transparent matte exists, then continues V2.5 on the generated character-matte workspace.",
     }
     return task
 
@@ -13289,7 +13293,7 @@ def evaluate_v3_subject_matte(workspace: Path, matte_path: Path) -> dict[str, An
             "edgeAlphaRatioLimit": V3_SUBJECT_EDGE_ALPHA_RATIO_LIMIT,
             "minSourceVisibleOverlapRatio": 0.95,
         },
-        "note": "This QA only verifies matte geometry and source-canvas plausibility. It cannot prove semantic identity; final V3 acceptance still requires registration, recompose, and visual review.",
+        "note": "This QA only verifies matte geometry and source-canvas plausibility. It cannot prove semantic identity; final V2.5 acceptance still requires registration, recompose, and visual review.",
         "createdAt": datetime.now().isoformat(timespec="seconds"),
     }
     write_json(workspace / "v3" / "source" / "subject-matte-qa.json", qa)
@@ -13297,10 +13301,10 @@ def evaluate_v3_subject_matte(workspace: Path, matte_path: Path) -> dict[str, An
 
 
 def ingest_v3_subject_matte(workspace: Path, matte: Path, out: Path | None = None, force: bool = False) -> dict[str, Any]:
-    """Create a clean V3 workspace from a $imagegen subject-isolated matte.
+    """Create a clean V2.5 workspace from a $imagegen subject-isolated matte.
 
     Scene workspaces are not valid component-mask sources. The matte becomes a new
-    source workspace, then normal V3 mask/reference/sheet task generation resumes.
+    source workspace, then normal V2.5 mask/reference/sheet task generation resumes.
     """
     if not (workspace / "source.png").exists():
         raise FileNotFoundError(workspace / "source.png")
@@ -13376,7 +13380,7 @@ def ingest_v3_subject_matte(workspace: Path, matte: Path, out: Path | None = Non
 
 
 def write_v3_imagegen_work_order(workspace: Path, max_registration_tasks: int = 24) -> dict[str, Any]:
-    """Write the current staged executable $imagegen work order for V3."""
+    """Write the current staged executable $imagegen work order for V2.5."""
     subject_report = v3_subject_preflight_blocks_masks(workspace)
     if subject_report.get("shouldBlockV3Masks"):
         tasks = [
@@ -13407,11 +13411,11 @@ def write_v3_imagegen_work_order(workspace: Path, max_registration_tasks: int = 
         }
         write_json(out_dir / "imagegen-work-order.json", work_order)
         lines = [
-            "# V3 $imagegen Work Order",
+            "# V2.5 $imagegen Work Order",
             "",
             "Status: `needs_imagegen_subject_matte`.",
             "",
-            "The source appears to be an opaque non-flat scene. V3 routes it to `$imagegen` subject isolation before component masks, reference bundles, parts sheets, or hidden inpaint.",
+            "The source appears to be an opaque non-flat scene. V2.5 routes it to `$imagegen` subject isolation before component masks, reference bundles, parts sheets, or hidden inpaint.",
             "",
             "Agent action:",
             "",
@@ -13494,10 +13498,10 @@ def write_v3_imagegen_work_order(workspace: Path, max_registration_tasks: int = 
                     "savePolicy": "Save the $imagegen result exactly at expectedOutput before running ingestCommand.",
                     "ingestCommand": task.get("ingestCommand"),
                     "validationCommands": [
-                        "python3 skill-v3/scripts/kine_layer_workspace.py v3-sync-candidates --workspace <workspace>",
-                        "python3 skill-v3/scripts/kine_layer_workspace.py v3-register-candidates --workspace <workspace>",
-                        "python3 skill-v3/scripts/kine_layer_workspace.py v3-recompose --workspace <workspace>",
-                        "python3 skill-v3/scripts/kine_layer_workspace.py v3-validate --workspace <workspace>",
+                        "python3 kine-layer-v2-5/scripts/kine_layer_workspace.py v3-sync-candidates --workspace <workspace>",
+                        "python3 kine-layer-v2-5/scripts/kine_layer_workspace.py v3-register-candidates --workspace <workspace>",
+                        "python3 kine-layer-v2-5/scripts/kine_layer_workspace.py v3-recompose --workspace <workspace>",
+                        "python3 kine-layer-v2-5/scripts/kine_layer_workspace.py v3-validate --workspace <workspace>",
                     ],
                 }
             )
@@ -13523,10 +13527,10 @@ def write_v3_imagegen_work_order(workspace: Path, max_registration_tasks: int = 
                     "savePolicy": "Save the $imagegen transparent PNG exactly at expectedOutput before running ingestCommand.",
                     "ingestCommand": task.get("ingestCommand"),
                     "validationCommands": [
-                        "python3 skill-v3/scripts/kine_layer_workspace.py v3-hidden-review-report --workspace <workspace>",
-                        "python3 skill-v3/scripts/kine_layer_workspace.py v3-recompose --workspace <workspace>",
-                        "python3 skill-v3/scripts/kine_layer_workspace.py v3-pose-stress --workspace <workspace>",
-                        "python3 skill-v3/scripts/kine_layer_workspace.py v3-validate --workspace <workspace>",
+                        "python3 kine-layer-v2-5/scripts/kine_layer_workspace.py v3-hidden-review-report --workspace <workspace>",
+                        "python3 kine-layer-v2-5/scripts/kine_layer_workspace.py v3-recompose --workspace <workspace>",
+                        "python3 kine-layer-v2-5/scripts/kine_layer_workspace.py v3-pose-stress --workspace <workspace>",
+                        "python3 kine-layer-v2-5/scripts/kine_layer_workspace.py v3-validate --workspace <workspace>",
                     ],
                 }
             )
@@ -13573,7 +13577,7 @@ def write_v3_imagegen_work_order(workspace: Path, max_registration_tasks: int = 
     write_json(out_dir / "imagegen-work-order.json", work_order)
 
     lines = [
-        "# V3 $imagegen Work Order",
+        "# V2.5 $imagegen Work Order",
         "",
         "Use the `$imagegen` skill as the only drawing path for every task below.",
         "",
@@ -13647,7 +13651,7 @@ def inspect_v3_imagegen_task_output(workspace: Path, task: dict[str, Any], canva
             row["canIngest"] = False
             row["characterMatteWorkspace"] = subject_ingest.get("characterMatteWorkspace")
             row["subjectMatteQA"] = subject_ingest.get("subjectMatteQA")
-            row["nextAction"] = "Continue V3 on the characterMatteWorkspace."
+            row["nextAction"] = "Continue V2.5 on the characterMatteWorkspace."
             return row
     if task_type in {"parts_sheet", "stable_object_repair"} and task.get("sheetId"):
         parts_manifest = read_json_if_exists(workspace / "parts" / "parts-sheet-manifest.json") or {}
@@ -13886,12 +13890,12 @@ def save_v3_imagegen_result(
     edge_chroma_key: str | None = "task",
     tolerance: int = 36,
 ) -> dict[str, Any]:
-    """File a built-in $imagegen PNG result into the V3 work-order path.
+    """File a built-in $imagegen PNG result into the V2.5 work-order path.
 
     Codex imagegen executions may expose a saved file, a generated_images file,
     or inline PNG bytes in the conversation. This adapter makes that generated
     image workspace-backed evidence without adding a drawing backend or
-    bypassing V3 ingest/QA gates.
+    bypassing V2.5 ingest/QA gates.
     """
     task = _select_v3_imagegen_task(workspace, task_id, expected_output)
     rel_output = str(task.get("expectedOutput") or "")
@@ -14037,7 +14041,7 @@ def _continue_v3_hidden_inpaint_task(workspace: Path, task: dict[str, Any], expe
         component_id,
         _v3_expected_output_path(workspace, expected_output),
         "imagegen",
-        "continued from V3 imagegen work order",
+        "continued from V2.5 imagegen work order",
     )
     hidden_review = write_v3_hidden_review_report(workspace)
     recompose_report = write_v3_recompose(workspace)
@@ -14059,7 +14063,7 @@ def _continue_v3_hidden_inpaint_task(workspace: Path, task: dict[str, Any], expe
 
 
 def continue_v3_imagegen(workspace: Path, force: bool = False) -> dict[str, Any]:
-    """Continue ready V3 $imagegen outputs without changing generation logic.
+    """Continue ready V2.5 $imagegen outputs without changing generation logic.
 
     It consumes already-saved expectedOutput PNGs and calls existing structured
     ingest functions, so Python never becomes a drawing backend.
@@ -14228,7 +14232,7 @@ def continue_v3_imagegen(workspace: Path, force: bool = False) -> dict[str, Any]
         "executionReport": "v3/imagegen/v3-imagegen-execution-report.json",
         "executionStatus": execution_report.get("status"),
         "createdAt": datetime.now().isoformat(timespec="seconds"),
-        "note": "Continuation consumes already-saved $imagegen expectedOutput PNG files. It does not generate images; it dispatches ready tasks to existing V3 ingest/QA functions.",
+        "note": "Continuation consumes already-saved $imagegen expectedOutput PNG files. It does not generate images; it dispatches ready tasks to existing V2.5 ingest/QA functions.",
     }
     out_path = workspace / "v3" / "imagegen" / "imagegen-continuation-report.json"
     write_json(out_path, report)
@@ -14302,7 +14306,7 @@ def ingest_v3_hidden_inpaint(
     components = [component for component in component_plan.get("components", []) if isinstance(component, dict)]
     component = next((item for item in components if item.get("id") == component_id), None)
     if component is None:
-        raise ValueError(f"Unknown V3 component: {component_id}")
+        raise ValueError(f"Unknown V2.5 component: {component_id}")
     source = Image.open(workspace / "source.png").convert("RGBA")
     hidden_img = Image.open(image_path).convert("RGBA")
     if hidden_img.size != source.size:
@@ -15432,7 +15436,7 @@ def export_v3_components(workspace: Path) -> dict[str, Any]:
             "stableOwnerCoverage": stable_owner_audit,
         },
         "psd": psd_status,
-        "note": "V3 final components are exported only from accepted merged components after V3 recompose, pose-stress, generated-candidate, stable-owner, and export provenance gates.",
+        "note": "V2.5 final components are exported only from accepted merged components after V2.5 recompose, pose-stress, generated-candidate, stable-owner, and export provenance gates.",
         "createdAt": datetime.now().isoformat(timespec="seconds"),
     }
     write_json(out_dir / "components-manifest.json", manifest)
@@ -15478,7 +15482,7 @@ def export_v3_components(workspace: Path) -> dict[str, Any]:
 
 
 def validate_v3_handoff(workspace: Path) -> dict[str, Any]:
-    """Validate exported V3 runtime handoff references without creating runtime projects."""
+    """Validate exported V2.5 runtime handoff references without creating runtime projects."""
     export_dir = workspace / "v3" / "export"
     export_dir.mkdir(parents=True, exist_ok=True)
     manifest_path = export_dir / "components-manifest.json"
@@ -15685,9 +15689,9 @@ def v3_gate_result(gate_id: str, status: str, blockers: list[str] | None = None,
 
 
 def v3_runtime_import_validation_gate(runtime_import: dict[str, Any]) -> tuple[str, list[str], dict[str, Any]]:
-    """Map optional external runtime-import evidence into the aggregate V3 gate.
+    """Map optional external runtime-import evidence into the aggregate V2.5 gate.
 
-    V3 exports Spine/Live2D handoff metadata, but it does not itself run those
+    V2.5 exports Spine/Live2D handoff metadata, but it does not itself run those
     external tools. Missing import evidence should not block the default
     source-master pipeline; actual failed import evidence still blocks.
     """
@@ -15696,7 +15700,7 @@ def v3_runtime_import_validation_gate(runtime_import: dict[str, Any]) -> tuple[s
             "status": "not_recorded",
             "required": False,
             "blockerCount": 0,
-            "note": "external runtime import evidence not required for default V3 source-master validation",
+            "note": "external runtime import evidence not required for default V2.5 source-master validation",
         }
     status = runtime_import.get("status")
     blockers = [str(blocker) for blocker in runtime_import.get("blockers", []) if blocker] if isinstance(runtime_import.get("blockers"), list) else []
@@ -15726,7 +15730,7 @@ def v3_runtime_import_validation_gate(runtime_import: dict[str, Any]) -> tuple[s
 
 
 def validate_v3_pipeline(workspace: Path) -> dict[str, Any]:
-    """Aggregate V3 artifact gates for real-sample hardening without mutating artifacts."""
+    """Aggregate V2.5 artifact gates for real-sample hardening without mutating artifacts."""
     v3_dir = workspace / "v3"
     component_plan = read_json_if_exists(v3_dir / "component-plan.json") or {}
     components = component_plan.get("components", []) if isinstance(component_plan.get("components"), list) else []
@@ -16112,7 +16116,7 @@ def validate_v3_pipeline(workspace: Path) -> dict[str, Any]:
 
 
 def discover_v3_workspaces(root: Path) -> list[Path]:
-    """Find likely V3 workspaces below a root without assuming a fixed output layout."""
+    """Find likely V2.5 workspaces below a root without assuming a fixed output layout."""
     if (root / "v3").is_dir():
         return [root]
     workspaces: set[Path] = set()
@@ -16128,7 +16132,7 @@ def write_v3_hardening_report(
     out_path: Path,
     refresh: bool = False,
 ) -> dict[str, Any]:
-    """Aggregate multiple V3 validation reports for real-sample hardening."""
+    """Aggregate multiple V2.5 validation reports for real-sample hardening."""
     workspace_rows: list[dict[str, Any]] = []
     status_counts: dict[str, int] = {}
     gate_status_counts: dict[str, dict[str, int]] = {}
@@ -16193,7 +16197,7 @@ def write_v3_hardening_report(
         "topBlockers": top_blockers,
         "workspaces": workspace_rows,
         "createdAt": datetime.now().isoformat(timespec="seconds"),
-        "note": "Batch hardening summary over V3 validation reports. It does not generate art or promote blocked workspaces.",
+        "note": "Batch hardening summary over V2.5 validation reports. It does not generate art or promote blocked workspaces.",
     }
     out_path.parent.mkdir(parents=True, exist_ok=True)
     write_json(out_path, report)
@@ -16301,11 +16305,11 @@ def write_v3_imagegen_execution_report(
     out_path: Path,
     refresh: bool = False,
 ) -> dict[str, Any]:
-    """Summarize whether real $imagegen outputs completed the V3 sheet loop.
+    """Summarize whether real $imagegen outputs completed the V2.5 sheet loop.
 
-    This report is intentionally narrower than aggregate V3 validation: it answers
+    This report is intentionally narrower than aggregate V2.5 validation: it answers
     the practical debugging question "did the generated role sheets get saved,
-    ingested, split, synced, and registered according to the V3 contract?"
+    ingested, split, synced, and registered according to the V2.5 contract?"
     """
     workspace_rows: list[dict[str, Any]] = []
     status_counts: dict[str, int] = {}
@@ -16582,7 +16586,7 @@ def write_v3_imagegen_execution_report(
         ],
         "workspaces": workspace_rows,
         "createdAt": datetime.now().isoformat(timespec="seconds"),
-        "note": "Real $imagegen role-sheet execution audit. Work orders and raw sheets are not final; this report checks saved outputs, ingest, candidate sync, registration, and V3 validation evidence.",
+        "note": "Real $imagegen role-sheet execution audit. Work orders and raw sheets are not final; this report checks saved outputs, ingest, candidate sync, registration, and V2.5 validation evidence.",
     }
     out_path.parent.mkdir(parents=True, exist_ok=True)
     write_json(out_path, report)
@@ -16591,7 +16595,7 @@ def write_v3_imagegen_execution_report(
 
 
 def write_v3_workspace_imagegen_execution_report(workspace: Path, refresh: bool = False) -> dict[str, Any]:
-    """Write the execution report inside the current V3 workspace for agent handoff."""
+    """Write the execution report inside the current V2.5 workspace for agent handoff."""
     out_path = workspace / "v3" / "imagegen" / "v3-imagegen-execution-report.json"
     report = write_v3_imagegen_execution_report([workspace], out_path, refresh=refresh)
     update_run_state(
@@ -16878,59 +16882,59 @@ def main() -> None:
     p_parts_prompt = sub.add_parser("parts-sheet-prompt")
     p_parts_prompt.add_argument("--workspace", required=True)
     p_parts_prompt.add_argument("--out", help="Defaults to imagegen/source-master-parts-sheet.prompt.txt inside the workspace.")
-    p_v3_plan = sub.add_parser("v3-plan", help="Write the V3 component plan, multi-sheet campaign, and QA gate scaffold.")
+    p_v3_plan = sub.add_parser("v3-plan", help="Write the V2.5 component plan, multi-sheet campaign, and QA gate scaffold.")
     p_v3_plan.add_argument("--workspace", required=True)
     p_v3_plan.add_argument("--max-sheet-components", type=int, default=12)
-    p_v3_source_preflight = sub.add_parser("v3-source-preflight", help="Inspect source background transparency/chroma-key risk for an existing V3 workspace.")
+    p_v3_source_preflight = sub.add_parser("v3-source-preflight", help="Inspect source background transparency/chroma-key risk for an existing V2.5 workspace.")
     p_v3_source_preflight.add_argument("--workspace", required=True)
     p_v3_source_preflight.add_argument("--tolerance", type=int, default=28)
-    p_v3_subject_preflight = sub.add_parser("v3-subject-preflight", help="Inspect whether V3 should continue directly or first run $imagegen subject isolation for a complex scene source.")
+    p_v3_subject_preflight = sub.add_parser("v3-subject-preflight", help="Inspect whether V2.5 should continue directly or first run $imagegen subject isolation for a complex scene source.")
     p_v3_subject_preflight.add_argument("--workspace", required=True)
-    p_v3_ingest_subject = sub.add_parser("v3-ingest-subject-matte", help="Create a clean V3 workspace from a $imagegen subject-isolated transparent matte.")
+    p_v3_ingest_subject = sub.add_parser("v3-ingest-subject-matte", help="Create a clean V2.5 workspace from a $imagegen subject-isolated transparent matte.")
     p_v3_ingest_subject.add_argument("--workspace", required=True, help="Original scene workspace that requested subject isolation.")
     p_v3_ingest_subject.add_argument("--matte", required=True, help="Full-canvas transparent PNG produced by the $imagegen subject matte task.")
     p_v3_ingest_subject.add_argument("--out", help="Output clean character workspace. Defaults to <workspace>-character-matte.")
     p_v3_ingest_subject.add_argument("--force", action="store_true", help="Delete and recreate --out when it already contains files.")
-    p_v3_masks = sub.add_parser("v3-mask-jobs", help="Write V3 per-component mask jobs, mask PNGs, visible cuts, and mask QA summary.")
+    p_v3_masks = sub.add_parser("v3-mask-jobs", help="Write V2.5 per-component mask jobs, mask PNGs, visible cuts, and mask QA summary.")
     p_v3_masks.add_argument("--workspace", required=True)
     p_v3_masks.add_argument("--no-ensure-partition", action="store_true", help="Do not auto-run source partition when owner visible masks are missing.")
     p_v3_refs = sub.add_parser("v3-reference-bundles", help="Write per-component original-crop + visible-cut reference bundles for $imagegen tasks.")
     p_v3_refs.add_argument("--workspace", required=True)
     p_v3_refs.add_argument("--padding", type=int, default=16)
     p_v3_refs.add_argument("--no-ensure-masks", action="store_true", help="Do not auto-run v3-mask-jobs before building references.")
-    p_v3_sheet_prompts = sub.add_parser("v3-sheet-prompts", help="Materialize role-specific V3 sheet prompts from v3/sheet-campaign.json.")
+    p_v3_sheet_prompts = sub.add_parser("v3-sheet-prompts", help="Materialize role-specific V2.5 sheet prompts from v3/sheet-campaign.json.")
     p_v3_sheet_prompts.add_argument("--workspace", required=True)
-    p_v3_sync_candidates = sub.add_parser("v3-sync-candidates", help="Copy legacy parts-sheet candidates into the V3 candidate pool and manifest.")
+    p_v3_sync_candidates = sub.add_parser("v3-sync-candidates", help="Copy legacy parts-sheet candidates into the V2.5 candidate pool and manifest.")
     p_v3_sync_candidates.add_argument("--workspace", required=True)
-    p_v3_register_candidates = sub.add_parser("v3-register-candidates", help="Register V3 sheet candidates to concrete component rows and write a structured registration report.")
+    p_v3_register_candidates = sub.add_parser("v3-register-candidates", help="Register V2.5 sheet candidates to concrete component rows and write a structured registration report.")
     p_v3_register_candidates.add_argument("--workspace", required=True)
     p_v3_register_candidates.add_argument("--min-score", type=float, default=0.55)
-    p_v3_registration_repair = sub.add_parser("v3-registration-repair-report", help="Write $imagegen repair prompts for V3 components whose sheet candidates were rejected.")
+    p_v3_registration_repair = sub.add_parser("v3-registration-repair-report", help="Write $imagegen repair prompts for V2.5 components whose sheet candidates were rejected.")
     p_v3_registration_repair.add_argument("--workspace", required=True)
     p_v3_registration_repair.add_argument("--max-tasks", type=int, default=24)
-    p_v3_imagegen_work_order = sub.add_parser("v3-imagegen-work-order", help="Write one executable $imagegen work order for pending V3 subject matte, role sheet, registration repair, and hidden inpaint tasks.")
+    p_v3_imagegen_work_order = sub.add_parser("v3-imagegen-work-order", help="Write one executable $imagegen work order for pending V2.5 subject matte, role sheet, registration repair, and hidden inpaint tasks.")
     p_v3_imagegen_work_order.add_argument("--workspace", required=True)
     p_v3_imagegen_work_order.add_argument("--max-registration-tasks", type=int, default=24)
-    p_v3_imagegen_progress = sub.add_parser("v3-imagegen-progress-report", help="Inspect pending V3 $imagegen work-order outputs and report ingest readiness.")
+    p_v3_imagegen_progress = sub.add_parser("v3-imagegen-progress-report", help="Inspect pending V2.5 $imagegen work-order outputs and report ingest readiness.")
     p_v3_imagegen_progress.add_argument("--workspace", required=True)
     p_v3_imagegen_progress.add_argument("--refresh-work-order", action="store_true", help="Regenerate the work order before checking expected outputs.")
-    p_v3_save_imagegen_inline = sub.add_parser("v3-save-imagegen-inline", help="Save a built-in $imagegen PNG result file or inline/base64 PNG to a V3 task expectedOutput path.")
+    p_v3_save_imagegen_inline = sub.add_parser("v3-save-imagegen-inline", help="Save a built-in $imagegen PNG result file or inline/base64 PNG to a V2.5 task expectedOutput path.")
     p_v3_save_imagegen_inline.add_argument("--workspace", required=True)
-    p_v3_save_imagegen_inline.add_argument("--task-id", help="V3 imagegen work-order taskId. Required when multiple tasks are pending unless --expected-output is provided.")
+    p_v3_save_imagegen_inline.add_argument("--task-id", help="V2.5 imagegen work-order taskId. Required when multiple tasks are pending unless --expected-output is provided.")
     p_v3_save_imagegen_inline.add_argument("--expected-output", help="Explicit workspace-relative expectedOutput path. Prefer task-id when available.")
     p_v3_save_imagegen_inline.add_argument("--input", help="PNG file returned by savedPath or selected from $CODEX_HOME/generated_images.")
     p_v3_save_imagegen_inline.add_argument("--base64", dest="inline_base64", help="Inline base64 PNG string or data URL returned by built-in $imagegen.")
     p_v3_save_imagegen_inline.add_argument("--base64-file", help="Text file containing the inline base64 PNG string returned by built-in $imagegen.")
     p_v3_save_imagegen_inline.add_argument("--edge-chroma-key", default="task", help="'task', 'auto', 'none', or 'r,g,b'. task uses auto for subject matte and none for other task types.")
     p_v3_save_imagegen_inline.add_argument("--tolerance", type=int, default=36)
-    p_v3_continue_imagegen = sub.add_parser("v3-continue-imagegen", help="Continue ready V3 $imagegen expectedOutput files through supported ingest steps.")
+    p_v3_continue_imagegen = sub.add_parser("v3-continue-imagegen", help="Continue ready V2.5 $imagegen expectedOutput files through supported ingest steps.")
     p_v3_continue_imagegen.add_argument("--workspace", required=True)
     p_v3_continue_imagegen.add_argument("--force", action="store_true", help="Allow supported continuation steps to recreate their output workspace when applicable.")
-    p_v3_hidden_jobs = sub.add_parser("v3-hidden-jobs", help="Write V3 visible/hidden/merged/overlap artifacts and hidden completion jobs for registered components.")
+    p_v3_hidden_jobs = sub.add_parser("v3-hidden-jobs", help="Write V2.5 visible/hidden/merged/overlap artifacts and hidden completion jobs for registered components.")
     p_v3_hidden_jobs.add_argument("--workspace", required=True)
-    p_v3_hidden_handoff = sub.add_parser("v3-hidden-handoff", help="Write V3 $imagegen skill hidden inpaint handoff tasks for missing hidden components.")
+    p_v3_hidden_handoff = sub.add_parser("v3-hidden-handoff", help="Write V2.5 $imagegen skill hidden inpaint handoff tasks for missing hidden components.")
     p_v3_hidden_handoff.add_argument("--workspace", required=True)
-    p_v3_ingest_hidden = sub.add_parser("v3-ingest-hidden", help="Ingest a $imagegen skill hidden inpaint PNG into a V3 component.")
+    p_v3_ingest_hidden = sub.add_parser("v3-ingest-hidden", help="Ingest a $imagegen skill hidden inpaint PNG into a V2.5 component.")
     p_v3_ingest_hidden.add_argument("--workspace", required=True)
     p_v3_ingest_hidden.add_argument("--component", required=True)
     p_v3_ingest_hidden.add_argument("--image", required=True)
@@ -16944,39 +16948,39 @@ def main() -> None:
     p_v3_hidden_review = sub.add_parser("v3-hidden-review-report", help="Write/apply batch review evidence for $imagegen hidden inpaint outputs.")
     p_v3_hidden_review.add_argument("--workspace", required=True)
     p_v3_hidden_review.add_argument("--decisions", help="Optional kine.v3.hiddenInpaintReviewDecisions JSON to apply.")
-    p_v3_recompose = sub.add_parser("v3-recompose", help="Recompose accepted V3 merged components and write source diff plus recompose report.")
+    p_v3_recompose = sub.add_parser("v3-recompose", help="Recompose accepted V2.5 merged components and write source diff plus recompose report.")
     p_v3_recompose.add_argument("--workspace", required=True)
-    p_v3_pose_stress = sub.add_parser("v3-pose-stress", help="Run V3 small-angle pose stress previews for accepted merged components.")
+    p_v3_pose_stress = sub.add_parser("v3-pose-stress", help="Run V2.5 small-angle pose stress previews for accepted merged components.")
     p_v3_pose_stress.add_argument("--workspace", required=True)
-    p_v3_review_decisions = sub.add_parser("v3-apply-review-decisions", help="Apply V3 Review HTML decision JSON back into component-plan.json.")
+    p_v3_review_decisions = sub.add_parser("v3-apply-review-decisions", help="Apply V2.5 Review HTML decision JSON back into component-plan.json.")
     p_v3_review_decisions.add_argument("--workspace", required=True)
     p_v3_review_decisions.add_argument("--decisions", required=True, help="JSON downloaded from Review HTML decision controls.")
-    p_v3_review_integrity = sub.add_parser("v3-review-integrity-report", help="Verify V3 Review HTML displays active components, candidates, Combined image, and folded debug evidence.")
+    p_v3_review_integrity = sub.add_parser("v3-review-integrity-report", help="Verify V2.5 Review HTML displays active components, candidates, Combined image, and folded debug evidence.")
     p_v3_review_integrity.add_argument("--workspace", required=True)
-    p_v3_export = sub.add_parser("v3-export", help="Export V3 accepted final components plus Kine/Spine handoff manifests.")
+    p_v3_export = sub.add_parser("v3-export", help="Export V2.5 accepted final components plus Kine/Spine handoff manifests.")
     p_v3_export.add_argument("--workspace", required=True)
-    p_v3_validate_handoff = sub.add_parser("v3-validate-handoff", help="Validate exported V3 component and Spine/Live2D handoff manifest references.")
+    p_v3_validate_handoff = sub.add_parser("v3-validate-handoff", help="Validate exported V2.5 component and Spine/Live2D handoff manifest references.")
     p_v3_validate_handoff.add_argument("--workspace", required=True)
-    p_v3_runtime_import = sub.add_parser("v3-runtime-import-report", help="Record external Spine/Live2D import evidence for exported V3 handoff artifacts.")
+    p_v3_runtime_import = sub.add_parser("v3-runtime-import-report", help="Record external Spine/Live2D import evidence for exported V2.5 handoff artifacts.")
     p_v3_runtime_import.add_argument("--workspace", required=True)
     p_v3_runtime_import.add_argument("--evidence", help="Optional kine.v3.runtimeImportEvidence JSON to apply.")
-    p_v3_validate = sub.add_parser("v3-validate", help="Write a read-only aggregate V3 gate report for real-sample hardening.")
+    p_v3_validate = sub.add_parser("v3-validate", help="Write a read-only aggregate V2.5 gate report for real-sample hardening.")
     p_v3_validate.add_argument("--workspace", required=True)
-    p_v3_hardening = sub.add_parser("v3-hardening-report", help="Aggregate V3 validation reports across real-sample workspaces.")
-    p_v3_hardening.add_argument("--workspace", action="append", default=[], help="V3 workspace to include. Can be passed more than once.")
-    p_v3_hardening.add_argument("--workspace-root", help="Root directory to scan for V3 workspaces.")
+    p_v3_hardening = sub.add_parser("v3-hardening-report", help="Aggregate V2.5 validation reports across real-sample workspaces.")
+    p_v3_hardening.add_argument("--workspace", action="append", default=[], help="V2.5 workspace to include. Can be passed more than once.")
+    p_v3_hardening.add_argument("--workspace-root", help="Root directory to scan for V2.5 workspaces.")
     p_v3_hardening.add_argument("--out", help="Output JSON path. Defaults to <workspace-root>/v3-hardening-report.json or the first workspace parent.")
     p_v3_hardening.add_argument("--refresh", action="store_true", help="Run v3-validate for each workspace before aggregating.")
     p_v3_imagegen_execution = sub.add_parser("v3-imagegen-execution-report", help="Audit real $imagegen role-sheet execution through save, ingest, candidate sync, registration, and validation evidence.")
-    p_v3_imagegen_execution.add_argument("--workspace", action="append", default=[], help="V3 workspace to include. Can be passed more than once.")
-    p_v3_imagegen_execution.add_argument("--workspace-root", help="Root directory to scan for V3 workspaces.")
+    p_v3_imagegen_execution.add_argument("--workspace", action="append", default=[], help="V2.5 workspace to include. Can be passed more than once.")
+    p_v3_imagegen_execution.add_argument("--workspace-root", help="Root directory to scan for V2.5 workspaces.")
     p_v3_imagegen_execution.add_argument("--out", help="Output JSON path. Defaults to <workspace-root>/v3-imagegen-execution-report.json or the first workspace parent.")
     p_v3_imagegen_execution.add_argument("--refresh", action="store_true", help="Rerun candidate sync, registration, and v3-validate for each workspace when enough artifacts exist.")
-    p_v3_imagegen_visual_board = sub.add_parser("v3-imagegen-visual-board", help="Render the V3 imagegen visual execution board for one workspace.")
+    p_v3_imagegen_visual_board = sub.add_parser("v3-imagegen-visual-board", help="Render the V2.5 imagegen visual execution board for one workspace.")
     p_v3_imagegen_visual_board.add_argument("--workspace", required=True)
-    p_v3_pose_calibration = sub.add_parser("v3-pose-calibration-report", help="Aggregate V3 pose-stress gap evidence and recommend calibration thresholds.")
-    p_v3_pose_calibration.add_argument("--workspace", action="append", default=[], help="V3 workspace to include. Can be passed more than once.")
-    p_v3_pose_calibration.add_argument("--workspace-root", help="Root directory to scan for V3 workspaces.")
+    p_v3_pose_calibration = sub.add_parser("v3-pose-calibration-report", help="Aggregate V2.5 pose-stress gap evidence and recommend calibration thresholds.")
+    p_v3_pose_calibration.add_argument("--workspace", action="append", default=[], help="V2.5 workspace to include. Can be passed more than once.")
+    p_v3_pose_calibration.add_argument("--workspace-root", help="Root directory to scan for V2.5 workspaces.")
     p_v3_pose_calibration.add_argument("--out", help="Output JSON path. Defaults to <workspace-root>/v3-pose-calibration-report.json or the first workspace parent.")
     p_v3_pose_calibration.add_argument("--refresh", action="store_true", help="Run v3-pose-stress for each workspace before aggregating.")
     p_map = sub.add_parser("map-parts")

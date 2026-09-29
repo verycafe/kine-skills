@@ -1,4 +1,4 @@
 interface:
-  display_name: "Kine Layer V3"
+  display_name: "Kine Layer V2.5"
   short_description: "Experimental component-plan-first KINE-LAYER pipeline."
-  default_prompt: "Use Kine Layer V3 to plan, split, register, QA, and review this character as animation-ready source-master components."
+  default_prompt: "Use $kine-layer-v2-5 to plan, split, register, QA, and review this character as animation-ready source-master components."

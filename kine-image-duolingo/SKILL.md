@@ -9,7 +9,7 @@ description: Generate children's educational game images in a Duolingo-style fla
 
 Turn any subject brief into a **Duolingo-style flat vector** image prompt and, when asked to draw/generate, produce the raster image through `$imagegen`. This style is the one that produced the Garden 1-1 garden background (sun + tree + fence + grass + flowers); it is reusable across arbitrary content: scene, background, character, animal, object, plant, prop, reward item, card, or asset sheet.
 
-This skill **defines the visual grammar and owns the prompt**. Actual rendering must use `$imagegen` (`/Users/tvwoo/.codex/skills/.system/imagegen/SKILL.md`), following that skill's default built-in `image_gen` path unless the user explicitly requests and confirms an `$imagegen` CLI fallback. It does not replace vectorization, Rive, or HTML/CSS skills.
+This skill **defines the visual grammar and owns the prompt**. Actual rendering must use `$imagegen` from the current Codex environment's available skills, following that skill's default built-in `image_gen` path unless the user explicitly requests and confirms an `$imagegen` CLI fallback. It does not replace vectorization, Rive, or HTML/CSS skills.
 
 **Provenance**: the style contract below is distilled verbatim from the real, verified prompt recorded in `…/garden-1-1-intro/build/sess/session.json` (the garden background). Reuse it to keep new art consistent with that lesson.
 
@@ -80,7 +80,7 @@ For precise output types and the canonical garden-background reference prompt, r
 
 ## Generation (via $imagegen)
 
-Rendering must go through `$imagegen`. Read `/Users/tvwoo/.codex/skills/.system/imagegen/SKILL.md` before the first generation in a session and follow its top-level mode rules.
+Rendering must go through `$imagegen`. Locate its `SKILL.md` in the current Codex environment's available skills before the first generation in a session and follow its top-level mode rules.
 
 1. **Default path**: use `$imagegen`'s built-in `image_gen` tool for normal generation and editing. Do not use fal.ai, `genmedia`, `giggle:fal-skill`, or `giggle:image-agent` for drawing in this skill.
 2. **Prompt**: pass the assembled Duolingo prompt to `image_gen`. Keep the prompt explicit about flat fills, high saturation, no gradients, no texture, no gloss, and no text unless requested.
